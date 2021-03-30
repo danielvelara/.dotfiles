@@ -1,0 +1,21 @@
+# Info
+[user]
+	name = Daniel Velázquez Lara
+	email = 13500134+danielvelara@users.noreply.github.com
+
+# Alias
+#git config --global alias.cm "commit -m"
+[alias]
+	cm = commit -m
+	co = checkout
+	st = status -sb
+	br = branch
+
+# Editor
+# git config --global core.editor "nvim"
+[core]
+	# editor = nvim
+	editor = code --wait
+
+[alias]
+	cm = commit -m
