@@ -12,6 +12,8 @@ export ZSH="/home/danielvelara/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+#TERM= "screen-256color"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -106,3 +108,9 @@ setxkbmap -option caps:escape
 # Ranger
 export VISUAL=nvim;
 export EDITOR=nvim;
+
+# Aliases
+alias vim='nvim'
+alias py='python3'
+
+eval $(thefuck --alias)

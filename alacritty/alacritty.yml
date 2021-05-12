@@ -1,0 +1,96 @@
+# Alacritty Config
+env:
+    #TERM: alacritty
+    TERM: xterm-256color
+#shell:
+    #program: /bin/zsh
+    #args:
+    #    - --login
+window:
+    title: Alacritty
+    class: #LinuxOnly
+        instance: Alacritty
+        general: Alacritty
+    padding:
+        x: 0
+        y: 0
+    dynamic_padding: false # Space Padding
+    dimensins: # Window Size, 0 = WM Default
+        columns: 0
+        lines: 50
+    position: # Window Placement, 0 = WM Default
+        x: 0
+        y: 0
+    decorations: none #full
+scrolling:
+    history: 1000
+    multiplier: 10
+cursor:
+    style:
+        shape: Beam # Block, Underline, Beam
+        blinking: On
+    thinkness: 0.15
+    blink_interval: 400
+    vi_mode_style: None
+    # unfocused_hollow: true
+font:
+    normal:
+        family: Fira Code
+        #family: false
+        style: Regular
+    size: 11
+    offset:
+        x: 0
+        y: 0
+
+selection:
+    save_to_clipboard: false # Selected text to clipboard
+
+#mouse_bindings:
+    # mouse: Middle, Left, Right
+    #- {mouse: Middle, action: PasteSelection}
+key_bindings:
+    # key: A-Z, F1-F24, Key0-Key9
+    # mods: Command, Control, Option, Super, Shift, Alt
+    # mode: AppCursor, AppKeypad, Search, Alt, Vi, ~Alt (When not active)
+    # - { key: V, mods, Conrol|Shift, action: Paste}
+    - { key: K, mods: Control, action: ClearHistory} # Remove scrollback history
+    - { key: O, mods: alt, mode: Vi, action: Open}
+    - { key: F11, action: ToggleFullscreen}
+      #- { key: Key4,   mods: Shift, mode: Vi|~Search, action: Last}
+    - { key: Key9, mode: Vi|~Search, action: Last}
+
+working_directory: None # Staring WD of parent process
+
+# Appearance
+background_opacity: 1.0
+colors:
+  # Default colors
+  primary:
+    background : '0x1d2021' # Hard
+    #background: '0x282828' # Medium
+    #background : '0x32302f' # Soft
+    foreground: '0xebdbb2'
+
+  # Normal colors
+  normal:
+    black:   '0x282828'
+    red:     '0xcc241d'
+    green:   '0x98971a'
+    yellow:  '0xd79921'
+    blue:    '0x458588'
+    magenta: '0xb16286'
+    cyan:    '0x689d6a'
+    white:   '0xa89984'
+
+  # Bright colors
+  bright:
+    black:   '0x928374'
+    red:     '0xfb4934'
+    green:   '0xb8bb26'
+    yellow:  '0xfabd2f'
+    blue:    '0x83a598'
+    magenta: '0xd3869b'
+    cyan:    '0x8ec07c'
+    white:   '0xebdbb2'
+
