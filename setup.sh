@@ -33,7 +33,7 @@ yay -S lazygit
 echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
 
 # Neovim
-yay -S neovim-nightly-bin xclip
+yay -S neovim xclip
 ln -sfn ~/.dotfiles/init.vim ~/.config/nvim/init.vim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ln -sfn ~/.dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
@@ -46,8 +46,10 @@ pip3 install scipy
 yay -S \
 nodejs nvm npm \
 java-environment \
-httpie ngrok aria2 jq \ # insomnia postman transmission cyberduck
+go go-tools \
+httpie ngrok aria2 jq \
 ccls tcc gcc # base-devel
+# insomnia postman transmission cyberduck
 # go dotnet-sdk mono flutter
 
 # DevOps
@@ -63,6 +65,14 @@ mongodb # mongodb-compass \
 #dbeaver
 #postgres pgcli pgAdmin
 #q
+
+# Cybersecurity
+yay -S \
+sublist3r-git \
+burpsuite \
+nikto \
+wifite2 \
+nmap
 
 # Brave
 yay -S brave
@@ -92,6 +102,7 @@ yay -S \
 zoom \
 sxiv zathura vlc mpv pandoc gimp youtube-dl deemix \
 newsboat \
+peek
 # obs-studio obs-virtualcam blender handbrake kdenlive audacity peek shutter
 #yay -S hledger ledger homebank timetrap
 #yay -S uxplay avahi-daemon checkra1n
@@ -106,7 +117,7 @@ mkdir ~/.config/mpd/playlists
 sudo pacman -S cmatrix pipes.sh
 
 # Entertainmnet
-# yay -S popcorntime-bin retroarch minecraft openttd
+# yay -S popcorntime-bin retroarch minecraft openttd 0ad
 
 # Math
 # yay -S qalculate tungsten mathics

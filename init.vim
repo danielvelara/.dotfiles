@@ -28,16 +28,23 @@ let g:coc_global_extensions = [
 	\ 'coc-pairs',
   	\ 'coc-snippets',
 	\ 'coc-prettier',
+	\ 'coc-pyright',
+	\ 'coc-highlight',
 \ ]
 "	\ 'coc-tsserver',
 "	\ 'coc-eslint',
+"	\ 'coc-html'
+"	\ 'coc-css'
 "	\ 'coc-json'
+"	\ 'coc-emmet'
+"	\ 'coc-tag'
 
 " Commands
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <A-b> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=20
+
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
@@ -84,6 +91,6 @@ set expandtab              " Convert tabs to spaces
 set foldmethod=indent
 set foldlevel=99
 
+" Fixes
 au VimLeave * set guicursor=a:ver100-blinkwait175-blinkoff150-blinkon175
-
 " set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
