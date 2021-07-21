@@ -17,6 +17,7 @@ git clone https://github.com/danielvelara/.dotfiles ~/.dotfiles && \
 cd ~/.dotfiles && \
 ./setup.sh
 ```
+
 code-minimap
 deemix 
 
