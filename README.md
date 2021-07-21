@@ -17,17 +17,23 @@ git clone https://github.com/danielvelara/.dotfiles ~/.dotfiles && \
 cd ~/.dotfiles && \
 ./setup.sh
 ```
+code-minimap
+deemix 
 
 ## TODO List
 - Activate PaperWM
 - Chrome Extensions:
-    - uBlock, clearURLs, Decentraleyes, UniversalBypass
+    - uBlock, clearURLs, Decentraleyes, UniversalBypass, SponsorBlock
     - h264ify, VideoSpeedController
     - OldRedditRedirect, RES
     - WebDeveloper, JSONViewer, GoFullPage, Visbug, WhatRuns, React
     - BuiltWith, SimilarTechProspecting SimilarWeb, Wappalyzer
     - ReadAloud, Vimium
     - MSEditor, Keepa, ViewImage
+    - Clockify
+    - MetaMask
+    - Wappalyzer, BuiltWith, WhatRuns
+    - React Tools
 - Anki Extensions
     - Heatmap: Manual Install
     - Image Occlusion: 1374772155
@@ -43,6 +49,12 @@ cd ~/.dotfiles && \
   - [Remove Dropdown Arrows](https://extensions.gnome.org/extension/800/remove-dropdown-arrows/)
   - [Internet Radio](https://extensions.gnome.org/extension/836/internet-radio/)
   - Pop Shell
+  - Radio
+  - rrc (No radius)
+  - Status-area-horizontal-spacing
+  - soung-output-device
+  - Vertical Overview
+  - Remove dropdown arros
 - Vim Install Plugins
     - `:PlugInstall`
 
