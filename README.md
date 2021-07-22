@@ -18,23 +18,44 @@ cd ~/.dotfiles && \
 ./setup.sh
 ```
 
+- Vim Install Plugins
+    - `:PlugInstall`
 code-minimap
 deemix 
+
+https://code.visualstudio.com/docs/languages/javascript
+vscode @ts-nocheck
 
 ## TODO List
 - Activate PaperWM
 - Chrome Extensions:
-    - uBlock, clearURLs, Decentraleyes, UniversalBypass, SponsorBlock
-    - h264ify, VideoSpeedController
-    - OldRedditRedirect, RES
-    - WebDeveloper, JSONViewer, GoFullPage, Visbug, WhatRuns, React
-    - BuiltWith, SimilarTechProspecting SimilarWeb, Wappalyzer
-    - ReadAloud, Vimium
-    - MSEditor, Keepa, ViewImage
-    - Clockify
-    - MetaMask
-    - Wappalyzer, BuiltWith, WhatRuns
-    - React Tools
+    - [ReadAloud](https://chrome.google.com/webstore/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp)
+        - chrome://extensions/shortcuts
+            - Play/Pause -> Alt+z
+            - Stop -> Alt+x
+    - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
+    - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
+    - [ClearURLs](https://chrome.google.com/webstore/detail/clearurls/lckanjgmijmafbedllaakclkaicjfmnk)
+    - [Decentraleyes](https://chrome.google.com/webstore/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj)
+    - [UniversalBypass](https://github.com/Sainan/Universal-Bypass)
+    - [SponsorBlock](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
+    - [VideoSpeedController](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
+    - [h264ify](https://chrome.google.com/webstore/detail/h264ify/aleakchihdccplidncghkekgioiakgal)
+    - [OldRedditRedirect](https://chrome.google.com/webstore/detail/old-reddit-redirect/dneaehbmnbhcippjikoajpoabadpodje)
+    - [RES](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb)
+    - [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es)
+    - [JSONViewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related)
+    - [GoFullPage](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl)
+    - [Visbug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc/)
+    - [Keepa](https://chrome.google.com/webstore/detail/neebplgakaahbhdphmkckjjcegoiijjo)
+    - [MS Editor](https://chrome.google.com/webstore/detail/microsoft-editor-spelling/gpaiobkfhnonedkhhfjpmhdalgeoebfa)
+    - [ViewImage](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk)
+    - [Clockify](https://chrome.google.com/webstore/detail/clockify-time-tracker/pmjeegjhjdlccodhacdgbgfagbpmccpe)
+    - [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
+    - [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
+    - [BuiltWith](https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn)
+    - [WhatRuns](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip)
+    - [React Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - Anki Extensions
     - Heatmap: Manual Install
     - Image Occlusion: 1374772155
@@ -43,45 +64,60 @@ deemix
     - Anki Simulator: 817108664
     - Frozen Fields: 516643804
     - Advanced Review Bottom Bar: 1136455830
-- Gnome Extensions
-  - [cpufreq](https://extensions.gnome.org/extension/1082/cpufreq/)
-  - [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
-  - [CPU Power Management](https://extensions.gnome.org/extension/945/cpu-power-manager/)
-  - [Remove Dropdown Arrows](https://extensions.gnome.org/extension/800/remove-dropdown-arrows/)
-  - [Internet Radio](https://extensions.gnome.org/extension/836/internet-radio/)
-  - Pop Shell
-  - Radio
-  - rrc (No radius)
-  - Status-area-horizontal-spacing
-  - soung-output-device
-  - Vertical Overview
-  - Remove dropdown arros
-- Vim Install Plugins
-    - `:PlugInstall`
 
-## Shortcuts
+## Gnome
+
+- Accessibility
+    - Repeat Keys
+
+
+### Gnome Extensions
+
+- [cpufreq](https://extensions.gnome.org/extension/1082/cpufreq/)
+- [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
+- [CPU Power Management](https://extensions.gnome.org/extension/945/cpu-power-manager/)
+- [Remove Dropdown Arrows](https://extensions.gnome.org/extension/800/remove-dropdown-arrows/)
+- [Internet Radio](https://extensions.gnome.org/extension/836/internet-radio/)
+- [Status Area Horizontal Spacing](https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/)
+- [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)'
+- [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+- Pop Shell
+- `yay -S gnome-shell-extension-pop-shell`
+
+
+
+
+# Pop-Shell Keyboard
+
+- Keyboard Shortcuts
+- Window 
+    - [ ] Hide Window
+    - [ ] Toggle Fullscreen 
+    - [ ] Close window
+    - [ ] Show the overview
+- System 
+    - [ ] Lock Screen
 
 ```bash
 xdg-open https://                 # Browser
 xdg-open .                        # File Explorer
 code                              # VSCode
-tilix .                           # Terminal
-xrandr --output HDMI2 --scale 1x1 # Monitor
-
-gsettings set org.gnome.desktop.interface text-scaling-factor 1.25
+alacritty .                       # Alacritty
 ```
+
 
 ## iPhone
 Phone NNWire BBVA Photos
-Spotify Tabs Anki PCalc
+Spotify Anki PCalc
 Files Mail Browser WhatsApp
 
-GMaps Drive
-Telegram Slack GitHub
-Bitso GBM Stocks
+Calendar
+GMaps
+GitHub
+Stocks
 Weex Parkimovil
-Watch Pommie Activity ACuriousQuestion VoiceMemos Calendar
-Lichess
+Pommie Activity VoiceMemos Calendar
+Lichess Delta
 
 ### Repos
 https://apt-alfhaily.me/

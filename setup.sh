@@ -5,14 +5,10 @@ sudo pacman -S yay
 
 # Terminal
 yay -S alacritty
-mkdir -p ~/.config/alacritty && ln -sfn ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+mkdir -p ~/.config/alacritty && ln -sfn ~/.dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
-
-mkdir -p .config/tilix/schemes
-wget -qO $HOME"/.config/tilix/schemes/cobalt2.json" https://raw.githubusercontent.com/storm119/Tilix-Themes/master/Themes/cobalt2.json
-wget -qO $HOME"/.config/tilix/schemes/gruvbox.json" https://raw.githubusercontent.com/storm119/Tilix-Themes/master/Themes/gruvbox.json
 
 # Terminal Navigation
 yay -S \
@@ -26,15 +22,14 @@ ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~/.tmux.conf
 ln -sfn ~/.dotfiles/.Xresources ~/.Xresources
 ln -sfn ~/.dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 
-
 # Git
-ln -sfn ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -sfn ~/.dotfiles/.gitconfig ~/.gitconfig 
 yay -S lazygit
 echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
 
 # Neovim
 yay -S neovim xclip
-ln -sfn ~/.dotfiles/init.vim ~/.config/nvim/init.vim
+mkdir -p ~/.config/nvim && ln -sfn ~/.dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ln -sfn ~/.dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 
@@ -47,14 +42,14 @@ yay -S \
 nodejs nvm npm \
 java-environment \
 go go-tools \
-httpie ngrok aria2 jq \
+httpie ngrok-bin aria2 jq \
 ccls tcc gcc # base-devel
 # insomnia postman transmission cyberduck
 # go dotnet-sdk mono flutter
 
 # DevOps
 yay -S \
-docker ctop lazydocker
+docker ctop lazydocker-bin
 # aws-cli heroku-cli
 
 # Database Tools
@@ -75,11 +70,11 @@ wifite2 \
 nmap
 
 # Brave
-yay -S brave
-# ln -sfn ~/.dotfiles/bookmarks.html .config/BraveSoftware/Brave-Browser/Default/Bookmarks
+yay -S brave-bin
+# TODO: Find a way to import bookmarks
 
 # Gnome
-git clone 'https://github.com/paperwm/PaperWM.git' "${XDG_DATA_HOME:-$HOME/.local/share}/gnome-shell/extensions/paperwm@hedning:matrix.org"
+yay -S gnome-shell-extension-pop-shell
 
 # System
 yay -S \
@@ -102,15 +97,16 @@ yay -S \
 zoom \
 sxiv zathura vlc mpv pandoc gimp youtube-dl deemix \
 newsboat \
-peek
+peek \
 # obs-studio obs-virtualcam blender handbrake kdenlive audacity peek shutter
 #yay -S hledger ledger homebank timetrap
-#yay -S uxplay avahi-daemon checkra1n
+#yay -S uxplay avahi-daemon 
+checkra1n-cli
 
 # Music
 sudo pacman -S mpd ncmpcpp
 mkdir ~/.config/mpd
-ln -sfn ~/.dotfiles/.mpd.conf ~/.config/mpd/mpd.conf
+ln -sfn ~/.dotfiles/.config/mpd.conf ~/.config/mpd/mpd.conf
 mkdir ~/.config/mpd/playlists
 
 # Other
@@ -121,4 +117,3 @@ sudo pacman -S cmatrix pipes.sh
 
 # Math
 # yay -S qalculate tungsten mathics
-

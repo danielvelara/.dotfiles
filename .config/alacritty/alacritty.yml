@@ -15,7 +15,7 @@ window:
         x: 0
         y: 0
     dynamic_padding: false # Space Padding
-    dimensins: # Window Size, 0 = WM Default
+    dimensions: # Window Size, 0 = WM Default
         columns: 0
         lines: 50
     position: # Window Placement, 0 = WM Default
@@ -29,7 +29,7 @@ cursor:
     style:
         shape: Beam # Block, Underline, Beam
         blinking: On
-    thinkness: 0.15
+    thickness: 0.15
     blink_interval: 400
     vi_mode_style: None
     # unfocused_hollow: true
