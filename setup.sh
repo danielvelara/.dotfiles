@@ -20,6 +20,7 @@ fzf \
 jump
 ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~/.tmux.conf
 ln -sfn ~/.dotfiles/.Xresources ~/.Xresources
+xrdb -load ~/.Xresources
 ln -sfn ~/.dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 
 # Git
@@ -46,6 +47,8 @@ httpie ngrok-bin aria2 jq \
 ccls tcc gcc # base-devel
 # insomnia postman transmission cyberduck
 # go dotnet-sdk mono flutter
+wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash # Nautilus VSCode
+
 
 # DevOps
 yay -S \
@@ -83,7 +86,9 @@ neofetch ufetch \
 duf gdu ncdu \
 gparted testdisk unetbootin \
 7zip cfdisk \
-dejadup
+dejadup \
+net-tools \
+bluez-utils
 # arc-gtk-theme papirus ttf-firacode tts-ms-fonts noto-fonts
 # screenkey imwheel
 # bitwarden vault keepass
@@ -95,9 +100,16 @@ protonvpn ntop
 # Utilities
 yay -S \
 zoom \
-sxiv zathura vlc mpv pandoc gimp youtube-dl deemix \
+zathura-pdf-poppler vlc mpv pandoc gimp youtube-dl deemix \
 newsboat \
 peek \
+sxiv \
+slides-bin \
+texlive-core \
+tmpmail \
+pipes \
+cmatrix
+
 # obs-studio obs-virtualcam blender handbrake kdenlive audacity peek shutter
 #yay -S hledger ledger homebank timetrap
 #yay -S uxplay avahi-daemon 

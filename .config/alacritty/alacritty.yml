@@ -28,10 +28,11 @@ scrolling:
 cursor:
     style:
         shape: Beam # Block, Underline, Beam
+          #blinking: Always
         blinking: On
     thickness: 0.15
     blink_interval: 400
-    vi_mode_style: None
+      # vi_mode_style: None
     # unfocused_hollow: true
 font:
     normal:
@@ -44,7 +45,7 @@ font:
         y: 0
 
 selection:
-    save_to_clipboard: false # Selected text to clipboard
+    save_to_clipboard: true # Selected text to clipboard
 
 #mouse_bindings:
     # mouse: Middle, Left, Right
@@ -93,4 +94,3 @@ colors:
     magenta: '0xd3869b'
     cyan:    '0x8ec07c'
     white:   '0xebdbb2'
-
