@@ -4,7 +4,7 @@
 call plug#begin()
 " Language
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " Integrations
 " Interface
 Plug 'morhetz/gruvbox'

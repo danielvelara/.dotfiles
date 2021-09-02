@@ -25,7 +25,7 @@ ln -sfn ~/.dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 
 # Git
 ln -sfn ~/.dotfiles/.gitconfig ~/.gitconfig 
-yay -S lazygit
+yay -S lazygit github-cli
 echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
 
 # Neovim
@@ -77,7 +77,7 @@ yay -S brave-bin
 # TODO: Find a way to import bookmarks
 
 # Gnome
-yay -S gnome-shell-extension-pop-shell
+yay -S gnome-shell-extension-pop-shell blanket-bin
 
 # System
 yay -S \
@@ -108,7 +108,8 @@ slides-bin \
 texlive-core \
 tmpmail \
 pipes \
-cmatrix
+cmatrix \
+calibre-installer
 
 # obs-studio obs-virtualcam blender handbrake kdenlive audacity peek shutter
 #yay -S hledger ledger homebank timetrap
