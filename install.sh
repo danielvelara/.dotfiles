@@ -80,6 +80,7 @@ yay -S brave-bin
 yay -S gnome-shell-extension-pop-shell blanket-bin
 
 # System
+#base-devel
 yay -S \
 gotop glances htop ncdu \
 neofetch ufetch \
