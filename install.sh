@@ -110,6 +110,7 @@ texlive-core \
 tmpmail \
 pipes \
 cmatrix \
+monero-gui \
 calibre-installer
 
 # obs-studio obs-virtualcam blender handbrake kdenlive audacity peek shutter
