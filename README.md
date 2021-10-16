@@ -108,17 +108,22 @@ alacritty .                       # Alacritty
 
 
 ## iPhone
-Phone NNWire BBVA Photos
-Spotify Anki PCalc
-Files Mail Browser WhatsApp
+Phone
+NNWire
+BBVA
+Photos
+Spotify
+Anki
+Files
+Mail
+Browser
+WhatsApp
 
-Calendar
 GMaps
-GitHub
-Stocks
-Weex Parkimovil
-Pommie Activity VoiceMemos Calendar
-Lichess Delta
+Weex
+Pommie
+iSH
+Expo Go
 
 ### Repos
 https://apt-alfhaily.me/
