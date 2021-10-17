@@ -1,0 +1,69 @@
+show-summary: true
+show-tags: false
+show-fundamentals: true
+show-separator: true
+show-holdings: true
+interval: 60
+currency: USD
+currency-summary-only: false
+sort: user
+
+watchlist:
+  - MXN=X
+  - BTC-USD
+  - ETH-USD
+  - ADA-USD
+  - XRP-USD
+  - XLM-USD
+  - BNB-USD
+  - XMR-USD
+  - SOL1-USD
+  - FIL-USD
+  - MATIC-USD
+  - DOT1-USD
+  - COMP-USD
+  - CAKE-USD
+  - SPY
+  - VOO
+  - GBMINTBO.MX
+  - GBMTRVBO.MX
+  - VTI
+  - QQQ
+  - VGT
+  - BRK-B
+  - DIA
+  - FB
+  - AAPL
+  - AMZN
+  - NFLX
+  - GOOGL
+  - MSFT
+  - TSLA
+  - NVDA
+  - ORCL
+  - AMD
+  - BYND
+  - AWK
+  - RH
+  - RVLV
+  - PLNHF
+  - AMC
+  - GME
+  - ELEKTRA.MX
+  - FUNO11.MX
+  - VNQ
+  - F
+
+lots:
+  - symbol: "ETH-USD"
+    quantity: 2.15
+    unit_cost: 2000
+  - symbol: "MATIC-USD"
+    quantity: 345
+    unit_cost: 2000
+  - symbol: "F"
+    quantity: 1
+    unit_cost: 0
+  - symbol: "GBMINTBO.MX"
+    quantity: 1
+    unit_cost: 10
