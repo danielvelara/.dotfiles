@@ -116,6 +116,7 @@ calibre-installer
 # obs-studio obs-virtualcam blender handbrake kdenlive audacity peek shutter
 #yay -S hledger ledger homebank timetrap
 #yay -S uxplay avahi-daemon 
+# yay -S idevicerestore
 checkra1n-cli
 
 # Music
