@@ -85,6 +85,7 @@ vscode @ts-nocheck
 - [Status Area Horizontal Spacing](https://extensions.gnome.org/extension/355/status-area-horizontal-spacing/)
 - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)'
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+- [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/)
 - Pop Shell
 - `yay -S gnome-shell-extension-pop-shell`
 

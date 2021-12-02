@@ -1,96 +1,68 @@
-# Creator: danielvelara
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 export ZSH="/home/danielvelara/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-# ZSH_THEME="random"
+ZSH_THEME="robbyrussell" # "random"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # echo $RANDOM_THEMEK
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-#TERM= "screen-256color"
-
-# Case-sensitive completiton
-# CASE_SENSITIVE="true" 
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-DISABLE_AUTO_UPDATE="true"
-# DISABLE_UPDATE_PROMPT="true"
+# oh-my-zsh
 # export UPDATE_ZSH_DAYS=13
+DISABLE_AUTO_UPDATE="true"
+DISABLE_UPDATE_PROMPT="true"
+CASE_SENSITIVE="false" 
 
-# Uncomment the following line if pasting URLs and other text is messed up.
+DISABLE_LS_COLORS="false"
+DISABLE_AUTO_TITLE="false"
+ENABLE_CORRECTION="false" 
+COMPLETION_WAITING_DOTS="false"
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+DISABLE_UNTRACKED_FILES_DIRTY="false"
 # DISABLE_MAGIC_FUNCTIONS="true"
+HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
-DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# ENABLE_CORRECTION="true" # Uncomment the following line to enable command auto-correction.
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+# HIST_STAMPS="yyyy-mm-dd"
 
 
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+# PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
+plugins=(git python docker zsh-autosuggestions zsh-syntax-highlighting)
+# plugins=(zsh-syntax-highlighting zsh-completions git)
+
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 source /usr/share/nvm/init-nvm.sh
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 setxkbmap -option caps:escape
 
-# Ranger
+export ARCHFLAGS="-arch x86_64"
 export VISUAL=nvim;
 export EDITOR=nvim;
 
 # Aliases
 alias vim='nvim'
-alias py='python3'
+alias exa='exa -l'
 
 eval $(thefuck --alias)
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="/home/danielvelara/.deta/bin:$PATH"
