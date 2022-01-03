@@ -1,14 +1,23 @@
 # .dotfile
+
 > Daniel Velázquez Lara
+
+```bash
+sudo pacman -Sy && \
+sudo pacman -S git --noconfirm && \
+git clone https://github.com/Einenlum/dotfiles-manjaro.git ~/dotfiles && \
+cd ~/dotfiles && \
+./install.sh
 
 
 https://github.com/jarun
 https://github.com/jarun/nnn
 https://ubunlog.com/ranger-gestor-archivo-terminal/
 https://wiki.archlinux.org/index.php/Ranger#Installation
+```
 
 1. Clone repo
-`git clone https://github.com/danielvelara/.dotfiles`
+   `git clone https://github.com/danielvelara/.dotfiles`
 
 ```bash
 sudo pacman -Sy && \
@@ -18,20 +27,20 @@ cd ~/.dotfiles && \
 ./setup.sh
 ```
 
-- Vim Install Plugins
-    - `:PlugInstall`
-code-minimap
-deemix 
+- Vim Install Plugins - `:PlugInstall`
+  code-minimap
+  deemix
 
 https://code.visualstudio.com/docs/languages/javascript
 vscode @ts-nocheck
 
 ## Chrome Extensions:
+
 - [GNOME Shell Integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
 - [ReadAloud](https://chrome.google.com/webstore/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp)
-    - chrome://extensions/shortcuts
-        - Play/Pause -> Alt+z
-        - Stop -> Alt+x
+  - chrome://extensions/shortcuts
+    - Play/Pause -> Alt+z
+    - Stop -> Alt+x
 - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 - [ClearURLs](https://chrome.google.com/webstore/detail/clearurls/lckanjgmijmafbedllaakclkaicjfmnk)
@@ -61,6 +70,7 @@ vscode @ts-nocheck
 - [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa)
 
 ## Anki Extensions
+
     - Heatmap: Manual Install
     - Image Occlusion: 1374772155
     - ProgrssBar: 2091361802
@@ -72,8 +82,7 @@ vscode @ts-nocheck
 ## Gnome
 
 - Accessibility
-    - Repeat Keys
-
+  - Repeat Keys
 
 ### Gnome Extensions
 
@@ -89,19 +98,16 @@ vscode @ts-nocheck
 - Pop Shell
 - `yay -S gnome-shell-extension-pop-shell`
 
-
-
-
 # Pop-Shell Keyboard
 
 - Keyboard Shortcuts
-- Window 
-    - [ ] Hide Window
-    - [ ] Toggle Fullscreen 
-    - [ ] Close window
-    - [ ] Show the overview
-- System 
-    - [ ] Lock Screen
+- Window
+  - [ ] Hide Window
+  - [ ] Toggle Fullscreen
+  - [ ] Close window
+  - [ ] Show the overview
+- System
+  - [ ] Lock Screen
 
 ```bash
 xdg-open https://                 # Browser
@@ -110,8 +116,8 @@ code                              # VSCode
 alacritty .                       # Alacritty
 ```
 
-
 ## iPhone
+
 Phone
 NNWire
 BBVA
@@ -130,10 +136,11 @@ iSH
 Expo Go
 
 ### Repos
+
 https://apt-alfhaily.me/
 repo.hackyouriphone.org
 https://cokepokes.github.io/
 
 Spotilife, Watusi, LocalIAPStore, AppSyncUnified, AppStore++ # Crack
 Snapper2, CarBridge, SorryLowBatter, AudiRecorderXS(2X557691YE600192F)
-Springtomize5, Snowboard, HideYourApps, PowerModule  ShyPageDots, Shuffle # UI
+Springtomize5, Snowboard, HideYourApps, PowerModule ShyPageDots, Shuffle # UI

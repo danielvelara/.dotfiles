@@ -19,6 +19,7 @@ thefuck \
 fzf \
 jump
 ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~/.tmux.conf
+# https://github.com/egel/tmux-gruvbox
 ln -sfn ~/.dotfiles/.Xresources ~/.Xresources
 xrdb -load ~/.Xresources
 ln -sfn ~/.dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
@@ -35,6 +36,7 @@ git config --global alias.co "checkout"
 git config --global alias.br "branch"
 git config --global alias.st "status -sb"
 git config --global core.editor "nvim"
+git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
 # Neovim
 yay -S neovim xclip
@@ -47,6 +49,7 @@ yay -S \
 visual-studio-code-bin
 python python-pip
 pip3 install scipy
+hugo \
 yay -S \
 nodejs nvm npm \
 java-environment \
@@ -86,7 +89,7 @@ yay -S brave-bin
 # TODO: Find a way to import bookmarks
 
 # Gnome
-yay -S gnome-shell-extension-pop-shell blanket-bin
+yay -S gnome-shell-extension-pop-shell
 
 # System
 #base-devel
@@ -112,6 +115,7 @@ protonvpn ntop
 
 # Utilities
 yay -S \
+anki-bin \
 zoom \
 zathura-pdf-poppler vlc mpv pandoc gimp youtube-dl deemix \
 sc \
@@ -134,14 +138,13 @@ ln -sfn ~/.dotfiles/.newsboat/config ~/.newsboat/config
 # obs-studio obs-virtualcam blender handbrake kdenlive audacity peek shutter
 #yay -S hledger ledger homebank timetrap
 #yay -S uxplay avahi-daemon 
-# yay -S idevicerestore
-checkra1n-cli
 
 # Music
 sudo pacman -S mpd ncmpcpp mpc
 mkdir ~/.config/mpd
 mkdir ~/.config/mpd/playlists
 ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
+ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
 mkdir ~/.config/ncmpcpp
 ln -sfn ~/.dotfiles/.config/ncmpcpp ~/.config
 sudo pacman -S spotify-tui-bin spotifyd 
