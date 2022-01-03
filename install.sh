@@ -132,8 +132,9 @@ monero-gui \
 calibre-installer \
 newsboat 
 mkdir -p ~/.newsboat/
-ln -sfn ~/.dotfiles/.newsboat/urls ~/.newsboat/urls
-ln -sfn ~/.dotfiles/.newsboat/config ~/.newsboat/config
+ln -sfn ~/.dotfiles/.config/newsboat/config ~/.newsboat/config
+ln -sfn ~/.dotfiles/.config/newsboat/urls ~/.newsboat/urls
+
 
 # obs-studio obs-virtualcam blender handbrake kdenlive audacity peek shutter
 #yay -S hledger ledger homebank timetrap
