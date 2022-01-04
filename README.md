@@ -99,6 +99,11 @@ vscode @ts-nocheck
 - [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/)
 - Pop Shell
 - `yay -S gnome-shell-extension-pop-shell`
+- Gnome Tweaks
+   - Applications: Matcha-dark-sea
+   - Cursor: Adwaita
+   - Icons: Papirus-Dark-Maia
+   - Shell: Adwaita-maia-dark
 
 # Pop-Shell Keyboard
 
