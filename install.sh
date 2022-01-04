@@ -60,6 +60,8 @@ tcc gcc # base-devel
 # go dotnet-sdk mono flutter
 wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash # Nautilus VSCode
 ccls \
+sqlitebrowser
+
 
 
 # DevOps
