@@ -3,6 +3,8 @@
 sudo pacman -Syu
 sudo pacman -S yay
 
+
+yay -S brave-bin
 # Terminal
 yay -S alacritty
 mkdir -p ~/.config/alacritty && ln -sfn ~/.dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
@@ -11,7 +13,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
 
 # Terminal Navigation
-yay -S \
+yay -S \ñ
 ranger exa bat tree ripgrep \ # nnn lf
 tldr \
 tmux \
@@ -43,40 +45,52 @@ yay -S neovim xclip
 mkdir -p ~/.config/nvim && ln -sfn ~/.dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ln -sfn ~/.dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+yay -S ccls \
+
 
 # Developer Tools
 yay -S \
+base-devel \
+tcc \
 visual-studio-code-bin
 python python-pip
 pip3 install scipy
 hugo \
+nodejs npm nvm\
+jdk-openjdk \
+go go-tools 
+
+# Networking
 yay -S \
-nodejs nvm npm \
-java-environment \
-go go-tools \
-httpie ngrok-bin aria2 jq \
-tcc gcc # base-devel
+httpie \
+ngrok-bin \
+aria2 \
+jq 
+
+
 # insomnia postman transmission cyberduck
 # go dotnet-sdk mono flutter
-wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash # Nautilus VSCode
-ccls \
-sqlitebrowser
-
-
+wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
 
 # DevOps
 yay -S \
-docker ctop lazydocker-bin
+docker \
+lazydocker-bin \
 # aws-cli heroku-cli
 
 # Database Tools
 yay -S \
-sqlite litecli \
+sqlite \
+litecli \
+sqlitebrowser
 #ln -sfn ~/.dotfiles/sqlite.rc ~/sqlite.rc \
-mongodb # mongodb-compass \
-#dbeaver
-#postgres pgcli pgAdmin
-#q
+# dbeaver
+# postgres
+# pgcli
+# pgAdmin
+# q
+# mongodb
+# mongodb-compass
 
 # Cybersecurity
 yay -S \
@@ -86,44 +100,38 @@ nikto \
 wifite2 \
 nmap
 
-# Brave
-yay -S brave-bin
-# TODO: Find a way to import bookmarks
-
 # Gnome
-yay -S gnome-shell-extension-pop-shell
+yay -S \
+gnome-shell-extension-pop-shell-git \
+gnome-themes-extra
 
 # System
-#base-devel
 yay -S \
-gotop glances htop ncdu \
-neofetch ufetch \
+gotop htop ncdu \
+neofetch \
 duf gdu ncdu \
 gparted testdisk unetbootin \
 7zip cfdisk \
 dejadup \
-net-tools \
 bluez-utils \
 sc-im \
 cryptomator-bin \
-python-spotdl 
 # arc-gtk-theme papirus ttf-firacode tts-ms-fonts noto-fonts
 # screenkey imwheel
 # bitwarden vault keepass
 
 # Networking
 yay -S \
-protonvpn ntop
+net-tools \
+protonvpn \
+# ntop \
+
 
 # Utilities
 yay -S \
-anki-bin \
-zoom \
 zathura-pdf-poppler vlc mpv pandoc gimp youtube-dl deemix \
 sc \
 
-
-peek \
 sxiv \
 slides-bin \
 texlive-core \
@@ -132,25 +140,36 @@ pipes \
 cmatrix \
 monero-gui \
 calibre-installer \
-newsboat 
-mkdir -p ~/.newsboat/
-ln -sfn ~/.dotfiles/.config/newsboat/config ~/.newsboat/config
-ln -sfn ~/.dotfiles/.config/newsboat/urls ~/.newsboat/urls
+
+# Productivity
+anki-bin \
+zoom \
+newsboat \
+mkdir -p ~/.newsboat/ \
+ln -sfn ~/.dotfiles/.config/newsboat/config ~/.newsboat/config \
+ln -sfn ~/.dotfiles/.config/newsboat/urls ~/.newsboat/urls \
 
 
-# obs-studio obs-virtualcam blender handbrake kdenlive audacity peek shutter
-#yay -S hledger ledger homebank timetrap
+obs-studio   handbrake  audacity peek shutter
+
+blender
+kdenlive
+#yay -S hledger-bin ledger timetrap
 #yay -S uxplay avahi-daemon 
 
 # Music
-sudo pacman -S mpd ncmpcpp mpc
+yay -S \
+python-spotdl \
+mpd \
+ncmpcpp \
+mpc \
 mkdir ~/.config/mpd
 mkdir ~/.config/mpd/playlists
 ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
 ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
 mkdir ~/.config/ncmpcpp
-ln -sfn ~/.dotfiles/.config/ncmpcpp ~/.config
-sudo pacman -S spotify-tui-bin spotifyd 
+ln -sfn ~/.dotfiles/.config/ncmpcpp ~/.config/ncmpcpp
+# sudo pacman -S spotify-tui-bin spotifyd 
 
 
 # Other
