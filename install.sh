@@ -117,6 +117,7 @@ bluez-utils \
 sc-im \
 cryptomator-bin \
 # arc-gtk-theme papirus ttf-firacode tts-ms-fonts noto-fonts
+pacman -S ttf-liberation
 # screenkey imwheel
 # bitwarden vault keepass
 
