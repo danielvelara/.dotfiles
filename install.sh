@@ -168,7 +168,9 @@ mkdir ~/.config/mpd/playlists
 ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
 ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
 mkdir ~/.config/ncmpcpp
-ln -sfn ~/.dotfiles/.config/ncmpcpp ~/.config/ncmpcpp
+ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
+ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
+
 # sudo pacman -S spotify-tui-bin spotifyd 
 
 
