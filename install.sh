@@ -9,6 +9,7 @@ mkdir -p ~/.config/alacritty && ln -sfn ~/.dotfiles/.config/alacritty/alacritty.
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
+yay -S ttf-meslo-nerd-font-powerlevel10k                                                 ─╯
 
 # Terminal Navigation
 yay -S \

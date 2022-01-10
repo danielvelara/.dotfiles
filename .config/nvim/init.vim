@@ -3,7 +3,7 @@
 " -------------------
 call plug#begin()
     " Syntax highlighti and autocomplete
-    Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'fatih/vim-go'
     " Plug 'github/copilot.vim'
     " Plug 'sheerun/vim-polyglot'

@@ -26,6 +26,14 @@ window:
 scrolling:
   history: 1000
   multiplier: 10
+font:
+  normal:
+    family: "MesloLGS NF"
+    style: Regular
+  size: 13
+  offset:
+    x: -1
+    y: 0
 cursor:
   style:
     shape: Beam # Block, Underline, Beam
@@ -33,14 +41,6 @@ cursor:
   thickness: 0.15
   blink_interval: 300
   unfocused_hollow: false
-font:
-  normal:
-    family: Fira Code
-    style: Regular
-  size: 13
-  offset:
-    x: -1
-    y: 0
 selection:
   save_to_clipboard: false # Selected text to clipboard
 mouse_bindings:
