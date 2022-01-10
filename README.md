@@ -97,6 +97,7 @@ vscode @ts-nocheck
 - [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)'
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 - [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/)
+- [Time++](https://extensions.gnome.org/extension/1238/time/)
 - Pop Shell
 - `yay -S gnome-shell-extension-pop-shell`
 - Gnome Tweaks
