@@ -144,35 +144,35 @@ iSH
 Expo Go
 
 ## Android
-andOTP
-AnkiDroid
-Aurora
-Bromite
-Cake Wallet
-Google Camera
-F-Droid
-Edenred
-FairMail
-Firewall
-GBM+
-lichess
-GMaps
-mpv
-MuPDF
-Simple Music
-Nubank
-PingID
-OrganicMaps
-ProtonVPN
-QR Scanner
-RetroMusic
-Signal
-Spotify
-Termux
-Trust Wallet
-Uber
-weex
-WhatsApp
+- andOTP
+- AnkiDroid
+- Aurora
+- Bromite
+- Cake Wallet
+- Google Camera
+- F-Droid
+- Edenred
+- FairMail
+- Firewall
+- GBM+
+- lichess
+- GMaps
+- mpv
+- MuPDF
+- Simple Music
+- Nubank
+- PingID
+- OrganicMaps
+- ProtonVPN
+- QR Scanner
+- RetroMusic
+- Signal
+- Spotify
+- Termux
+- Trust Wallet
+- Uber
+- weex
+- WhatsApp
 
 ### Repos
 
