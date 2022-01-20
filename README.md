@@ -148,6 +148,7 @@ Expo Go
 - AnkiDroid
 - Aurora
 - Bromite
+- BBVA
 - Cake Wallet
 - Google Camera
 - F-Droid
