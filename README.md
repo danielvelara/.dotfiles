@@ -158,18 +158,22 @@ Expo Go
 - GBM+
 - lichess
 - GMaps
+- Guitar Tuna
 - mpv
 - MuPDF
 - Simple Music
 - Nubank
-- PingID
 - OrganicMaps
+- PingID
+- Photos
 - ProtonVPN
 - QR Scanner
+- Record Voice
 - RetroMusic
 - Signal
 - Spotify
 - Termux
+- Teams
 - Trust Wallet
 - Uber
 - weex
