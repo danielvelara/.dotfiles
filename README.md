@@ -1,92 +1,65 @@
-# .dotfile
-
-> Daniel Velázquez Lara
-```bash
-sudo pacman -Sy && \
-sudo pacman -S git --noconfirm && \
-git clone https://github.com/Einenlum/dotfiles-manjaro.git ~/dotfiles && \
-cd ~/dotfiles && \
-./install.sh
-https://github.com/jarun
-https://github.com/jarun/nnn
-https://ubunlog.com/ranger-gestor-archivo-terminal/
-https://wiki.archlinux.org/index.php/Ranger#Installation
-```
-
-1. Clone repo
-   `git clone https://github.com/danielvelara/.dotfiles`
+# .dotfiles
 
 ```bash
-sudo pacman -Sy && \
+sudo pacman -Syu && \
 sudo pacman -S git --noconfirm && \
-git clone https://github.com/danielvelara/.dotfiles ~/.dotfiles && \
-cd ~/.dotfiles && \
-./setup.sh
+git clone https://github.com/danielvelara/.dotfiles ~/.dotfiles
+sh ~/dotfiles/install.sh
 ```
-
-- Vim Install Plugins - `:PlugInstall`
-  code-minimap
-  deemix
-
-https://code.visualstudio.com/docs/languages/javascript
-vscode @ts-nocheck
 
 ## Chrome Extensions:
 - Developer
-  - [SeleniumIDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd)
-  - [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
-  - [BuiltWith](https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn)
-  - [WhatRuns](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaa)
-  - [React Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoieni)
-  - [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibl)
-  - [VisBug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbe)
-  - [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es)
-  - [Visbug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc/)
+   - [SeleniumIDE](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd)
+   - [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
+   - [BuiltWith](https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn)
+   - [WhatRuns](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaa)
+   - [React Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoieni)
+   - [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibl)
+   - [VisBug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbe)
+   - [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es)
+   - [Visbug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc/)
 - Productivity
-  - [ReadAloud](https://chrome.google.com/webstore/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp)
-    - chrome://extensions/shortcuts
-      - Play/Pause -> Alt+z
-      - Stop -> Alt+x
-  - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
-  - [JSONViewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related)
-  - [UniversalBypass](https://github.com/Sainan/Universal-Bypass)
-  - [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa)
-  - [MS Editor](https://chrome.google.com/webstore/detail/microsoft-editor-spelling/gpaiobkfhnonedkhhfjpmhdalgeoebfa)
-  - [ViewImage](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk)
+   - [ReadAloud](https://chrome.google.com/webstore/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp)
+   - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
+   - [JSONViewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related)
+   - [UniversalBypass](https://github.com/Sainan/Universal-Bypass)
+   - [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa)
+   - [MS Editor](https://chrome.google.com/webstore/detail/microsoft-editor-spelling/gpaiobkfhnonedkhhfjpmhdalgeoebfa)
+   - [ViewImage](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk)
+   - [Bypass Paywall](https://github.com/iamadamdev/bypass-paywalls-chrome)
+   - [Shazam](https://chrome.google.com/webstore/detail/shazam/mmioliijnhnoblpgimnlajmefafdfilb)
 - YouTube QoL
-  - [Unhook](https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid)
-  - [SponsorBlock](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
-  - [VideoSpeedController](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
-  - [h264ify](https://chrome.google.com/webstore/detail/h264ify/aleakchihdccplidncghkekgioiakgal)
-  - [Return YouTube Dislike](https://chrome.google.com/webstore/detail/return-youtube-dislike/gebbhagfogifgggkldgodflihgfeippi)
+   - [Unhook](https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid)
+   - [SponsorBlock](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
+   - [VideoSpeedController](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
+   - [h264ify](https://chrome.google.com/webstore/detail/h264ify/aleakchihdccplidncghkekgioiakgal)
+   - [Return YouTube Dislike](https://chrome.google.com/webstore/detail/return-youtube-dislike/gebbhagfogifgggkldgodflihgfeippi)
  - Reddit QoL
-  - [OldRedditRedirect](https://chrome.google.com/webstore/detail/old-reddit-redirect/dneaehbmnbhcippjikoajpoabadpodje)
-  - [RES](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb)
+   - [OldRedditRedirect](https://chrome.google.com/webstore/detail/old-reddit-redirect/dneaehbmnbhcippjikoajpoabadpodje)
+   - [RES](https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb)
 - Privacy
-  - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
-  - [ClearURLs](https://chrome.google.com/webstore/detail/clearurls/lckanjgmijmafbedllaakclkaicjfmnk)
-  - [Decentraleyes](https://chrome.google.com/webstore/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj)
-  - [Keepa](https://chrome.google.com/webstore/detail/neebplgakaahbhdphmkckjjcegoiijjo)
+   - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
+   - [ClearURLs](https://chrome.google.com/webstore/detail/clearurls/lckanjgmijmafbedllaakclkaicjfmnk)
+   - [Decentraleyes](https://chrome.google.com/webstore/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj)
+   - [Keepa](https://chrome.google.com/webstore/detail/neebplgakaahbhdphmkckjjcegoiijjo)
 - Web3
-  - [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
+   - [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
+   - [Terra Station Wallet](https://chrome.google.com/webstore/detail/terra-station-wallet/aiifbnbfobpmeekipheeijimdpnlpgpp)
 - [GNOME Shell Integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
 
 ## Anki Extensions
 
-    - Heatmap: Manual Install
-    - Image Occlusion: 1374772155
-    - ProgrssBar: 2091361802
-    - Syntax Highlighting for Code: 1463041493
-    - Anki Simulator: 817108664
-    - Frozen Fields: 516643804
-    - Advanced Review Bottom Bar: 1136455830
+- Heatmap: Manual Install
+- Image Occlusion: 1374772155
+- ProgrssBar: 2091361802
+- Syntax Highlighting for Code: 1463041493
+- Anki Simulator: 817108664
+- Frozen Fields: 516643804
+- Advanced Review Bottom Bar: 1136455830
 
 ## Gnome
 
-- Accessibility
-  - Repeat Keys
-
-### Gnome Extensions
+### Extensions
 
 - [cpufreq](https://extensions.gnome.org/extension/1082/cpufreq/)
 - [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
@@ -98,58 +71,49 @@ vscode @ts-nocheck
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
 - [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/)
 - [Time++](https://extensions.gnome.org/extension/1238/time/)
-- Pop Shell
-- `yay -S gnome-shell-extension-pop-shell`
-- Gnome Tweaks
-   - Applications: Matcha-dark-sea
-   - Cursor: Adwaita
-   - Icons: Papirus-Dark-Maia
-   - Shell: Adwaita-maia-dark
+- Pop Shell*
 
-# Pop-Shell Keyboard
-
-- Keyboard Shortcuts
-- Window
-  - [ ] Hide Window
-  - [ ] Toggle Fullscreen
-  - [ ] Close window
-  - [ ] Show the overview
-- System
-  - [ ] Lock Screen
+### Keyboard Shortcuts
 
 ```bash
-xdg-open https://                 # Browser
-xdg-open .                        # File Explorer
-code                              # VSCode
-alacritty .                       # Alacritty
+# Pop-Shell
+# Navigate applications and windows
+Super+J # Switch focus to window down
+Super+H # Switch focus to window left
+Super+L # Switch focus to window right
+Super+K # Switch focus to window up
+
+# System
+Super+Esc                  # Lock Screen
+Restore keyboard shortcuts # Disabled
+Show all applications      # Disabled
+Show overview              # Disabled
+
+# Typing
+Switch to next input source # Disabled
+Switch to prev input source # Disabled
+
+# Windows
+Close Window # Super+Backspace
+Hide Window  # Disabled
+Super+F      # Toggle fullscreen
+
+# Custom
+xdg-open https://  # Open Browser
+xdg-open .         # File Explorer
+code               # VSCode
+alacritty          # Alacritty
+rofi -show drun    # rofi drun
+rofi -show run     # rofi run
+rofi -show window  # rofi window
 ```
 
-## iPhone
-
-Phone
-NNWire
-BBVA
-Photos
-Spotify
-Anki
-Files
-Mail
-Browser
-WhatsApp
-
-GMaps
-Weex
-Pommie
-iSH
-Expo Go
-
-## Android
+## Smartphone
 - andOTP
 - AnkiDroid
 - Aurora
 - Bromite
 - BBVA
-- Cake Wallet
 - Google Camera
 - F-Droid
 - Edenred
@@ -164,6 +128,7 @@ Expo Go
 - Simple Music
 - Nubank
 - OrganicMaps
+- OpenScan
 - PingID
 - Photos
 - ProtonVPN
@@ -178,13 +143,3 @@ Expo Go
 - Uber
 - weex
 - WhatsApp
-
-### Repos
-
-https://apt-alfhaily.me/
-repo.hackyouriphone.org
-https://cokepokes.github.io/
-
-Spotilife, Watusi, LocalIAPStore, AppSyncUnified, AppStore++ # Crack
-Snapper2, CarBridge, SorryLowBatter, AudiRecorderXS(2X557691YE600192F)
-Springtomize5, Snowboard, HideYourApps, PowerModule ShyPageDots, Shuffle # UI
