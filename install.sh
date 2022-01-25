@@ -17,6 +17,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ln -sfn ~/.dotfiles/.p10k.zsh ~/
 
 # System
+yay -S awesome && \
+    ln -sfn ~/.dotfiles/.config/awesome ~/.config
 yay -S rofi rofi-emoji rofi-calc && \
     ln -sfn ~/.dotfiles/.config/rofi/ ~/.config
 # git clone --depth=1 https://github.com/adi1090x/rofi.git ; cd rofi ; chmod +x setup.sh ; ./setup
@@ -24,6 +26,7 @@ yay -S polybar && \
     ln -sfn ~/.dotfiles/.config/polybar ~/.config
 yay -S ranger && \
     ln -sfn ~/.dotfiles/.config/ranger ~/.config
+yay -S cronie
 
 
 # Terminal Navigation
@@ -41,15 +44,20 @@ yay -S \
 
 ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~/.tmux.conf
 # https://github.com/egel/tmux-gruvbox
-ln -sfn ~/.dotfiles/.Xresources ~/.Xresources
+ln -sfn ~/.dotfiles/.Xresources ~/
 xrdb -load ~/.Xresources
 ln -sfn ~/.dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+yay -S perl-image-exiftool
 
 
 # Developer
-yay -S git lazygit github-cli && ln -sfn ~/.dotfiles/.gitconfig ~/ && echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
+yay -S git lazygit github-cli && \
+    ln -sfn ~/.dotfiles/.gitconfig ~/ && \
+    ln -sfn ~/.dotfiles/.config/gh ~/.config && \
+    echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
+    
 yay -S neovim xclip ccls && ln -sfn ~/.dotfiles/.config/nvim ~/.config && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 yay -S \
@@ -58,7 +66,9 @@ yay -S \
     visual-studio-code-bin \
     firebase-tools-bin \
     python python-pip tk \
+    pip3 install neovim
     pip3 install scipy
+    pip3 install pyqt5 matplotlib
     hugo \
     nodejs npm nvm\
     npm i -g typescript
@@ -116,12 +126,13 @@ yay -S \
 gnome-shell-extension-pop-shell-git \
 gnome-themes-extra
 
+yay -S neofetch && \
+    ln -sfn ~/.dotfiles/.config/neofetch ~/.config
 # System
 yay -S \
     bc \
     sc-im \
     gotop htop ncdu \
-    neofetch \
     duf gdu ncdu \
     gparted testdisk unetbootin \
     7zip cfdisk \
@@ -146,8 +157,11 @@ protonvpn \
 yay -S gimp imagemagick
 sudo npm i -g @squoosh/cli
 
-yay -S \
-zathura-pdf-poppler vlc mpv pandoc gimp youtube-dl deemix \
+yay -S zathura-pdf-poppler && \
+    ln -sfn ~/.dotfiles/.config/zathura ~/.config
+yay -S mpv && \
+    ln -sfn ~/.dotfiles/.config/mpv ~/.config
+yay -S vlc pandoc gimp yt-dlp deemix \
 sc \
 scrcpy \
 sxiv \
@@ -191,16 +205,15 @@ cointop-bin
 
 
 # Music
-yay -S \
-    python-spotdl \
-    mpd \
-    ncmpcpp \
-    mpc \
-mkdir ~/.config/mpd
-mkdir ~/.config/mpd/playlists
-ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
-ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
-mkdir ~/.config/ncmpcpp
+# mkdir ~/.config/mpd
+# mkdir ~/.config/mpd/playlists
+# mkdir ~/.config/ncmpcpp
+yay -S ncmpcpp mpc mpd && \
+    ln -sfn ~/.dotfiles/.config/ncmpcpp ~/.config && \
+    ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf && \
+    ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
+
+yay -S python-spotdl \
 ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
 ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
 
