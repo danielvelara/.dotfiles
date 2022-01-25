@@ -1,2 +1,8 @@
-Sxiv.foreground: #111111
-Sxiv.background: #222222
+Sxiv.background: #000000
+Sxiv.foreground: #00C0FF
+
+rofi.ssh-client:                     ssh
+rofi.ssh-command:                    {terminal} -e "{ssh-client}" {host}
+
+
+

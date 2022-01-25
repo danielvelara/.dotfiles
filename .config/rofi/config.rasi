@@ -1,0 +1,14 @@
+/** Basic config file **/
+
+configuration {
+    display-drun: "Applications";
+    display-window: "Windows";
+    drun-display-format: "{icon} {name}";
+    modi: "window,run,drun,calc,emoji,filebrowser,combi";
+    show-icons:         true;
+    icon-theme:         "Papirus";
+}
+
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+//@theme "/home/danielvelara/.config/rofi/flat-orange.rasi"
+@theme "/usr/share/rofi/themes/android_notification.rasi"

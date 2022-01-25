@@ -2,7 +2,8 @@
 
 sudo pacman -Syu
 sudo pacman -S yay
-
+yay -S networkmanager
+# systemctl enable NetworkManager
 
 yay -S brave-bin
 # Terminal
@@ -13,14 +14,30 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
 yay -S ttf-meslo-nerd-font-powerlevel10k                                                 ─╯
 
+yay -S \
+    rofi \
+    rofi-emoji \
+    rofi-calc \
+    polybar
+
+git clone --depth=1 https://github.com/adi1090x/rofi.git
+cd rofi
+chmod +x setup.sh
+./setup
+
 # Terminal Navigation
-yay -S \ñ
-ranger exa bat tree ripgrep \ # nnn lf
-tldr \
-tmux \
-thefuck \
-fzf \
-jump
+yay -S \
+    ranger \
+    exa \
+    bat \
+    tree \
+    ripgrep \
+    tldr \
+    tmux \
+    thefuck \
+    fzf \
+    jump
+
 ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~/.tmux.conf
 # https://github.com/egel/tmux-gruvbox
 ln -sfn ~/.dotfiles/.Xresources ~/.Xresources
@@ -49,23 +66,28 @@ ln -sfn ~/.dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 yay -S ccls \
 
 
-# Developer Tools
+# Developer
 yay -S \
-base-devel \
-tcc \
-visual-studio-code-bin
-python python-pip
-pip3 install scipy
-hugo \
-nodejs npm nvm\
-jdk-openjdk \
-go go-tools 
+    base-devel \
+    tcc \
+    visual-studio-code-bin \
+    firebase-tools-bin \
+    python python-pip tk \
+    pip3 install scipy
+    hugo \
+    nodejs npm nvm\
+    npm i -g typescript
+    jdk-openjdk \
+    go go-tools 
 
 # Networking
 yay -S \
 httpie \
 ngrok-bin \
 aria2 \
+aircrack-ng \
+speedtest-cli \
+nload \
 jq 
 
 
@@ -77,6 +99,9 @@ wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.
 yay -S \
 docker \
 lazydocker-bin \
+sudo groupadd docker
+sudo usermod -aG docker $USER
+# reboot
 # aws-cli heroku-cli
 
 # Database Tools
@@ -108,16 +133,18 @@ gnome-themes-extra
 
 # System
 yay -S \
-gotop htop ncdu \
-neofetch \
-duf gdu ncdu \
-gparted testdisk unetbootin \
-7zip cfdisk \
-dejadup \
-bluez-utils \
-sc-im \
-cryptomator-bin \
-# arc-gtk-theme papirus ttf-firacode tts-ms-fonts noto-fonts
+    bc \
+    sc-im \
+    gotop htop ncdu \
+    neofetch \
+    duf gdu ncdu \
+    gparted testdisk unetbootin \
+    7zip cfdisk \
+    dejadup \
+    bluez bluez-utils \
+    # gnome-bluetooth \
+    espeak-ng \
+# arc-gtk-theme papirus ttf-firacode tts-ms-fonts ttf-ms-fonts noto-fonts
 pacman -S ttf-liberation
 # screenkey imwheel
 # bitwarden vault keepass
@@ -130,18 +157,23 @@ protonvpn \
 
 
 # Utilities
+# Images
+yay -S gimp imagemagick
+sudo npm i -g @squoosh/cli
+
 yay -S \
 zathura-pdf-poppler vlc mpv pandoc gimp youtube-dl deemix \
 sc \
-
+scrcpy \
 sxiv \
 slides-bin \
+beamer-bin \
 texlive-core \
 tmpmail \
 pipes \
 cmatrix \
-monero-gui \
 calibre-installer \
+
 
 # Productivity
 anki-bin \
@@ -156,8 +188,22 @@ obs-studio   handbrake  audacity peek shutter
 
 blender
 kdenlive
-#yay -S hledger-bin ledger timetrap
+
+# Finance
+yay -S \
+hledger-bin \
+ledger \
+timetrap
 #yay -S uxplay avahi-daemon 
+docker pull ghcr.io/gamestonkterminal/gst-poetry:latest                                             ─╯
+
+# Crypto
+yay -S \
+monero-gui \
+ticker \
+cointop-bin
+
+
 
 # Music
 yay -S \
@@ -183,4 +229,8 @@ sudo pacman -S cmatrix pipes.sh
 # yay -S popcorntime-bin retroarch minecraft openttd 0ad tint-tetris
 
 # Math
-# yay -S qalculate tungsten mathics
+yay -S \
+    qalculate \
+    libqalculate \
+    tungsten \
+    mathics
