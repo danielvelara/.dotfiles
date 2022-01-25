@@ -124,7 +124,6 @@ rofi -show window  # rofi window
 - Edenred
 - FairMail
 - Firewall
-- GBM+
 - lichess
 - GMaps
 - Guitar Tuna
@@ -132,7 +131,6 @@ rofi -show window  # rofi window
 - MuPDF
 - Simple Music
 - Nubank
-- OrganicMaps
 - OpenScan
 - PingID
 - Photos
@@ -143,8 +141,6 @@ rofi -show window  # rofi window
 - Signal
 - Spotify
 - Termux
-- Teams
-- Trust Wallet
 - Uber
 - weex
 - WhatsApp
