@@ -1,4 +1,9 @@
-# .dotfiles
+# ~/.dotfiles
+
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/13500134/150906114-216d4c5b-06f0-4ef4-a6d9-9087f2bc33b2.png" width="200"/>
+</p>
+
 
 ```bash
 sudo pacman -Syu && \
