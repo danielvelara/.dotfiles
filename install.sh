@@ -6,24 +6,25 @@ yay -S networkmanager
 # systemctl enable NetworkManager
 
 yay -S brave-bin
+
 # Terminal
-yay -S alacritty
-mkdir -p ~/.config/alacritty && ln -sfn ~/.dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-# oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+yay -S alacritty && \
+    ln -sfn ~/.dotfiles/.config/alacritty ~/.config
 ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 yay -S ttf-meslo-nerd-font-powerlevel10k                                                 ─╯
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+ln -sfn ~/.dotfiles/.p10k.zsh ~/
 
-yay -S \
-    rofi \
-    rofi-emoji \
-    rofi-calc \
-    polybar
+# System
+yay -S rofi rofi-emoji rofi-calc && \
+    ln -sfn ~/.dotfiles/.config/rofi/ ~/.config
+# git clone --depth=1 https://github.com/adi1090x/rofi.git ; cd rofi ; chmod +x setup.sh ; ./setup
+yay -S polybar && \
+    ln -sfn ~/.dotfiles/.config/polybar ~/.config
+yay -S ranger && \
+    ln -sfn ~/.dotfiles/.config/ranger ~/.config
 
-git clone --depth=1 https://github.com/adi1090x/rofi.git
-cd rofi
-chmod +x setup.sh
-./setup
 
 # Terminal Navigation
 yay -S \
@@ -43,30 +44,14 @@ ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~/.tmux.conf
 ln -sfn ~/.dotfiles/.Xresources ~/.Xresources
 xrdb -load ~/.Xresources
 ln -sfn ~/.dotfiles/.config/ranger/rc.conf ~/.config/ranger/rc.conf
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-# Git
-ln -sfn ~/.dotfiles/.gitconfig ~/.gitconfig 
-yay -S lazygit github-cli
-echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
-git config --global alias.cm "commit -m"
-git config --global alias.co "checkout"
-git config --global alias.br "branch"
-git config --global alias.st "status -sb"
-git config --global core.editor "nvim"
-git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-
-# Neovim
-yay -S neovim xclip
-mkdir -p ~/.config/nvim && ln -sfn ~/.dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-ln -sfn ~/.dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
-yay -S ccls \
-
 
 # Developer
+yay -S git lazygit github-cli && ln -sfn ~/.dotfiles/.gitconfig ~/ && echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
+yay -S neovim xclip ccls && ln -sfn ~/.dotfiles/.config/nvim ~/.config && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 yay -S \
     base-devel \
     tcc \
@@ -207,10 +192,10 @@ cointop-bin
 
 # Music
 yay -S \
-python-spotdl \
-mpd \
-ncmpcpp \
-mpc \
+    python-spotdl \
+    mpd \
+    ncmpcpp \
+    mpc \
 mkdir ~/.config/mpd
 mkdir ~/.config/mpd/playlists
 ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
@@ -222,15 +207,13 @@ ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
 # sudo pacman -S spotify-tui-bin spotifyd 
 
 
-# Other
+# Utilities
 sudo pacman -S cmatrix pipes.sh
 
 # Entertainmnet
 # yay -S popcorntime-bin retroarch minecraft openttd 0ad tint-tetris
 
 # Math
-yay -S \
-    qalculate \
-    libqalculate \
-    tungsten \
-    mathics
+yay -S qalculate libqalculate
+ln -sfn ~/.dotfiles/.config/qalculate ~/.config
+# yay -S tungsten mathics
