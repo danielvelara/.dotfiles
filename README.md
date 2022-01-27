@@ -33,6 +33,7 @@ sh ~/dotfiles/install.sh
    - [ViewImage](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk)
    - [Bypass Paywall](https://github.com/iamadamdev/bypass-paywalls-chrome)
    - [Shazam](https://chrome.google.com/webstore/detail/shazam/mmioliijnhnoblpgimnlajmefafdfilb)
+   - [Simple Allow Copy](https://chrome.google.com/webstore/detail/simple-allow-copy/aefehdhdciieocakfobpaaolhipkcpgc)
 - YouTube QoL
    - [Unhook](https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid)
    - [SponsorBlock](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
