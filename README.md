@@ -123,7 +123,6 @@ rofi -show window  # rofi window
 - Google Camera
 - F-Droid
 - Edenred
-- FairMail
 - Firewall
 - lichess
 - GMaps
@@ -131,7 +130,6 @@ rofi -show window  # rofi window
 - mpv
 - MuPDF
 - Simple Music
-- Nubank
 - OpenScan
 - PingID
 - Photos
@@ -142,6 +140,4 @@ rofi -show window  # rofi window
 - Signal
 - Spotify
 - Termux
-- Uber
-- weex
 - WhatsApp
