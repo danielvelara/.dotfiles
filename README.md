@@ -112,6 +112,7 @@ alacritty          # Alacritty
 rofi -show drun    # rofi drun
 rofi -show run     # rofi run
 rofi -show window  # rofi window
+flameshot gui
 ```
 
 ## Smartphone
