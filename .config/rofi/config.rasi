@@ -11,4 +11,5 @@ configuration {
 
 //@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
 //@theme "/home/danielvelara/.config/rofi/flat-orange.rasi"
-@theme "/usr/share/rofi/themes/android_notification.rasi"
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

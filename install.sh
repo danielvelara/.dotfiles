@@ -27,10 +27,12 @@ yay -S polybar && \
 yay -S ranger && \
     ln -sfn ~/.dotfiles/.config/ranger ~/.config
 yay -S cronie
+yay -S flameshot
 
 
 # Terminal Navigation
 yay -S \
+    pass
     ranger \
     exa \
     bat \
@@ -64,7 +66,6 @@ yay -S \
     base-devel \
     tcc \
     visual-studio-code-bin \
-    firebase-tools-bin \
     python python-pip tk \
     pip3 install neovim
     pip3 install scipy
@@ -75,15 +76,22 @@ yay -S \
     jdk-openjdk \
     go go-tools 
 
+yay -S \
+    firebase-tools-bin \
+    aws-cli-v2-bin
+
 # Networking
 yay -S \
-httpie \
-ngrok-bin \
-aria2 \
-aircrack-ng \
-speedtest-cli \
-nload \
-jq 
+    httpie \
+    ngrok-bin \
+    aria2 \
+    aircrack-ng \
+    speedtest-cli \
+    nload \
+    ipcalc \
+    whois \
+    gnu-netcat \
+    jq 
 
 
 # insomnia postman transmission cyberduck
@@ -162,6 +170,7 @@ yay -S zathura-pdf-poppler && \
 yay -S mpv && \
     ln -sfn ~/.dotfiles/.config/mpv ~/.config
 yay -S vlc pandoc gimp yt-dlp deemix \
+    pomo
 sc \
 scrcpy \
 sxiv \
@@ -216,6 +225,7 @@ yay -S ncmpcpp mpc mpd && \
 yay -S python-spotdl \
 ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
 ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
+# yay -S pulsemixer
 
 # sudo pacman -S spotify-tui-bin spotifyd 
 
