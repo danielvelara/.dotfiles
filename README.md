@@ -126,12 +126,16 @@ flameshot gui
 - Edenred
 - Firewall
 - lichess
+- LocationPrivacy
 - GMaps
 - Guitar Tuna
 - mpv
 - MuPDF
 - Simple Music
 - OpenScan
+- OpenKeychain
+- OrganicMaps
+- PasswordStore
 - PingID
 - Photos
 - ProtonVPN
@@ -139,6 +143,9 @@ flameshot gui
 - Record Voice
 - RetroMusic
 - Signal
+- Stellarium
 - Spotify
 - Termux
+- Tabs
+- Trail Sense
 - WhatsApp
