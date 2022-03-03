@@ -121,7 +121,6 @@ flameshot gui
 - Aurora
 - Bromite
 - BBVA
-- Google Camera
 - F-Droid
 - Edenred
 - Firewall
@@ -133,11 +132,11 @@ flameshot gui
 - MuPDF
 - Simple Music
 - OpenScan
+- Open Camera
 - OpenKeychain
 - OrganicMaps
 - PasswordStore
 - PingID
-- Photos
 - ProtonVPN
 - QR Scanner
 - Record Voice
