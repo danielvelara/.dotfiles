@@ -115,10 +115,9 @@ rofi -show window  # rofi window
 flameshot gui
 ```
 
-## Smartphone
-- andOTP
+## CalyxOS Apps
 - AnkiDroid
-- Aurora
+- AuroraStore
 - Bromite
 - BBVA
 - F-Droid
@@ -141,7 +140,6 @@ flameshot gui
 - QR Scanner
 - Record Voice
 - RetroMusic
-- Signal
 - Stellarium
 - Spotify
 - Termux
