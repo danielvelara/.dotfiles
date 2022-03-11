@@ -115,30 +115,34 @@ rofi -show window  # rofi window
 flameshot gui
 ```
 
-## Smartphone
-- andOTP
+## CalyxOS Apps
 - AnkiDroid
-- Aurora
+- AuroraStore
 - Bromite
 - BBVA
-- Google Camera
 - F-Droid
 - Edenred
 - Firewall
 - lichess
+- LocationPrivacy
 - GMaps
 - Guitar Tuna
 - mpv
 - MuPDF
 - Simple Music
 - OpenScan
+- Open Camera
+- OpenKeychain
+- OrganicMaps
+- PasswordStore
 - PingID
-- Photos
 - ProtonVPN
 - QR Scanner
 - Record Voice
 - RetroMusic
-- Signal
+- Stellarium
 - Spotify
 - Termux
+- Tabs
+- Trail Sense
 - WhatsApp
