@@ -4,7 +4,7 @@
 call plug#begin()
     " Syntax highlighti and autocomplete
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'fatih/vim-go'
+    " Plug 'fatih/vim-go'
     " Plug 'github/copilot.vim'
     " Plug 'sheerun/vim-polyglot'
     " Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'
@@ -92,6 +92,7 @@ let g:coc_global_extensions = [
 	\ 'coc-pyright',
     \ 'coc-java',
 	\ 'coc-pairs',
+	\ 'coc-go',
 \ ]
 " \ 'coc-snippets',
 " \ 'coc-tag', 
@@ -112,8 +113,9 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-type-definition)
 " nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" nmap <silent> [g <Plug>(coc-diagnostic-prev)
+" nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> gw <Plug>(coc-diagnostic-next)
 " nmap <silent> gf <Plug>(coc-format)
 nmap <F2> <Plug>(coc-rename)
 

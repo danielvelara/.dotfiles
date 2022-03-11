@@ -32,7 +32,8 @@ HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
 
 # PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
-plugins=(git python docker zsh-autosuggestions zsh-syntax-highlighting)
+# plugins=(git python docker zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git gh python docker aws pass golang archlinux ufw npm zsh-autosuggestions)
 # plugins=(zsh-syntax-highlighting zsh-completions git)
 
 pasteinit() {

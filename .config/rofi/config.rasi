@@ -4,7 +4,7 @@ configuration {
     display-drun: "Applications";
     display-window: "Windows";
     drun-display-format: "{icon} {name}";
-    modi: "window,run,drun,calc,emoji,filebrowser,combi";
+    modi: "window,run,drun,calc,emoji,filebrowser,combi,ssh";
     show-icons:         true;
     icon-theme:         "Papirus";
 }
@@ -12,4 +12,5 @@ configuration {
 //@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
 //@theme "/home/danielvelara/.config/rofi/flat-orange.rasi"
 //@theme "/usr/share/rofi/themes/android_notification.rasi"
-@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"

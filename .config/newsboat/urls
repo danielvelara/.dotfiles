@@ -22,7 +22,6 @@ https://verificado.com.mx/feed/ "~Verificado"
 ---News---
 https://www.slowernews.com/rss.xml "~Slower News"
 ---Blogs---
-https://danluu.com/atom.xm "~Dan Luu"
 https://chasethedevil.github.io/index.xml "~Chase the Devil"
 https://levels.io/rss/ "~@levelsio (Pieter Levels)"
 https://apod.nasa.gov/apod.rss "~APoD"
@@ -52,7 +51,26 @@ https://realpython.com/atom.xml "~Real Python"
 https://code.visualstudio.com/feed.xml "~Visual Studio Code - Code Editing. Redefined."
 https://cprss.s3.amazonaws.com/golangweekly.com.xml "~Golang Weekly"
 https://selfhostedheaven.com/feed.xml "~Selfhosted Heaven"
----Biz--
+https://randomascii.wordpress.com/feed/ "~Random ASCII"
+https://jvns.ca/atom.xml "~Julia Evans"
+https://poor.dev/blog/index.xml "~poor.dev"
+https://www.taniarascia.com/rss.xml "~Tania Rascia"
+https://ciechanow.ski/atom.xml "~Bartosz Ciechanowski"
+https://fabiensanglard.net/rss.xml "~Fabien Sanglard"
+https://eli.thegreenplace.net/feeds/all.atom.xml "~Eli Bendersky"
+https://danluu.com/atom.xml "~Dan Luu"
+https://www.joshwcomeau.com/rss.xml "~Josh W Comeau"
+https://drewdevault.com/blog/index.xml "~Drew DeVault's"
+https://kinduff.com/feed.xml "~Kinduff"
+https://m10k.eu/feed.xml "~m10k"
+https://shapeshed.com/index.xml "~George Ornbo"
+https://fasterthanli.me/index.xml "~Amos"
+http://antirez.com/rss "~<antirez>"
+https://www.natemeyvis.com/writing/rss/ "~Nate Meyvis"
+https://critter.blog/feed/ "Critter"
+---Blogs---
+https://acoup.blog/feed/ "~A Collection of Unmitigated Pedantry"
+---Biz---
 https://feeds.feedburner.com/visualcapitalist "~Visual Capitalist"
 https://www.investopedia.com/feedbuilder/feed/getfeed "~Investopedia"
 https://kill-the-newsletter.com/feeds/wh66k0tsr08w7jtg.xml "~Money Brief"
@@ -62,12 +80,15 @@ https://perrodinero.blog/feed.xml "~Perro Dinero - Finanzas Personales 🐕💵"
 https://decrypt.co/feed "~Decrypt"
 https://cointelegraph.com/rss "~Cointelegraph.com News"
 https://www.diariobitcoin.com/feed/ "~DiarioBitcoin"
----Tech News---
+---TechNews---
 https://es.gizmodo.com/rss "~Gizmodo en Español"
 http://feeds.weblogssl.com/genbeta "~Genbeta"
 https://hipertextual.com/feed/ "~Hipertextual"
+http://feeds.weblogssl.com/xataka2 "~Xataka"
 https://www.eff.org/rss/updates.xml "~EFF"
 https://calyxos.org/feed.xml "~CalyxOS"
+---Misc---
+https://homesteadandchill.com/feed/ "~Homestead & Chill"
 ---YouTube:Developer---
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "~Fireship"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA "~Computerphile"
@@ -127,7 +148,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCSHZKyawb77ixDdsGog4iWA "~L
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9yt3wz-6j19RwD5m5f6HSg "~Think Twice"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtxJFU9DgUhfr2J2bveCHkQ "~Verge Science"
 https://www.youtube.com/feeds/videos.xml?channel_id=UConJDkGk921yT9hISzFqpzw "~Freethink"
----YouTube:World News---
+---YouTube:World-News---
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9RM-iSvTu1uPJb8X5yp3EQ "~Wendover Productions"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtYKe7-XbaDjpUwcU5x0bLg "~neo"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCW39zufHfsuGgpLviKh297Q "~DW Documentary"
@@ -152,6 +173,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCp1mRTkVlqDnxz_9S0YD9YQ "~P
 https://www.youtube.com/feeds/videos.xml?channel_id=UCpvhlSLzg2LT89FNUuN-Sig "~Wireless Philosophy"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC6-ymYjG0SU0jUWnWh9ZzEQ "~Wisecrack"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCf_MY8uWjWH8gwzFK6vCAmg "~Esquizofrenia Natural"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9pO2YNforRbdwKOh09djKA "~BlankOnBlank"
 ---YouTube:Entretainment---
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRcgy6GzDeccI7dkbbBna3Q "~LEMMiNO"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOjH8D2XAgjzQlneM2W0EQ "~Jake Tran"
@@ -182,6 +204,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCr_Q-bPpcw5fJ-Oow1BW1NQ "~K
 https://www.youtube.com/feeds/videos.xml?channel_id=UCNIuvl7V8zACPpTmmNIqP2A "~OverSimplified"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCCODtTcd5M1JavPCOr_Uydg "~Extra Credits"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC1DTYW241WD64ah5BFWn4JA "~Sam O'Nella Academy"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVbOEcs6RMxXXX3WWNtl_Fw "~El Mapa de Sebas"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCv05qOuJ6Igbe-EyQibJgwQ "~Academia Play"
 ---GitHub---
 https://github.com/Ciphey/Ciphey/releases.atom "~Ciphey"
 https://github.com/zagortenay333/timepp__gnome/tags.atom "~timepp"
@@ -198,3 +222,20 @@ https://github.com/alacritty/alacritty/releases.atom "~Alacritty"
 https://github.com/maaslalani/slides/releases "~slides"
 https://github.com/termux/termux-app/releases "~Termux"
 https://github.com/M66B/FairEmail "~FairEmail"
+---Reddit---
+# https://old.reddit.com/r/mexico/top/.rss "~r/mexico"
+# https://old.reddit.com/r/Guadalajara/top/.rss "~r/Guadalajara"
+# https://old.reddit.com/r/DerechoMexicano/top/.rss "~r/DerechoMexicano"
+# ---Reddit:Tech---
+# https://old.reddit.com/r/unixporn/top/.rss "~r/unixporn"
+# https://old.reddit.com/r/privacy/top/.rss "~r/privacy"
+# https://old.reddit.com/r/hacking/top/.rss "~r/hacking"
+# https://old.reddit.com/r/Anki/top/.rss "~r/Anki"
+#---Reddit:Communities---
+# https://old.reddit.com/r/Consoom/top/.rss "~r/Consoom"
+# https://old.reddit.com/r/Cringetopia/top/.rss "~r/Cringetopia"
+# https://old.reddit.com/r/trippy/top/.rss "~r/trippy"
+# https://old.reddit.com/r/LucidDreaming/top/.rss "~r/LucidDreaming"
+# https://old.reddit.com/r/InternetIsBeautiful/top/.rss "~r/InternetIsBeautiful"
+# https://old.reddit.com/r/woahdude/top/.rss "~r/woahdude"
+

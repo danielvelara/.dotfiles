@@ -60,7 +60,8 @@ key_bindings:
 working_directory: None # WD of parent process
 
 # Appearance
-background_opacity: 1.0
+# background_opacity: 1.0
+window.opacity: 1.0
 colors:
   # Default colors
   primary:
