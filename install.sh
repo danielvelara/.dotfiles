@@ -18,6 +18,7 @@ sudo pacman -S gnome gnome-extra gnome-shell-extension-pop-shell-git gnome-theme
 # sudo pacman -S xfce4 xfce4-goodies
 # yay -S awesome && ln -sfn ~/.dotfiles/.config/awesome ~/.config
 yay -S brightnessctl
+yay -S xorg-xrandr
 
 
 # Desktop Tools
@@ -25,6 +26,7 @@ yay -S rofi rofi-emoji rofi-calc && ln -sfn ~/.dotfiles/.config/rofi/ ~/.config
 # git clone --depth=1 https://github.com/adi1090x/rofi.git ; cd rofi ; chmod +x setup.sh ; ./setup
 yay -S polybar && ln -sfn ~/.dotfiles/.config/polybar ~/.config
 yay -S ranger && ln -sfn ~/.dotfiles/.config/ranger ~/.config
+yay -S dunst && ln -sfn ~/.dotfiles/.config/dunst ~/.config
 
 
 # Terminal
@@ -39,6 +41,7 @@ yay -S cronie
 
 # Gnome
 yay -S brave-bin
+yay -S librewolf-bin
 
 # System
 yay -S \
@@ -80,7 +83,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 yay -S tmux && ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~/.tmux.conf
 yay -S newsboat && ln -sfn ~/.dotfiles/.config/newsboat ~/.newsboat
 yay -S ranger && ln -sfn ~/.dotfiles/.config/ranger ~/.config
-yay -S perl-image-exiftool
+yay -S lf-bin
+yay -S perl-image-exiftool mediainfo
 
 
 
@@ -192,6 +196,8 @@ yay -S pandoc-bin yt-dlp \
     tmpmail \
     pipes \
     cmatrix \
+    # calcurse \
+    # khal \
     calibre-installer \
 
 
