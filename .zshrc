@@ -61,6 +61,8 @@ export EDITOR=nvim;
 alias vim='nvim'
 alias exa='exa -l'
 alias dmenu='rofi -dmenu'
+alias n="ncmpcpp"
+alias nb="newsboat"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
