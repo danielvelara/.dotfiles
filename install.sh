@@ -68,9 +68,9 @@ yay -S \
     exa \
     bat \
     tree \
-    ripgrep \
     tldr \
     thefuck \
+    ripgrep \
     fzf \
     jump
 
@@ -83,7 +83,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 yay -S tmux && ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~/.tmux.conf
 yay -S newsboat && ln -sfn ~/.dotfiles/.config/newsboat ~/.newsboat
 yay -S ranger && ln -sfn ~/.dotfiles/.config/ranger ~/.config
-yay -S lf-bin
+yay -S lf-bin && ln -sfn ~/.dotfiles/.config/lf ~/.config
 yay -S perl-image-exiftool mediainfo
 
 

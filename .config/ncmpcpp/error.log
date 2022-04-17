@@ -15,3 +15,5 @@ writeCommonTags: couldn't write 'track' tag to 'Our Dream - Sovietwave.m4a' as i
 writeCommonTags: couldn't write 'year' tag to 'Tycho - The Science of Patterns.m4a' as it's not a positive integer
 writeCommonTags: couldn't write 'track' tag to 'Tycho - The Science of Patterns.m4a' as it's not a positive integer
 TagLib: Could not open file /home/danielvelara/Music/Skeeter Davis - The End of the World.mp3
+writeCommonTags: couldn't write 'year' tag to 'Migala-LoFi.m4a' as it's not a positive integer
+writeCommonTags: couldn't write 'track' tag to 'Migala-LoFi.m4a' as it's not a positive integer

@@ -33,7 +33,7 @@ HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
 # PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
 # plugins=(git python docker zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(git gh python docker aws pass golang archlinux ufw npm zsh-autosuggestions)
+plugins=(git gh python docker aws pass golang archlinux ufw npm httpie zsh-autosuggestions)
 # plugins=(zsh-syntax-highlighting zsh-completions git)
 
 pasteinit() {
@@ -63,6 +63,7 @@ alias exa='exa -l'
 alias dmenu='rofi -dmenu'
 alias n="ncmpcpp"
 alias nb="newsboat"
+alias q="qalc"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
