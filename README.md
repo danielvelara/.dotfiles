@@ -113,6 +113,7 @@ rofi -show drun    # rofi drun
 rofi -show run     # rofi run
 rofi -show window  # rofi window
 flameshot gui
+powerprofilesctl set $(printf "performance\nbalanced\npower-saver" | rofi -dmenu -p "Power Mode")
 ```
 
 ## CalyxOS Apps
