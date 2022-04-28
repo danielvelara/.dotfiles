@@ -144,6 +144,16 @@ powerprofilesctl set $(printf "performance\nbalanced\npower-saver" | rofi -dmenu
 - Stellarium
 - Spotify
 - Termux
+- Signal
 - Tabs
 - Trail Sense
 - WhatsApp
+
+## F-Droid Repositories
+https://apt.izzysoft.de/fdroid/repo
+https://www.collaboraoffice.com/downloads/fdroid/repo/
+https:://molly.im/fdroid/foss/fdroid/repo
+https://fdroid.bromite.org/fdroid/repo
+https://guardianproject.info/
+https://fdroid.getsession.org/fdroid/repo
+
