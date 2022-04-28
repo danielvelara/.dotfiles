@@ -52,6 +52,9 @@ source /usr/share/nvm/init-nvm.sh
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 setxkbmap -option caps:escape
+# gsettings set org.gnome.desktop.interface text-scaling-factor 1.4
+# redshift -O 2500k -P
+
 
 export ARCHFLAGS="-arch x86_64"
 export VISUAL=nvim;
@@ -64,6 +67,7 @@ alias dmenu='rofi -dmenu'
 alias n="ncmpcpp"
 alias nb="newsboat"
 alias q="qalc"
+alias ct="cointop"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -16,9 +16,13 @@ systemctl enable lxdm.service
 # Desktop Envrionment
 sudo pacman -S gnome gnome-extra gnome-shell-extension-pop-shell-git gnome-themes-extra
 # sudo pacman -S xfce4 xfce4-goodies
+yay -S xfce4-settings
 # yay -S awesome && ln -sfn ~/.dotfiles/.config/awesome ~/.config
 yay -S brightnessctl
 yay -S xorg-xrandr
+yay -S polybar
+yay -S networkmanager_dmenu
+ln -sfn ~/.dotfiles/.config/networkmanager-dmenu ~/.config
 
 
 # Desktop Tools
@@ -58,6 +62,10 @@ yay -S \
 # arc-gtk-theme papirus ttf-firacode tts-ms-fonts ttf-ms-fonts noto-fonts
 pacman -S ttf-liberation
 yay -S neofetch && ln -sfn ~/.dotfiles/.config/neofetch ~/.config
+
+yay -S redshift
+ln -sfn ~/.dotfiles/.config/redshift ~/.config
+
 # screenkey imwheel
 
 
@@ -73,6 +81,7 @@ yay -S \
     ripgrep \
     fzf \
     jump
+ln -sfn ~/.dotfiles/.config/bat ~/.config
 
     # https://github.com/egel/tmux-gruvbox
 
@@ -97,6 +106,7 @@ echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore
 yay -S \
     visual-studio-code-bin \
     neovim xclip ccls && ln -sfn ~/.dotfiles/.config/nvim ~/.config && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+npm install -g bash-language-server
 
 yay -S \
     base-devel tcc \
@@ -110,7 +120,9 @@ pip3 install pyqt5 matplotlib
 npm i -g typescript
 # hugo \
 
+
 wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
+yay -S pcmanfm thunar
 
 # Networking
 yay -S \
@@ -165,10 +177,12 @@ ln -sfn ~/.dotfiles/.sqliterc ~/
 # mongodb
 # mongodb-compass
 
+# Android & iOS
+yay -S scrcpy # uxplay avahi-daemon 
 
-
-# Android
-    scrcpy \
+# GUI Apps
+yay -S anki-bin \ zoom
+yay -S libreoffice-still
 
 # Screen Recording & Video & Images
 yay -S && \
@@ -201,33 +215,24 @@ yay -S pandoc-bin yt-dlp \
     calibre-installer \
 
 
-# Productivity
-anki-bin \
-zoom \
-
-
-
 
 # Finance
 yay -S \
     hledger-bin \
+    ticker
     ledger \
     timetrap
-#yay -S uxplay avahi-daemon 
 docker pull ghcr.io/gamestonkterminal/gst-poetry:latest                                             ─╯
 
-# Crypto
+# Finance & Crypto
 yay -S \
-monero-gui \
-ticker \
-cointop-bin
-
+    monero-gui \
+    cointop-bin \
+    electrum \
+    wasabi-wallet-bin
 
 
 # Music
-# mkdir ~/.config/mpd
-# mkdir ~/.config/mpd/playlists
-# mkdir ~/.config/ncmpcpp
 yay -S ncmpcpp mpc mpd && \
     ln -sfn ~/.dotfiles/.config/ncmpcpp ~/.config && \
     ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf && \
@@ -241,11 +246,11 @@ ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
 # sudo pacman -S spotify-tui-bin spotifyd 
 
 
-# Utilities
+# CLI
 sudo pacman -S cmatrix pipes.sh
 
 # Entertainmnet
-# yay -S popcorntime-bin retroarch minecraft openttd 0ad tint-tetris
+# yay -S popcorntime-bin retroarch retroarch-assests-xmb minecraft openttd 0ad tint-tetris
 
 # Math
 yay -S qalculate libqalculate

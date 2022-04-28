@@ -75,6 +75,7 @@ https://critter.blog/feed/ "Critter"
 https://unzip.dev/rss/ "~Unzip"
 ---Blogs:AI---
 https://jack-clark.net/feed/ "~Import AI"
+https://openai.com/blog/rss/ "~OpenAI"
 ---Blogs---
 https://acoup.blog/feed/ "~A Collection of Unmitigated Pedantry"
 ---Biz---
@@ -137,6 +138,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCqM1Yw5XfJ5rVwCntLy0KxA "~L
 ---YouTube:Science---
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q "~Kurzgesagt – In a Nutshell"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCTpmmkp1E4nmZqWPS-dl5bg "~Quanta Magazine"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCIFtADcWrOApqrsinzPoOfA "~Destiny"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtRFmSyL4fSLQkn-wMqlmdA "~History of the Universe"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCK-0srt5hdY5m6Zos_NlJZg "~The Secrets of the Universe"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCe3tPdpxTF7wdBG8uV4hbew "~Seeker+"
@@ -159,6 +161,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCUHW94eEFW7hkUMVaZz4eDg "~M
 https://www.youtube.com/feeds/videos.xml?channel_id=UCeiYXex_fwgYDonaTcSIk6w "~MinuteEarth"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCxqAWLTk1CmBvZFPzeZMd9A "~DoS - Domain of Science"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCSHZKyawb77ixDdsGog4iWA "~Lex Fridman"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJIfeSCssxSC_Dhc5s7woww "~Lex Clips"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9yt3wz-6j19RwD5m5f6HSg "~Think Twice"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtxJFU9DgUhfr2J2bveCHkQ "~Verge Science"
 https://www.youtube.com/feeds/videos.xml?channel_id=UConJDkGk921yT9hISzFqpzw "~Freethink"
@@ -249,11 +252,13 @@ https://github.com/M66B/FairEmail "~FairEmail"
 # https://old.reddit.com/r/mexico/top/.rss "~r/mexico"
 # https://old.reddit.com/r/Guadalajara/top/.rss "~r/Guadalajara"
 # https://old.reddit.com/r/DerechoMexicano/top/.rss "~r/DerechoMexicano"
+# https://old.reddit.com/r/MexicoFinanciero/top/.rss "~r/MexicoFinanciero"
 # ---Reddit:Tech---
 # https://old.reddit.com/r/unixporn/top/.rss "~r/unixporn"
 # https://old.reddit.com/r/privacy/top/.rss "~r/privacy"
 # https://old.reddit.com/r/hacking/top/.rss "~r/hacking"
 # https://old.reddit.com/r/Anki/top/.rss "~r/Anki"
+# https://old.reddit.com/r/selfhosted/top/.rss "~r/Anki"
 #---Reddit:Communities---
 # https://old.reddit.com/r/Consoom/top/.rss "~r/Consoom"
 # https://old.reddit.com/r/Cringetopia/top/.rss "~r/Cringetopia"

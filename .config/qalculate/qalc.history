@@ -22,8 +22,8 @@ rpn off
 0010 1010 to oct
 0010 1010 to dec
 00101010 to dec
-
 0b00110100
 0x42
 0xFF
 42m to ft
+120 to hex

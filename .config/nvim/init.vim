@@ -4,6 +4,7 @@
 call plug#begin()
     " Syntax highlighti and autocomplete
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'jackguo380/vim-lsp-cxx-highlight'
     " Plug 'fatih/vim-go'
     " Plug 'github/copilot.vim'
     " Plug 'sheerun/vim-polyglot'
@@ -11,7 +12,6 @@ call plug#begin()
 
     " Plug 'nvim-treesitter/nvim-treesitter'
     " Plug 'nvim-orgmode/orgmode'
-
 
     Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -29,8 +29,9 @@ call plug#begin()
     " Plug 'plasticboy/vim-markdown'
     " Plug 'vim-pandoc/vim-pandoc'
 
-    " Git
+    " VCS
     " Plug tpope/vim-fugitive
+    Plug 'tpope/vim-fugitive'
 
     " Symbols for git diffs in files as you type.
     " Plug 'airblade/vim-gitgutter'
@@ -42,19 +43,14 @@ call plug#begin()
     " Plug 'terryma/vim-multiple-cursors'
 
     " WebDev
-    Plug 'neoclide/coc-pairs'
     " Plug 'alvan/vim-closetag'
     " Plug 'docunext/closetag.vim'
-    " Plug 'jiangmiao/auto-pairs'
-    " Plug 'mxw/vim-jsx'
-    " Plug 'mattn/emmet-vim'
-    " Plug 'mlaursen/vim-react-snippets'
+    Plug 'maxmellon/vim-jsx-pretty'
     " Plug 'leafgarland/typescript-vim'
     " Plug 'styled-components/vim-styled-components'
     " Plug 'jparise/vim-graphql'
     " Plug 'rettier/vim-prettier'
     " Plug 'leafgarland/typescript-vim'
-    " Plug 'pangloss/vim-javascript'
     " Plug 'pangloss/vim-javascript'
     " Plug 'peitalin/vim-jsx-typescript'
     " Plug 'MaxMEllon/vim-jsx-pretty'
@@ -62,22 +58,23 @@ call plug#begin()
 
     " Apprenace
     Plug 'morhetz/gruvbox'
+    " Plug 'glepnir/dashboard-nvim'
+
     " Plug 'ryanoasis/vim-devicons'
     " Plug 'yanoasis/vim-devicons'
 
     " Status bar
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-    Plug 'tpope/vim-fugitive'
     " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
     " Plug 'wfxr/minimap.vim'
     " Plug 'severin-lemaignan/vim-minimap'
     " Plug 'shougo/neosnippet'
     " Plug 'yggdroot/indentLine'
 
-    " Debugging, refactoring and version control
+    " Debugging
+    " Refactoring
     " Plug 'puremourning/vimspector'
-
 call plug#end()
 
 "  coc-extensions
@@ -93,6 +90,7 @@ let g:coc_global_extensions = [
     \ 'coc-java',
 	\ 'coc-pairs',
 	\ 'coc-go',
+	\ 'coc-markdownlint',
 \ ]
 " \ 'coc-snippets',
 " \ 'coc-tag', 
@@ -103,10 +101,10 @@ let mapleader="-"
 " CoC Mappings
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-vmap <leader>f  <Plug>(coc-format-selected)
 nnoremap <silent> gh :call CocAction('doHover')<CR>
 nnoremap <leader>do <Plug>(coc-codeaction)
 nnoremap <leader>f <Plug>(coc-format-selected)
+vmap <leader>f  <Plug>(coc-format-selected)
 " inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " CoC Commands
 nmap <silent> gd <Plug>(coc-definition)
