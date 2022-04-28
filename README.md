@@ -156,4 +156,5 @@ https:://molly.im/fdroid/foss/fdroid/repo
 https://fdroid.bromite.org/fdroid/repo
 https://guardianproject.info/
 https://fdroid.getsession.org/fdroid/repo
+https://forum.f-droid.org/t/known-repositories/721
 
