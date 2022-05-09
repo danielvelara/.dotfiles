@@ -46,6 +46,7 @@ call plug#begin()
     " Plug 'alvan/vim-closetag'
     " Plug 'docunext/closetag.vim'
     Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'dsznajder/vscode-es7-javascript-react-snippets'
     " Plug 'leafgarland/typescript-vim'
     " Plug 'styled-components/vim-styled-components'
     " Plug 'jparise/vim-graphql'
@@ -81,20 +82,21 @@ call plug#end()
 let g:coc_global_extensions = [
 	\ 'coc-html',
 	\ 'coc-css',
-	\ 'coc-emmet',
-    \ 'coc-prettier',
-	\ 'coc-json',
 	\ 'coc-tsserver',
-    \ 'coc-eslint',
+	\ 'coc-json',
 	\ 'coc-pyright',
     \ 'coc-java',
-	\ 'coc-pairs',
 	\ 'coc-go',
+	\ 'coc-emmet',
+    \ 'coc-prettier',
+	\ 'coc-pairs',
 	\ 'coc-markdownlint',
+    \ 'coc-yaml',
 \ ]
 " \ 'coc-snippets',
 " \ 'coc-tag', 
 " \ 'coc-highlight',
+" \ 'coc-eslint',
 
 " Mappings
 let mapleader="-"

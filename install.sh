@@ -74,6 +74,7 @@ yay -S \
     pass \
     pass-otp \
     exa \
+    fd \
     bat \
     tree \
     tldr \
@@ -139,6 +140,7 @@ yay -S \
     ntop \
     protonvpn \
     ufw \
+    gufw \
     httpie \
     jq 
 
