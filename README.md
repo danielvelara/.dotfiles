@@ -45,6 +45,7 @@ sh ~/dotfiles/install.sh
    - [ClearURLs](https://chrome.google.com/webstore/detail/clearurls/lckanjgmijmafbedllaakclkaicjfmnk)
    - [Decentraleyes](https://chrome.google.com/webstore/detail/decentraleyes/ldpochfccmkkmhdbclfhpagapcfdljkj)
    - [Keepa](https://chrome.google.com/webstore/detail/neebplgakaahbhdphmkckjjcegoiijjo)
+   - [libredirect](https://github.com/libredirect/libredirect)
 - [GNOME Shell Integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
 
 ## VSCodium Extensions
