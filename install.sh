@@ -1,5 +1,4 @@
 #! /usr/bin/env bash
-
 sudo pacman -Syu
 sudo pacman -S yay
 yay -S networkmanager
@@ -20,28 +19,30 @@ yay -S xfce4-settings
 # yay -S awesome && ln -sfn ~/.dotfiles/.config/awesome ~/.config
 yay -S brightnessctl
 yay -S xorg-xrandr
-yay -S polybar
 yay -S networkmanager_dmenu
-ln -sfn ~/.dotfiles/.config/networkmanager-dmenu ~/.config
+ln -sfn ~/.dotfiles/.config/mimeapps.list .config
 
 
 # Desktop Tools
+yay -S pcmanfm thunar
 yay -S rofi rofi-emoji rofi-calc && ln -sfn ~/.dotfiles/.config/rofi/ ~/.config
 # git clone --depth=1 https://github.com/adi1090x/rofi.git ; cd rofi ; chmod +x setup.sh ; ./setup
 yay -S polybar && ln -sfn ~/.dotfiles/.config/polybar ~/.config
 yay -S ranger && ln -sfn ~/.dotfiles/.config/ranger ~/.config
 yay -S dunst && ln -sfn ~/.dotfiles/.config/dunst ~/.config
 
+ln -sfn ~/.dotfiles/.config/networkmanager-dmenu ~/.config
 
 # Terminal
-yay -S alacritty && ln -sfn ~/.dotfiles/.config/alacritty ~/.config
-ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
+yay -S alacritty && ln -sfn ~/.dotfiles/.config/alacritty ~/.config
 yay -S ttf-meslo-nerd-font-powerlevel10k                                                 ─╯
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ln -sfn ~/.dotfiles/.p10k.zsh ~/
 
 yay -S cronie
+pacman -S ttf-liberation
 
 # Gnome
 yay -S brave-bin
@@ -60,7 +61,6 @@ yay -S \
     bluez bluez-utils \
     espeak-ng \
 # arc-gtk-theme papirus ttf-firacode tts-ms-fonts ttf-ms-fonts noto-fonts
-pacman -S ttf-liberation
 yay -S neofetch && ln -sfn ~/.dotfiles/.config/neofetch ~/.config
 
 yay -S redshift
@@ -94,8 +94,19 @@ yay -S tmux && ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~
 yay -S newsboat && ln -sfn ~/.dotfiles/.config/newsboat ~/.newsboat
 yay -S ranger && ln -sfn ~/.dotfiles/.config/ranger ~/.config
 yay -S lf-bin && ln -sfn ~/.dotfiles/.config/lf ~/.config
-yay -S perl-image-exiftool mediainfo
 
+yay -S vscodium-bin && ln -sfn ~/.dotfiles/.config/VSCodium/User ~/.config/VSCodium
+ln -sfn ~/.dotfiles/.config/VSCodium/product.json ~/.config/VSCodium # Enable Marketplace
+ln -sfn ~/.dotfiles/.config/VSCodium/keybindings.json ~/.config/VSCodium/User 
+ln -sfn ~/.dotfiles/.config/VSCodium/settings.json ~/.config/VSCodium/User 
+ln -sfn ~/.dotfiles/.config/VSCodium/snippets ~/.config/VSCodium/User 
+# Copy User Settings
+# cp ~/.config/Code/User ~/.config/VSCodium
+# Copy Extensions
+# cp ~/.code ~/.vscode-oss
+# vscodium --install-extension 
+
+yay -S perl-image-exiftool mediainfo
 
 
 # Git
@@ -103,10 +114,9 @@ yay -S git lazygit github-cli && ln -sfn ~/.dotfiles/.gitconfig ~/
 yay -S github-cli && ln -sfn ~/.dotfiles/.config/gh ~/.config && \
 echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
 
-# Text Editors
-yay -S \
-    visual-studio-code-bin \
-    neovim xclip ccls && ln -sfn ~/.dotfiles/.config/nvim ~/.config && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# NeoVim
+yay -S neovim xclip ccls && ln -sfn ~/.dotfiles/.config/nvim ~/.config
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 npm install -g bash-language-server
 
 yay -S \
@@ -114,16 +124,13 @@ yay -S \
     python python-pip tk \
     nodejs npm nvm\
     jdk-openjdk \
-    rust \
     go go-tools \ 
+    rust \
 
 pip3 install pyqt5 matplotlib
 npm i -g typescript
 # hugo \
 
-
-wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
-yay -S pcmanfm thunar
 
 # Networking
 yay -S \
@@ -231,7 +238,8 @@ yay -S \
     monero-gui \
     cointop-bin \
     electrum \
-    wasabi-wallet-bin
+    wasabi-wallet-bin \
+    bisq-bin
 
 
 # Music

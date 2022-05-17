@@ -1,0 +1,152 @@
+{
+  // Editor
+  "editor.fontSize": 19,
+  "editor.letterSpacing": -1.0,
+  "editor.minimap.enabled": false,
+  "editor.minimap.size": "fit",
+  "editor.minimap.showSlider": "always",
+  "editor.formatOnPaste": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "off",
+  // "editor.wrappingColumn": 0,
+  // "editor.wrappingIndent": "none",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "normal",
+  "editor.fontFamily": "\"Fira Code\",Menlo, Monaco, 'Courier New', monospace",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.quickSuggestions": false,
+  // "editor.renderIndentGuides": false,
+  // "editor.guides.indentation": true,
+  "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+  "editor.multiCursorModifier": "alt",
+  "editor.largeFileOptimizations": false,
+  "editor.renderControlCharacters": true,
+  "editor.parameterHints.enabled": false,
+  "editor.rulers": [79, 100],
+  // "editor.linkedEditing": false,
+  // Workbench
+  "workbench.layoutControl.type": "menu",
+  "workbench.editor.decorations.colors": true,
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.untitled.hint": "hidden",
+  "sqltools.useNodeRuntime": true,
+  // File
+  "files.autoSave": "onFocusChange",
+  // Terminal
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.letterSpacing": -0.1,
+  "terminal.integrated.localEchoStyle": "dim",
+  "terminal.integrated.fontFamily": "MesloLGS NF, Monospace",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.tabs.enabled": false,
+  //Degugger
+  "debug.inlineValues": "off",
+  // Vim
+  "vim.cursorStylePerMode.insert": "line-thin",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.replace": "underline",
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/bin/nvim",
+  "vim.easymotion": true,
+  "vim.smartRelativeLine": true,
+  "vim.highlightedyank.enable": true,
+  "keyboard.dispatch": "keyCode",
+  "vim.handleKeys": {
+    "<C-k>": false,
+    "<C-b>": false,
+    "<C-j>": false,
+    "<C-w>": false,
+    "<C-f>": false
+  },
+  // Other
+  "security.workspace.trust.untrustedFiles": "open",
+  "update.mode": "none",
+  // Telemetry
+  "telemetry.telemetryLevel": "off",
+  "aws.telemetry": false,
+  // "telemetry.enableCrashReporter": false,
+  // "telemetry.enableTelemetry": false,
+  "githubPullRequests.telemetry.enabled": false,
+  "redhat.telemetry.enabled": false,
+  "rest-client.enableTelemetry": false,
+  "update.showReleaseNotes": false,
+  // Markdown
+  "markdown-preview-enhanced.enableScriptExecution": true,
+  "markdown-preview-enhanced.chromePath": "/usr/bin/brave",
+  // Python
+  "python.pythonPath": "/usr/bin/python3",
+  "python.languageServer": "Pylance",
+  "python.autoComplete.addBrackets": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.autoComplete.extraPaths": [
+    "/usr/bin/python3" //Made by me
+  ],
+  "python.analysis.extraPaths": ["/usr/bin/python3"],
+  "workbench.colorTheme": "GitHub Dark",
+  "window.menuBarVisibility": "toggle",
+  // Languages
+  "[python]": {
+    "editor.wordBasedSuggestions": false,
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "off",
+    "editor.occurrencesHighlight": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "omnisharp.path": "latest",
+  "omnisharp.useGlobalMono": "always",
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+  // Java
+  "java.semanticHighlighting.enabled": true,
+  // Jupyter
+  "jupyter.askForKernelRestart": false,
+  "jupyter.sendSelectionToInteractiveWindow": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "workbench.activityBar.visible": false,
+  "editor.wordWrapColumn": 800
+}

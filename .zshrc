@@ -59,6 +59,7 @@ setxkbmap -option caps:escape
 export ARCHFLAGS="-arch x86_64"
 export VISUAL=nvim;
 export EDITOR=nvim;
+export LEDGER_FILE=.main.journal
 
 # Aliases
 alias vim='nvim'

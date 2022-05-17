@@ -7,6 +7,8 @@ https://www.slowernews.com/rss.xml "~Slower News"
 # https://finshots.in/archive/rss/ "~Finshots"
 # https://eldeforma.com/feed/ "~El Deforma"
 # https://verificado.com.mx/feed/ "~Verificado"
+https://www.libhunt.com/feed "~libhunt"
+https://www.ejemplos.co/feed/ "~Ejemplos.co"
 ---Twitter---
 https://nitter.net/NavalBot/rss "~Naval Ravikant Bot / @NavalBot"
 ---Blogs---
@@ -112,9 +114,10 @@ https://perrodinero.blog/feed.xml "~Perro Dinero - Finanzas Personales 🐕💵"
 # https://feeds.feedburner.com/visualcapitalist "~Visual Capitalist"
 # https://kill-the-newsletter.com/feeds/wh66k0tsr08w7jtg.xml "~Money Brief"
 # ---Crypto---
-# https://decrypt.co/feed "~Decrypt"
-# https://cointelegraph.com/rss "~Cointelegraph.com News"
-# https://www.diariobitcoin.com/feed/ "~DiarioBitcoin"
+https://decrypt.co/feed "~Decrypt"
+https://cointelegraph.com/rss "~Cointelegraph.com News"
+https://www.diariobitcoin.com/feed/ "~DiarioBitcoin"
+https://kill-the-newsletter.com/feeds/y53i9lqb3i22ln9v.xml "~Trader University"
 # ---Misc---
 # https://homesteadandchill.com/feed/ "~Homestead & Chill"
 ---YouTube:Developer---
@@ -212,7 +215,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC6-ymYjG0SU0jUWnWh9ZzEQ "~W
 https://www.youtube.com/feeds/videos.xml?channel_id=UCf_MY8uWjWH8gwzFK6vCAmg "~Esquizofrenia Natural"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9pO2YNforRbdwKOh09djKA "~BlankOnBlank"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCJxv80y78XTCUqfiplmDyRw "~Tri-line"
----YouTube:Entretainment---
+---YouTube:Infotainment---
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRcgy6GzDeccI7dkbbBna3Q "~LEMMiNO"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOjH8D2XAgjzQlneM2W0EQ "~Jake Tran"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCT0dmfFCLWuVKPWZ6wcdKyg "~James Jani"
