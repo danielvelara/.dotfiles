@@ -90,7 +90,6 @@
     "/usr/bin/python3" //Made by me
   ],
   "python.analysis.extraPaths": ["/usr/bin/python3"],
-  "workbench.colorTheme": "GitHub Dark",
   "window.menuBarVisibility": "toggle",
   // Languages
   "[python]": {
@@ -147,6 +146,15 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "workbench.activityBar.visible": false,
-  "editor.wordWrapColumn": 800
+  "editor.wordWrapColumn": 800,
+  "python.formatting.provider": "black",
+  "workbench.localHistory.enabled": false,
+  "terraform.languageServer": {
+    "external": true,
+    "pathToBinary": "",
+    "args": ["serve"],
+    "ignoreSingleFileWarning": false
+  },
+  "terraform.codelens.referenceCount": true,
+  "workbench.colorTheme": "GitHub Dark"
 }

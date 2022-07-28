@@ -60,6 +60,7 @@ yay -S \
     dejadup \
     bluez bluez-utils \
     espeak-ng \
+    fsrx 
 # arc-gtk-theme papirus ttf-firacode tts-ms-fonts ttf-ms-fonts noto-fonts
 yay -S neofetch && ln -sfn ~/.dotfiles/.config/neofetch ~/.config
 
@@ -149,7 +150,14 @@ yay -S \
     ufw \
     gufw \
     httpie \
-    jq 
+    insomnia-bin \
+    jq
+
+# gRPC for Go
+# go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
+# go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+yay -S protobuf-go
+
 
 # Cybersecurity
 yay -S \
@@ -161,7 +169,6 @@ yay -S \
     wifite2 \
     nmap
 
-# insomnia postman transmission 
 
 # DevOps
 yay -S docker lazydocker-bin && \
@@ -171,13 +178,15 @@ yay -S \
     heroku-cli-bin \
     firebase-tools-bin \
     aws-cli-v2-bin \
+yay -S \
+    terraform
 
 # Database Tools
 yay -S \
     sqlite \
     litecli \
-    pgcli \
     sqlitebrowser \
+    pgcli \
     dbeaver \
 ln -sfn ~/.dotfiles/.sqliterc ~/
 # postgres
@@ -224,37 +233,28 @@ yay -S pandoc-bin yt-dlp \
     calibre-installer \
 
 
-
-# Finance
+# Finance & Crypto
 yay -S \
     hledger-bin \
     ticker
-    ledger \
-    timetrap
-docker pull ghcr.io/gamestonkterminal/gst-poetry:latest                                             ─╯
-
-# Finance & Crypto
-yay -S \
     monero-gui \
     cointop-bin \
     electrum \
     wasabi-wallet-bin \
     bisq-bin
+docker pull ghcr.io/gamestonkterminal/gst-poetry:latest                                             ─╯
 
 
 # Music
 yay -S ncmpcpp mpc mpd && \
-    ln -sfn ~/.dotfiles/.config/ncmpcpp ~/.config && \
     ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf && \
     ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
+    ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
+    ln -sfn ~/.dotfiles/.config/ncmpcpp ~/.config && \
+    ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
 
-yay -S python-spotdl \
-ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
-ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
+# yay -S python-spotdl \
 # yay -S pulsemixer
-
-# sudo pacman -S spotify-tui-bin spotifyd 
-
 
 # CLI
 sudo pacman -S cmatrix pipes.sh

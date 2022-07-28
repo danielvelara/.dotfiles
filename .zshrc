@@ -33,7 +33,7 @@ HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
 # PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
 # plugins=(git python docker zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(git gh python docker aws pass golang archlinux ufw npm httpie zsh-autosuggestions)
+plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform zsh-autosuggestions)
 # plugins=(zsh-syntax-highlighting zsh-completions git)
 
 pasteinit() {
@@ -60,6 +60,8 @@ export ARCHFLAGS="-arch x86_64"
 export VISUAL=nvim;
 export EDITOR=nvim;
 export LEDGER_FILE=.main.journal
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # Aliases
 alias vim='nvim'
@@ -69,6 +71,9 @@ alias n="ncmpcpp"
 alias nb="newsboat"
 alias q="qalc"
 alias ct="cointop"
+alias code="codium"
+alias hl="hledger"
+alias tf="terraform"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

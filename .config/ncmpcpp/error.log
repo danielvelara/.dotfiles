@@ -271,3 +271,4 @@ writeCommonTags: couldn't write 'year' tag to 'PODCAST MIGALA 1.2 - IA [0mDv6_X1
 writeCommonTags: couldn't write 'track' tag to 'PODCAST MIGALA 1.2 - IA [0mDv6_X1cks].m4a' as it's not a positive integer
 writeCommonTags: couldn't write 'year' tag to 'PODCAST MIGALA - Especial de fin de año. [N0x2eKYQWww].m4a' as it's not a positive integer
 writeCommonTags: couldn't write 'track' tag to 'PODCAST MIGALA - Especial de fin de año. [N0x2eKYQWww].m4a' as it's not a positive integer
+TagLib: Could not open file /home/danielvelara/Music/Jeremih - oui.mp3

@@ -21,5 +21,14 @@
     "prefix": "main",
     "body": ["if __name__ == \"__main__\":", "\t${1:pass}"],
     "description": "SQLAlchemy: Commit changes"
+  },
+  "Lambda: Hello World": {
+    "prefix": "lhw",
+    "body": [
+      "def lambda_handler(event, context):",
+      "\tprint(event)",
+      "\treturn ${1:Hello Lambda}"
+    ],
+    "description": "AWS Lambda: \"Hello World\""
   }
 }
