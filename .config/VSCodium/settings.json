@@ -11,11 +11,15 @@
   "editor.wordWrap": "off",
   // "editor.wrappingColumn": 0,
   // "editor.wrappingIndent": "none",
-  "editor.fontLigatures": true,
+  // "editor.fontLigatures": true,
   "editor.fontWeight": "normal",
   "editor.fontFamily": "\"Fira Code\",Menlo, Monaco, 'Courier New', monospace",
   "editor.bracketPairColorization.enabled": true,
-  "editor.quickSuggestions": false,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
   // "editor.renderIndentGuides": false,
   // "editor.guides.indentation": true,
   "editor.renderWhitespace": "all",
