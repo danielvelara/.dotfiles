@@ -33,7 +33,7 @@ HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
 # PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
 # plugins=(git python docker zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform zsh-autosuggestions)
+plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform deno zsh-autosuggestions)
 # plugins=(zsh-syntax-highlighting zsh-completions git)
 
 pasteinit() {
@@ -80,3 +80,7 @@ alias tf="terraform"
 
 export PATH="/home/danielvelara/.deta/bin:$PATH"
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc

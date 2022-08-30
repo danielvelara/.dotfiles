@@ -6,7 +6,6 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'jackguo380/vim-lsp-cxx-highlight'
     " Plug 'fatih/vim-go'
-    " Plug 'github/copilot.vim'
     " Plug 'sheerun/vim-polyglot'
     " Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'
 
@@ -17,6 +16,7 @@ call plug#begin()
     Plug 'Xuyuanp/nerdtree-git-plugin'
     " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+    Plug 'github/copilot.vim'
     " Plug 'yggdroot/indentline'
     " Navigation
     " Plug 'Shougo/denite.nvim'

@@ -38,7 +38,6 @@
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.layoutControl.enabled": false,
-  "workbench.editor.pinnedTabSizing": "compact",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.untitled.hint": "hidden",
   "sqltools.useNodeRuntime": true,
@@ -50,7 +49,6 @@
   "terminal.integrated.localEchoStyle": "dim",
   "terminal.integrated.fontFamily": "MesloLGS NF, Monospace",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.tabs.enabled": false,
   //Degugger
   "debug.inlineValues": "off",
   // Vim
@@ -160,5 +158,16 @@
     "ignoreSingleFileWarning": false
   },
   "terraform.codelens.referenceCount": true,
-  "workbench.colorTheme": "GitHub Dark"
+  "workbench.colorTheme": "GitHub Dark",
+  "reactSnippets.settings.importReactOnTop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "workspace",
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.wrapTabs": true,
+  "terminal.integrated.tabs.enabled": false,
+  "workbench.editor.tabCloseButton": "off",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "vsicons.presets.hideFolders": true,
+  "python.linting.mypyEnabled": true
 }
