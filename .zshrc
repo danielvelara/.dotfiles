@@ -48,10 +48,8 @@ zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/nvm/init-nvm.sh
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-setxkbmap -option caps:escape
 # gsettings set org.gnome.desktop.interface text-scaling-factor 1.4
 # redshift -O 2500k -P
 
@@ -74,6 +72,9 @@ alias ct="cointop"
 alias code="codium"
 alias hl="hledger"
 alias tf="terraform"
+alias lvim="~/.local/bin/lvim"
+alias lg="lazygit"
+alias ld="lazydocker"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -81,6 +82,6 @@ alias tf="terraform"
 export PATH="/home/danielvelara/.deta/bin:$PATH"
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-autoload -Uz compinit
-zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+zstyle ':completion:*' menu select
+autoload -Uz compinit && compinit

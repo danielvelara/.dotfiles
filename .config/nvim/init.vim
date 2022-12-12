@@ -3,11 +3,15 @@
 " -------------------
 call plug#begin()
     " Syntax highlighti and autocomplete
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'jackguo380/vim-lsp-cxx-highlight'
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'jackguo380/vim-lsp-cxx-highlight'
     " Plug 'fatih/vim-go'
     " Plug 'sheerun/vim-polyglot'
     " Plug 'nvim-neorg/neorg' | Plug 'nvim-lua/plenary.nvim'
+    
+    " File Manager for Neovim, Better than NERDTree.
+    Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+
 
     " Plug 'nvim-treesitter/nvim-treesitter'
     " Plug 'nvim-orgmode/orgmode'
@@ -16,7 +20,7 @@ call plug#begin()
     Plug 'Xuyuanp/nerdtree-git-plugin'
     " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-    Plug 'github/copilot.vim'
+    " Plug 'github/copilot.vim'
     " Plug 'yggdroot/indentline'
     " Navigation
     " Plug 'Shougo/denite.nvim'
@@ -30,7 +34,6 @@ call plug#begin()
     " Plug 'vim-pandoc/vim-pandoc'
 
     " VCS
-    " Plug tpope/vim-fugitive
     Plug 'tpope/vim-fugitive'
 
     " Symbols for git diffs in files as you type.
@@ -41,6 +44,10 @@ call plug#begin()
     Plug 'tpope/vim-commentary'
     " Plug 'simnalamburt/vim-mundo'
     " Plug 'terryma/vim-multiple-cursors'
+
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+
 
     " WebDev
     " Plug 'alvan/vim-closetag'
@@ -59,6 +66,7 @@ call plug#begin()
 
     " Apprenace
     Plug 'morhetz/gruvbox'
+    Plug 'junegunn/goyo.vim'
     " Plug 'glepnir/dashboard-nvim'
 
     " Plug 'ryanoasis/vim-devicons'
@@ -99,8 +107,14 @@ let g:coc_global_extensions = [
 " \ 'coc-eslint',
 
 " Mappings
-let mapleader="-"
+let mapleader="ñ"
 " CoC Mappings
+" nnoremap <leader>v <cmd>CHADopen<cr>
+
+" Navigation Shortcuts
+" map <C-PageUp> :tabn
+" noremap <C-Tab> :<C-U>tabnext<Cr>
+
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nnoremap <silent> gh :call CocAction('doHover')<CR>
@@ -149,6 +163,9 @@ set relativenumber  " Relative number line
 set syntax          " Syntax Highlight
 set wrap!           " Disable Word Wrap
 set termguicolors
+lua << EOF
+require("bufferline").setup{}
+EOF
 set tabstop=4       " Width of a rendered tab
 set shiftwidth=4    " How many spaces will TAB will add
 set expandtab       " Convert tabs to spaces

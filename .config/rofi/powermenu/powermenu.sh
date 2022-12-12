@@ -82,6 +82,8 @@ case $chosen in
     $lock)
 		if [[ -f /usr/bin/i3lock ]]; then
 			i3lock
+		elif [[ -f /usr/bin/slock ]]; then
+			slock
 		elif [[ -f /usr/bin/betterlockscreen ]]; then
 			betterlockscreen -l
 		fi

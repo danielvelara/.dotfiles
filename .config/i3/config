@@ -1,0 +1,147 @@
+set $mod Mod4 
+set $sup Mod1
+
+# Start XDG autostart .desktop files using dex
+exec --no-startup-id dex --autostart --environment i3
+
+# Grab logind suspend inhibit lock and use i3lock before suspend
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
+
+# NetworkManager
+exec --no-startup-id nm-applet
+
+# Window title font
+font pango:monospace 8
+font pango:Fira Code Nerd Font Mono Regular 11
+# font pango:DejaVu Sans Mono 8
+
+# Change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+# bindsym $mod+ntilde focus right
+
+# Move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Define workspaces
+set $sw1 "1"
+set $sw2 "2"
+set $sw3 "3"
+set $sw4 "4"
+set $sw5 "5"
+set $sw6 "6"
+set $sw7 "7"
+set $sw8 "8"
+set $sw9 "9"
+set $sw10 "10"
+
+# Switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Split horizontal/vertial
+# bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Toggle Fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Toggle tiling / floating
+bindsym $mod+g floating toggle
+# Focus tiling / floating windows
+bindsym $mod+Shift+g focus mode_toggle
+# Use Mouse+$mod to drag floating window to their wanted position
+floating_modifier $mod
+
+# Change container layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Kill window
+bindsym $mod+q kill
+
+
+# Focus parent container
+bindsym $mod+a focus parent
+# Focus child container
+bindsym $mod+shift+a focus child
+
+mode "resize" {
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit'"
+
+# Adjust PulseAudio volume
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseValue exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && refresh_i3status
+bindsym XF86AudioLowerValue exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && refresh_i3status
+
+
+bar {
+    status_command i3status
+}
+
+# ----- i3-gaps -----
+gaps inner 10
+gaps inner 0
+smart_gaps on
+
+# ----- Custom ----- 
+# bindsym $mod+space exec "rofi -show drun"
+bindsym $mod+space exec "rofi -modi drun,run -show drun"
+
+# bindsym $mod+Return exec "alacritty"
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Ctrl+n exec "xdg-open ."
+bindsym $mod+Ctrl+b exec "xdg-open https://"
+
+bindsym $mod+d exec "rofi -combi"
+bindsym $mod+d exec "rofi -show drun"
+# bindsym $mod+tab exec "rofi -show window"
+# bindsym $mod+print exec "flameshot gui"
+bindsym $mod+d exec "codium"
+bindsym $Shift+Escape "loginctl lock-session"
+
+# powerprofilesctl set $(printf "performance\nbalanced\npower-saver" | rofi -dmenu -p "Power Mode")
+

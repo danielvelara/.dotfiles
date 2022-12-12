@@ -1,16 +1,39 @@
 #! /usr/bin/env bash
-sudo pacman -Syu
-sudo pacman -S yay
-yay -S networkmanager
-# systemctl enable NetworkManager
 
-# Display Server
-sudo pacman -S xorg
-# sudo pacman -S wayland
+# Make sure user is running as root
+if [ $EUID -ne 0 ]
+then
+    echo "Program should run as root"
+    exit
+fi
 
-# Display Manager
-pacman -S lxdm
-systemctl enable lxdm.service
+# Ask for confirmation
+echo "Continue with Arch setup? y/n"
+read CONFIRM
+if [ $CONFIRM = n ]
+then 
+    exit
+fi
+sleep 1s
+clear
+
+pacman -Syyu
+pacman -S git
+
+
+# ----- OS -----
+# sudo pacman -S \
+    # xorg \
+    # i3-gaps 
+    # lxdm
+# yay -S networkmanager && systemctl enable NetworkManager
+# systemctl enable lxdm.service
+
+yay -S slock # betterlockscren, i3lock
+yay -S xautolock
+ln -sfn ~/.dotfiles/.profile .profile
+ln -sfn ~/.dotfiles/.Xresources .Xresources
+ln -sfn ~/.dotfiles/.xinitrc .xinitrc
 
 # Desktop Envrionment
 sudo pacman -S gnome gnome-extra gnome-shell-extension-pop-shell-git gnome-themes-extra
@@ -22,18 +45,37 @@ yay -S xorg-xrandr
 yay -S networkmanager_dmenu
 ln -sfn ~/.dotfiles/.config/mimeapps.list .config
 
+# System
 
 # Desktop Tools
-yay -S pcmanfm thunar
-yay -S rofi rofi-emoji rofi-calc && ln -sfn ~/.dotfiles/.config/rofi/ ~/.config
+yay -S \
+    pcmanfm \
+    thunar
+
+yay -S lf-bin && ln -sfn ~/.dotfiles/.config/lf ~/.config 
+yay -S xplr && ln -sfn ~/.dotfiles/.config/xplr ~/.config # A hackable, minimal, fast TUI file explorer
+
+yay -S \
+    rofi \
+    rofi-emoji \
+    rofi-calc \
+    && ln -sfn ~/.dotfiles/.config/rofi/ ~/.config
 # git clone --depth=1 https://github.com/adi1090x/rofi.git ; cd rofi ; chmod +x setup.sh ; ./setup
 yay -S polybar && ln -sfn ~/.dotfiles/.config/polybar ~/.config
 yay -S ranger && ln -sfn ~/.dotfiles/.config/ranger ~/.config
 yay -S dunst && ln -sfn ~/.dotfiles/.config/dunst ~/.config
+yay -S xclip
 
 ln -sfn ~/.dotfiles/.config/networkmanager-dmenu ~/.config
 
+# Appearance
+yay -S \
+    lxappearance  \ # change themes, icons, cursors or fonts
+    arc-gtk-theme \
+    papirus-icon-theme
+
 # Terminal
+yay -S zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
 yay -S alacritty && ln -sfn ~/.dotfiles/.config/alacritty ~/.config
@@ -42,27 +84,28 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ln -sfn ~/.dotfiles/.p10k.zsh ~/
 
 yay -S cronie
-pacman -S ttf-liberation
 
-# Gnome
-yay -S brave-bin
-yay -S librewolf-bin
 
 # System
 yay -S \
     bc \
     sc-im \
     visidata \
-    gotop htop ncdu \
+    htop ncdu bottom \
     duf gdu ncdu \
     gparted testdisk unetbootin \
     7zip cfdisk \
     dejadup \
     bluez bluez-utils \
     espeak-ng \
+    qrcp \
     fsrx 
-# arc-gtk-theme papirus ttf-firacode tts-ms-fonts ttf-ms-fonts noto-fonts
+
 yay -S neofetch && ln -sfn ~/.dotfiles/.config/neofetch ~/.config
+
+# Fonts
+pacman -S ttf-liberation ttf-firacode tts-ms-fonts ttf-ms-fonts noto-fonts
+
 
 yay -S redshift
 ln -sfn ~/.dotfiles/.config/redshift ~/.config
@@ -93,8 +136,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 yay -S tmux && ln -sfn ~/.dotfiles/.tmux.conf ~/.tmux.conf && tmux source-file ~/.tmux.conf
 yay -S newsboat && ln -sfn ~/.dotfiles/.config/newsboat ~/.newsboat
-yay -S ranger && ln -sfn ~/.dotfiles/.config/ranger ~/.config
-yay -S lf-bin && ln -sfn ~/.dotfiles/.config/lf ~/.config
+
+
 
 yay -S vscodium-bin && ln -sfn ~/.dotfiles/.config/VSCodium/User ~/.config/VSCodium
 ln -sfn ~/.dotfiles/.config/VSCodium/product.json ~/.config/VSCodium # Enable Marketplace
@@ -107,40 +150,52 @@ ln -sfn ~/.dotfiles/.config/VSCodium/snippets ~/.config/VSCodium/User
 # cp ~/.code ~/.vscode-oss
 # vscodium --install-extension 
 
-yay -S perl-image-exiftool mediainfo
 
 
 # Git
 yay -S git lazygit github-cli && ln -sfn ~/.dotfiles/.gitconfig ~/
+yay -S git-chglog
 yay -S github-cli && ln -sfn ~/.dotfiles/.config/gh ~/.config && \
 echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
 
 # NeoVim
-yay -S neovim xclip ccls && ln -sfn ~/.dotfiles/.config/nvim ~/.config
+yay -S neovim ccls && ln -sfn ~/.dotfiles/.config/nvim ~/.config
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 npm install -g bash-language-server
+
+# LunarVim
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 
 yay -S \
     base-devel tcc \
     python python-pip tk \
-    nodejs npm nvm\
+    nodejs npm nvm \
+    deno \
     jdk-openjdk \
     go go-tools \ 
-    rust \
-
-pip3 install pyqt5 matplotlib
-npm i -g typescript
-# hugo \
+    rust 
 
 
-# Networking
+# Applications
+yay -S brave-bin librewolf-bin
+yay -S imv # Image viewer for Wayland/X11
+
+
+
+#######################
+# Developer
+yay -S hugo
+
+# Terminal
+yay -S perl-image-exiftool mediainfo
+
+# Terminal Networking
 yay -S \
     net-tools \
     bind \ # dig, host, nslookup
     ngrok-bin \
     inetutils \
     aria2 \
-    speedtest-cli \
     nload \
     ipcalc \
     whois \
@@ -153,11 +208,7 @@ yay -S \
     insomnia-bin \
     jq
 
-# gRPC for Go
-# go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
-# go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
-yay -S protobuf-go
-
+yay -S traefik-bin portmaster-stub-bin
 
 # Cybersecurity
 yay -S \
@@ -169,7 +220,6 @@ yay -S \
     wifite2 \
     nmap
 
-
 # DevOps
 yay -S docker lazydocker-bin && \
     sudo groupadd docker
@@ -178,8 +228,10 @@ yay -S \
     heroku-cli-bin \
     firebase-tools-bin \
     aws-cli-v2-bin \
-yay -S \
-    terraform
+    azure-cli-bin
+
+ln -s /etc/bash_completion.d/azure-cli ~/.oh-my-zsh/custom/az.zsh # Autocomplete
+
 
 # Database Tools
 yay -S \
@@ -188,6 +240,7 @@ yay -S \
     sqlitebrowser \
     pgcli \
     dbeaver \
+    usql \
 ln -sfn ~/.dotfiles/.sqliterc ~/
 # postgres
 # pgAdmin
@@ -206,7 +259,6 @@ yay -S libreoffice-still
 yay -S && \
     kdenlive \
     obs-studio \
-    peek \
     flameshot \
     handbrake \
     audacity \ 
@@ -217,7 +269,10 @@ yay -S && \
 # Utilities
 
 yay -S zathura-pdf-poppler && ln -sfn ~/.dotfiles/.config/zathura ~/.config
+
+
 yay -S mpv && ln -sfn ~/.dotfiles/.config/mpv ~/.config
+
 yay -S pandoc-bin yt-dlp \
     pomo \
     sc \
@@ -236,11 +291,8 @@ yay -S pandoc-bin yt-dlp \
 # Finance & Crypto
 yay -S \
     hledger-bin \
-    ticker
     monero-gui \
     cointop-bin \
-    electrum \
-    wasabi-wallet-bin \
     bisq-bin
 docker pull ghcr.io/gamestonkterminal/gst-poetry:latest                                             ─╯
 
@@ -266,3 +318,12 @@ sudo pacman -S cmatrix pipes.sh
 yay -S qalculate libqalculate
 ln -sfn ~/.dotfiles/.config/qalculate ~/.config
 # yay -S tungsten mathics
+
+echo "Successfull installation! Reboot? y/n"
+read REBOOT
+if [ $REBOOT = y ]
+then
+    echo "rebooting..."
+    sleep 1s
+    reboot
+fi

@@ -4,5 +4,6 @@ Sxiv.foreground: #00C0FF
 rofi.ssh-client:                     ssh
 rofi.ssh-command:                    {terminal} -e "{ssh-client}" {host}
 
-
+/* Scale Display */
+Xft.dpi: 120
 

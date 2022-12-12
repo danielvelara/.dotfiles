@@ -2,7 +2,6 @@
   // Editor
   "editor.fontSize": 19,
   "editor.letterSpacing": -1.0,
-  "editor.minimap.enabled": false,
   "editor.minimap.size": "fit",
   "editor.minimap.showSlider": "always",
   "editor.formatOnPaste": true,
@@ -41,8 +40,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.untitled.hint": "hidden",
   "sqltools.useNodeRuntime": true,
-  // File
-  "files.autoSave": "onFocusChange",
   // Terminal
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.letterSpacing": -0.1,
@@ -158,7 +155,6 @@
     "ignoreSingleFileWarning": false
   },
   "terraform.codelens.referenceCount": true,
-  "workbench.colorTheme": "GitHub Dark",
   "reactSnippets.settings.importReactOnTop": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "python.analysis.typeCheckingMode": "basic",
@@ -169,5 +165,10 @@
   "workbench.editor.tabCloseButton": "off",
   "liveServer.settings.donotShowInfoMsg": true,
   "vsicons.presets.hideFolders": true,
-  "python.linting.mypyEnabled": true
+  "python.linting.mypyEnabled": true,
+  "editor.minimap.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "git.autofetch": true,
+  "files.autoSave": "afterDelay",
+  "workbench.colorTheme": "GitHub Dark"
 }
