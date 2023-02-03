@@ -10,7 +10,7 @@
 ```bash
 sudo pacman -Syu
 sudo pacman -S git
-git clone https://github.com/danielvelara/.dotfiles ~/.dotfiles
+git clone https://github.com/danielvelara/.dotfiles
 sh ~/dotfiles/install.sh
 ```
 
