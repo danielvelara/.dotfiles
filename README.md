@@ -197,8 +197,6 @@ sh ~/dotfiles/install.sh
 
 - Entertainment
   - AntennaPod
-  - Beek
-  - Blinkist
   - lichess
   - RetroMusic
   - Spotify
@@ -206,16 +204,9 @@ sh ~/dotfiles/install.sh
   - AnkiDroid
   - Guitar Tuna
   - Tabs
-- Security
-  - LocationPrivacy
-  - DuoMobile
-  - MS Authenticator
-  - Firewall
-  - PasswordStore
-  - OpenKeychain
 - Banking
   - BBVA
-  - BlueWallet
+  - muun
   - Nubank
   - Sivale
 - System
@@ -228,7 +219,6 @@ sh ~/dotfiles/install.sh
 - Utilities
   - GMaps
   - GoogleCamera
-  - Camera
   - QR Scanner
   - OrganicMaps
   - Notebloc
