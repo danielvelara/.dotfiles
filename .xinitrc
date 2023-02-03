@@ -7,8 +7,6 @@ setxkbmap -option caps:escape
 xset r rate 300 30 # Key auto-repeat speed
 
 # Default
-export EDITOR=nvim
-export VISUAL=nvim
 
 export BROWSER=brave
 export TERMINAL="alacritty"
