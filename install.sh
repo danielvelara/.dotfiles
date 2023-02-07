@@ -17,29 +17,29 @@ fi
 sleep 1s
 clear
 
-pacman -Syyu
-pacman -S git
-
-
-# ----- OS -----
-# sudo pacman -S \
-    # xorg \
-    # i3-gaps 
-    # lxdm
-# yay -S networkmanager && systemctl enable NetworkManager
-# systemctl enable lxdm.service
-
-yay -S slock # betterlockscren, i3lock
-yay -S xautolock
-ln -sfn ~/.dotfiles/.profile .profile
-ln -sfn ~/.dotfiles/.Xresources .Xresources
+# System 
 ln -sfn ~/.dotfiles/.xinitrc .xinitrc
+# yay -S slock # betterlockscren, i3lock
+# yay -S xautolock
+# ln -sfn ~/.dotfiles/.profile .profile
+# ln -sfn ~/.dotfiles/.Xresources .Xresources
 
-# Desktop Envrionment
-sudo pacman -S gnome gnome-extra gnome-shell-extension-pop-shell-git gnome-themes-extra
+# Terminal
+yay -S zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
+
+yay -S ttf-meslo-nerd-font-powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+yay -S alacritty && ln -sfn ~/.dotfiles/.config/alacritty ~/.config
+ln -sfn ~/.dotfiles/.p10k.zsh ~/
+
+# yay -S networkmanager && systemctl enable NetworkManager
+
+
 # sudo pacman -S xfce4 xfce4-goodies
 yay -S xfce4-settings
-# yay -S awesome && ln -sfn ~/.dotfiles/.config/awesome ~/.config
 yay -S brightnessctl
 yay -S xorg-xrandr
 yay -S networkmanager_dmenu
@@ -50,7 +50,8 @@ ln -sfn ~/.dotfiles/.config/mimeapps.list .config
 # Desktop Tools
 yay -S \
     pcmanfm \
-    thunar
+    thunar \
+    gvfs gvfs-mtp
 
 yay -S lf-bin && ln -sfn ~/.dotfiles/.config/lf ~/.config 
 yay -S xplr && ln -sfn ~/.dotfiles/.config/xplr ~/.config # A hackable, minimal, fast TUI file explorer
@@ -74,14 +75,6 @@ yay -S \
     arc-gtk-theme \
     papirus-icon-theme
 
-# Terminal
-yay -S zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
-yay -S alacritty && ln -sfn ~/.dotfiles/.config/alacritty ~/.config
-yay -S ttf-meslo-nerd-font-powerlevel10k                                                 ─╯
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-ln -sfn ~/.dotfiles/.p10k.zsh ~/
 
 yay -S cronie
 
