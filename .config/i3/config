@@ -11,10 +11,16 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
 # NetworkManager
 exec --no-startup-id nm-applet
 
+# Config
+exec --no-startup-id setxkbmap -option caps:escape
+exec --no-startup-id xset r rate 300 30 # Key auto-repeat speed
+
+
 # Window title font
 font pango:monospace 8
 font pango:Fira Code Nerd Font Mono Regular 11
 # font pango:DejaVu Sans Mono 8
+
 
 # Change focus
 bindsym $mod+h focus left
