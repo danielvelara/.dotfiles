@@ -22,7 +22,7 @@ font pango:Fira Code Nerd Font Mono Regular 11
 # font pango:DejaVu Sans Mono 8
 
 
-# Change focus
+# Focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -72,7 +72,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Split horizontal/vertial
-# bindsym $mod+h split h
+bindsym $mod+b split h
 bindsym $mod+v split v
 
 # Toggle Fullscreen
