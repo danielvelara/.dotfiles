@@ -1,0 +1,26 @@
+set $mod Mod4
+
+set $left h
+set $down j
+set $up k
+set $right l
+
+set $term foot
+set $term alacritty
+# set $menu wofi
+set $menu dmenu_patch | dmenu | xargs swaymsg exec --
+
+input * {
+    xkb_layout "latam"
+    xkb_options caps:escape
+    xkb_numlock enabled
+}
+
+# output * bg ~/Pictures/archpc_gruvbox.png fill
+output * bg #000000 solid_color
+
+# Key bindings
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+q kill
+bindsym $mod+escape exec $lock
+
