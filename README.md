@@ -8,7 +8,7 @@
 
 
 ```bash
-sudo pacman -Syu
+sudo pacman -Syyu
 sudo pacman -S git
 git clone https://github.com/danielvelara/.dotfiles
 sh ~/dotfiles/install.sh
