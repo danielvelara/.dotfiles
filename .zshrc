@@ -32,9 +32,7 @@ HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
 
 # PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
-# plugins=(git python docker zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform deno zsh-autosuggestions)
-# plugins=(zsh-syntax-highlighting zsh-completions git)
+plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform deno zsh-syntax-highlighting zsh-autosuggestions)
 
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
@@ -85,3 +83,4 @@ function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;
 fpath+=~/.zfunc
 zstyle ':completion:*' menu select
 autoload -Uz compinit && compinit
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}

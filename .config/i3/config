@@ -1,53 +1,103 @@
 set $mod Mod4 
 set $sup Mod1
 
-# Start XDG autostart .desktop files using dex
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
 # Grab logind suspend inhibit lock and use i3lock before suspend
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- slock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xautolock -time 10 -locker "i3lock -c #000000" &
+# Prevent sleep
+exec --no-startup-id xset s off -dpms 
 
 # NetworkManager
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 
 # Config
-exec --no-startup-id setxkbmap -option caps:escape
-exec --no-startup-id xset r rate 300 30 # Key auto-repeat speed
+exec_always --no-startup-id setxkbmap -option caps:escape
+# setxkbmap -layout "la-latin1"
+exec_always --no-startup-id xset r rate 300 30
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+# exec --no-startup-id polybar
+exec_always --no-startup-id redshift -O 3500 -P
+# exec --no-startup-id feh --no-fehbg --bg-fill '/path/to/favorite-picture.jpg'
 
 
-# Window title font
-font pango:monospace 8
-font pango:Fira Code Nerd Font Mono Regular 11
+# horizontal|vertical|auto
+default_orientation vertical
+
+hide_edge_borders none
+# smart_borders off
+
+# default|stacking|tabbed
+workspace_layout tabbed
+
+# Style
+# font pango:monospace 8
+font pango:Fira Code Nerd Font Mono Regular 8
 # font pango:DejaVu Sans Mono 8
+# client.focused #859900 #859900 #fdf6e3 #859900
+# class        border | backgr | text | indicator | child_border
+client.focused #D79921 #D79921 #FBF1C7 #FFFF00
+# client.focused #D65D0E #D65D0E #FBF1C7 #FFFF00
+client.background #2B2B2B
 
+# nomral|pixel|toggle
+default_border pixel
+# default_border normal 5
+default_floating_border pixel
+floating_minimum_size 75 x 75
+floating_maximum_size 1280 x 720
+for_window [class="^.*"] sticky enable
+# Sticky floating window: Float independent of workspace
+# for_window [instance=alacritty] sticky enable
+
+# title_window_icon 
+
+
+smart_gaps on
+gaps inner 15
+gaps outer 0
 
 # Focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-# bindsym $mod+ntilde focus right
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # Move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
-# Define workspaces
-set $sw1 "1"
-set $sw2 "2"
-set $sw3 "3"
-set $sw4 "4"
-set $sw5 "5"
-set $sw6 "6"
-set $sw7 "7"
-set $sw8 "8"
-set $sw9 "9"
-set $sw10 "10"
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
-# Switch to workspace
+# switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -59,7 +109,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# Move focused container to workspace
+# move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -79,11 +129,15 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # Toggle tiling / floating
-bindsym $mod+g floating toggle
-# Focus tiling / floating windows
-bindsym $mod+Shift+g focus mode_toggle
-# Use Mouse+$mod to drag floating window to their wanted position
+bindsym $mod+Shift+space floating toggle
 floating_modifier $mod
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Focus parent container
+bindsym $mod+a focus parent
+# Focus child container
+bindsym $mod+shift+a focus child
 
 # Change container layout
 bindsym $mod+s layout stacking
@@ -91,23 +145,23 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # Kill window
-bindsym $mod+q kill
+bindsym $mod+Shift+q kill
 
-
-# Focus parent container
-bindsym $mod+a focus parent
-# Focus child container
-bindsym $mod+shift+a focus child
 
 mode "resize" {
-    bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
 
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+r mode "default"
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -118,36 +172,48 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit
 
 # Adjust PulseAudio volume
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseValue exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && refresh_i3status
-bindsym XF86AudioLowerValue exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && refresh_i3status
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+bindsym XF86Explorer exec --no-startup-id thunar
+bindsym XF86Tools exec --no-startup-id powerprofilesctl set $(printf "performance\nbalanced\npower-saver" | rofi -dmenu -p "Power Mode")
+bindsym XF86Display exec --no-startup-id autorandr --load $(printf "docked\nmobile" | rofi -dmenu -p "Autorandr Configuration")
+
+bindsym $mod+Escape exec --no-startup-id i3lock -c 000000 
+bindsym $mod+Shift+Escape exec --no-startup-id i3lock -c 000000 && mpc -q pause && systemctl suspend
+# bindsym $Shift+Escape "loginctl lock-session"
+bindsym $mod+XF86LaunchA exec --no-startup-id dunstify "hi"
 
 
-bar {
-    status_command i3status
+# ----- Menu ----- 
+# bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id "rofi -modi calc,window,drun,run,ssh,emoji -show drun -show-icons"
+
+bindsym $mod+Return exec --no-startup-id alacritty 
+bindsym $mod+Shift+Return exec --no-startup-id alacritty -e tmux attatch
+bindsym $mod+Ctrl+n exec "xdg-open ."
+bindsym $mod+Shift+b exec "xdg-open https://"
+bindsym $mod+Print exec "flameshot gui"
+
+# bindsym $mod+d exec "rofi -combi"
+# bindsym $mod+d exec "rofi -show drun"
+# bindsym $mod+tab exec "rofi -show window"
+# bindsym $mod+d exec "codium"
+
+set $mode_launcher Launch: [b]brave [c]odium
+bindsym $mod+o mode "$mode_launcher"
+
+mode "$mode_launcher"{
+	bindsym b exec --no-startup-id brave
+	bindsym c exec --no-startup-id codium
+	bindsym Escape mode "default"
+	bindsym Return mode "default"
 }
 
-# ----- i3-gaps -----
-gaps inner 10
-gaps inner 0
-smart_gaps on
-
-# ----- Custom ----- 
-# bindsym $mod+space exec "rofi -show drun"
-bindsym $mod+space exec "rofi -modi drun,run -show drun"
-
-# bindsym $mod+Return exec "alacritty"
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Ctrl+n exec "xdg-open ."
-bindsym $mod+Ctrl+b exec "xdg-open https://"
-
-bindsym $mod+d exec "rofi -combi"
-bindsym $mod+d exec "rofi -show drun"
-# bindsym $mod+tab exec "rofi -show window"
-# bindsym $mod+print exec "flameshot gui"
-bindsym $mod+d exec "codium"
-bindsym $Shift+Escape "loginctl lock-session"
-
-# powerprofilesctl set $(printf "performance\nbalanced\npower-saver" | rofi -dmenu -p "Power Mode")
-
+#bar {
+#	status_command i3status
+#	position top
+# }

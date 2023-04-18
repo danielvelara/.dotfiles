@@ -22,7 +22,7 @@ sh ~/dotfiles/install.sh
 | **Boot Loader**          | [GNU grub](https://www.gnu.org/software/grub/)                                                                                     |
 | **Display Manager**      | [lxdm](https://wiki.archlinux.org/title/LXDM)                                                                                      |
 | **Service Manager**      | [systemd](https://systemd.io/)                                                                                                     |
-| **Window Manager**       | [i3-gaps](https://github.com/Airblader/i3)                                                                                         |
+| **Window Manager**       | [i3wm](https://github.com/i3/i3)                                                                                         |
 | **Compositor**           | [jonaburg/picom](https://github.com/jonaburg/picom)                                                                                |
 | **Network Manager**      | [NetworkManager](https://networkmanager.dev/)                                                                                      |
 | **Notification Manager** | [Dunst](https://dunst-project.org/)                                                                                                |

@@ -3,10 +3,10 @@ env:
   TERM: alacritty
 shell:
   program: /bin/zsh
-  # args:
-  #   - -l
-  #   - -c
-  #   - "tmux attach || tmux"
+# args:
+#   - -l
+#   - -c
+#   - "tmux attach || tmux"
 window:
   title: Alacritty
   class: #LinuxOnly
@@ -22,7 +22,7 @@ window:
   position: # Window Placement, 0 = WM Default
     x: 0
     y: 0
-  decorations: none #full
+  decorations: full #none
 scrolling:
   history: 1000
   multiplier: 10

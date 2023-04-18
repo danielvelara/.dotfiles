@@ -42,7 +42,7 @@
   "sqltools.useNodeRuntime": true,
   // Terminal
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.letterSpacing": -0.1,
+  "terminal.integrated.letterSpacing": 0,
   "terminal.integrated.localEchoStyle": "dim",
   "terminal.integrated.fontFamily": "MesloLGS NF, Monospace",
   "terminal.integrated.cursorBlinking": true,
@@ -140,7 +140,6 @@
   "java.semanticHighlighting.enabled": true,
   // Jupyter
   "jupyter.askForKernelRestart": false,
-  "jupyter.sendSelectionToInteractiveWindow": false,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -155,7 +154,6 @@
     "ignoreSingleFileWarning": false
   },
   "terraform.codelens.referenceCount": true,
-  "reactSnippets.settings.importReactOnTop": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.diagnosticMode": "workspace",
@@ -170,5 +168,11 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "git.autofetch": true,
   "files.autoSave": "afterDelay",
-  "workbench.colorTheme": "GitHub Dark"
+  "workbench.colorTheme": "GitHub Dark",
+  "jupyter.interactiveWindow.textEditor.executeSelection": false,
+  "reactSnippets.settings.importReactOnTop": false,
+  "git.openRepositoryInParentFolders": "never",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoImportUserSymbols": true,
+  "css.lint.unknownAtRules": "ignore"
 }
