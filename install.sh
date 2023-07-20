@@ -56,7 +56,7 @@ systemctl enable bluetooth.service --now
 systemctl enable cups.service --now
 
 # CLI
-yay -S pass pass-otp exa fd bat tldr ripgrep fzf jump dust
+yay -S pass pass-otp exa fd bat tldr ripgrep fzf jump dust csview
 yay -S neofetch visidata ncdu bottom duf gdu ncdu gparted testdisk
 yay -S 7zip cfdisk qrcp libqalculate
 yay -S man-db perl-image-exiftool mediainfo
@@ -73,7 +73,7 @@ ln -sfn ~/.dotfiles/.config/VSCodium/settings.json ~/.config/VSCodium/User
 ln -sfn ~/.dotfiles/.config/VSCodium/snippets ~/.config/VSCodium/User 
 
 # Git
-yay -S git lazygit github-cli git-chglog
+yay -S git lazygit github-cli git-chglog onefetch
 ln -sfn ~/.dotfiles/.gitconfig ~/
 echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
 
@@ -81,16 +81,20 @@ echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore
 yay -S neovim
 ln -sfn ~/.dotfiles/.config/nvim ~/.config
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+sudo npm i -g bash-language-server
 
 # Developer
 yay -S python python-pip nodejs npm elixir jdk-openjdk go base-devel tcc rust hugo
-yay -S sqlite litecli sqlitebrowser pgcli dbeaver usql # Databases
-yay -S docker docker-compose lazydocker-bin aws-cli-v2-bin traefik-bin portmaster-stub-bin # DevOps
+yay -S sqlite litecli sqlitebrowser pgcli dbeaver usql postgresql # Databases
+
+# Cloud
+yay -S docker docker-compose lazydocker-bin aws-cli-v2-bin traefik-bin portmaster-stub-bin flyctl-bin # DevOps
 sudo usermod -aG docker $USER
 npm i -g serve
+npm i -g serverless
 
 # Networking
-yay -S net-tools bind ngrok-bin inetutils aria2 nload ipcalc whois ntop protonvpn ufw gufw httpie insomnia-bin jq
+yay -S net-tools bind ngrok-bin inetutils aria2 nload ipcalc whois ntop protonvpn ufw gufw httpie insomnia-bin jq websocat static-web-server-bin gping oha
 
 # Cybersecurity
 yay -S aircrack-ng sublist3r-git gnu-netcat burpsuite nikto wifite2 nmap

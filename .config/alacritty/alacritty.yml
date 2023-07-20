@@ -3,10 +3,10 @@ env:
   TERM: alacritty
 shell:
   program: /bin/zsh
-# args:
-#   - -l
-#   - -c
-#   - "tmux attach || tmux"
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 window:
   title: Alacritty
   class: #LinuxOnly
@@ -30,7 +30,7 @@ font:
   normal:
     family: "MesloLGS NF"
     style: Regular
-  size: 13
+  size: 12.5
   offset:
     x: -1
     y: 0

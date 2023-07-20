@@ -32,7 +32,7 @@ HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
 
 # PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
-plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform deno zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform deno zsh-syntax-highlighting zsh-autosuggestions httpie)
 
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}

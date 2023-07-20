@@ -10,6 +10,5 @@ rofi.ssh-client:                     ssh
 rofi.ssh-command:                    {terminal} -e "{ssh-client}" {host}
 
 /* Scale Display */
-/* *dpi: 250 */
-/* Xft.dpi: 100 */
-/* Xft.dpi: 150 */
+*dpi: 100
+Xft.dpi: 100

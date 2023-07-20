@@ -39,7 +39,6 @@
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.untitled.hint": "hidden",
-  "sqltools.useNodeRuntime": true,
   // Terminal
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.letterSpacing": 0,
@@ -49,9 +48,6 @@
   //Degugger
   "debug.inlineValues": "off",
   // Vim
-  "vim.cursorStylePerMode.insert": "line-thin",
-  "vim.cursorStylePerMode.normal": "block",
-  "vim.cursorStylePerMode.replace": "underline",
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/bin/nvim",
   "vim.easymotion": true,
@@ -70,31 +66,23 @@
   "update.mode": "none",
   // Telemetry
   "telemetry.telemetryLevel": "off",
-  "aws.telemetry": false,
-  // "telemetry.enableCrashReporter": false,
-  // "telemetry.enableTelemetry": false,
-  "githubPullRequests.telemetry.enabled": false,
-  "redhat.telemetry.enabled": false,
-  "rest-client.enableTelemetry": false,
   "update.showReleaseNotes": false,
   // Markdown
   "markdown-preview-enhanced.enableScriptExecution": true,
   "markdown-preview-enhanced.chromePath": "/usr/bin/brave",
   // Python
-  "python.pythonPath": "/usr/bin/python3",
-  "python.languageServer": "Pylance",
-  "python.autoComplete.addBrackets": true,
-  "python.analysis.completeFunctionParens": true,
-  "python.autoComplete.extraPaths": [
-    "/usr/bin/python3" //Made by me
-  ],
-  "python.analysis.extraPaths": ["/usr/bin/python3"],
+  // "python.languageServer": "Pylance",
+  // "python.analysis.completeFunctionParens": true,
+  // "python.autoComplete.extraPaths": [
+  //   "/usr/bin/python3" //Made by me
+  // ],
+  // "python.analysis.extraPaths": ["/usr/bin/python3"],
   "window.menuBarVisibility": "toggle",
   // Languages
-  "[python]": {
-    "editor.wordBasedSuggestions": false,
-    "editor.defaultFormatter": "ms-python.python"
-  },
+  // "[python]": {
+  //   "editor.wordBasedSuggestions": false,
+  //   "editor.defaultFormatter": "ms-python.python"
+  // },
   "[markdown]": {
     "editor.wordWrap": "off",
     "editor.occurrencesHighlight": false,
@@ -125,54 +113,25 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
-  "emmet.includeLanguages": {
-    "django-html": "html"
-  },
-  "omnisharp.path": "latest",
-  "omnisharp.useGlobalMono": "always",
-  "github.copilot.enable": {
-    "*": false,
-    "yaml": false,
-    "plaintext": false,
-    "markdown": false
-  },
-  // Java
-  "java.semanticHighlighting.enabled": true,
-  // Jupyter
-  "jupyter.askForKernelRestart": false,
-  "notebook.cellToolbarLocation": {
-    "default": "right",
-    "jupyter-notebook": "left"
-  },
   "editor.wordWrapColumn": 800,
-  "python.formatting.provider": "black",
   "workbench.localHistory.enabled": false,
-  "terraform.languageServer": {
-    "external": true,
-    "pathToBinary": "",
-    "args": ["serve"],
-    "ignoreSingleFileWarning": false
-  },
-  "terraform.codelens.referenceCount": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.diagnosticMode": "workspace",
+  // "python.analysis.typeCheckingMode": "basic",
+  // "python.analysis.diagnosticMode": "workspace",
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.editor.wrapTabs": true,
   "terminal.integrated.tabs.enabled": false,
   "workbench.editor.tabCloseButton": "off",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "vsicons.presets.hideFolders": true,
-  "python.linting.mypyEnabled": true,
-  "editor.minimap.enabled": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "git.autofetch": true,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "onFocusChange",
   "workbench.colorTheme": "GitHub Dark",
-  "jupyter.interactiveWindow.textEditor.executeSelection": false,
   "reactSnippets.settings.importReactOnTop": false,
   "git.openRepositoryInParentFolders": "never",
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.autoImportUserSymbols": true,
-  "css.lint.unknownAtRules": "ignore"
+  // "python.analysis.autoImportCompletions": true,
+  // "python.analysis.autoImportUserSymbols": true,
+  // "python.formatting.provider": "black",
+
+  "css.lint.unknownAtRules": "ignore",
+  // "python.linting.mypyEnabled": true,
+  "editor.minimap.enabled": false
 }

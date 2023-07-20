@@ -22,7 +22,7 @@ exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always --no-startup-id xset r rate 300 30
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 # exec --no-startup-id polybar
-exec_always --no-startup-id redshift -O 3500 -P
+exec_always --no-startup-id redshift -O 3000 -P
 # exec --no-startup-id feh --no-fehbg --bg-fill '/path/to/favorite-picture.jpg'
 
 
@@ -182,8 +182,9 @@ bindsym XF86Explorer exec --no-startup-id thunar
 bindsym XF86Tools exec --no-startup-id powerprofilesctl set $(printf "performance\nbalanced\npower-saver" | rofi -dmenu -p "Power Mode")
 bindsym XF86Display exec --no-startup-id autorandr --load $(printf "docked\nmobile" | rofi -dmenu -p "Autorandr Configuration")
 
-bindsym $mod+Escape exec --no-startup-id i3lock -c 000000 
+# bindsym $mod+Escape exec --no-startup-id i3lock -c 000000 
 bindsym $mod+Shift+Escape exec --no-startup-id i3lock -c 000000 && mpc -q pause && systemctl suspend
+# bindsym $mod+Shift+Escape exec --no-startup-id  i3lock -c 000000 &&systemctl suspend
 # bindsym $Shift+Escape "loginctl lock-session"
 bindsym $mod+XF86LaunchA exec --no-startup-id dunstify "hi"
 
