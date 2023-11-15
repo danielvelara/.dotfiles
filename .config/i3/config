@@ -22,7 +22,7 @@ exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always --no-startup-id xset r rate 300 30
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 # exec --no-startup-id polybar
-exec_always --no-startup-id redshift -O 3000 -P
+exec_always --no-startup-id redshift -O 2500 -P
 # exec --no-startup-id feh --no-fehbg --bg-fill '/path/to/favorite-picture.jpg'
 
 

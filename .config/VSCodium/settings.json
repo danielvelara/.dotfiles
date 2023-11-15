@@ -19,15 +19,16 @@
     "strings": "off",
     "other": "off"
   },
-  // "editor.renderIndentGuides": false,
-  // "editor.guides.indentation": true,
   "editor.renderWhitespace": "all",
   "editor.suggestSelection": "first",
   "editor.multiCursorModifier": "alt",
   "editor.largeFileOptimizations": false,
   "editor.renderControlCharacters": true,
   "editor.parameterHints.enabled": false,
-  "editor.rulers": [79, 100],
+  "editor.rulers": [
+    79,
+    100
+  ],
   // "editor.linkedEditing": false,
   // Workbench
   "workbench.layoutControl.type": "menu",
@@ -38,13 +39,13 @@
   "workbench.tips.enabled": false,
   "workbench.layoutControl.enabled": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.editor.untitled.hint": "hidden",
   // Terminal
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.letterSpacing": 0,
   "terminal.integrated.localEchoStyle": "dim",
   "terminal.integrated.fontFamily": "MesloLGS NF, Monospace",
   "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.tabs.enabled": false,
   //Degugger
   "debug.inlineValues": "off",
   // Vim
@@ -57,6 +58,7 @@
   "vim.handleKeys": {
     "<C-k>": false,
     "<C-b>": false,
+    "<C-p>": false,
     "<C-j>": false,
     "<C-w>": false,
     "<C-f>": false
@@ -67,71 +69,43 @@
   // Telemetry
   "telemetry.telemetryLevel": "off",
   "update.showReleaseNotes": false,
-  // Markdown
-  "markdown-preview-enhanced.enableScriptExecution": true,
-  "markdown-preview-enhanced.chromePath": "/usr/bin/brave",
-  // Python
-  // "python.languageServer": "Pylance",
-  // "python.analysis.completeFunctionParens": true,
-  // "python.autoComplete.extraPaths": [
-  //   "/usr/bin/python3" //Made by me
-  // ],
-  // "python.analysis.extraPaths": ["/usr/bin/python3"],
   "window.menuBarVisibility": "toggle",
-  // Languages
-  // "[python]": {
-  //   "editor.wordBasedSuggestions": false,
-  //   "editor.defaultFormatter": "ms-python.python"
-  // },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+    // "editor.wordBasedSuggestions": false,
+  },
   "[markdown]": {
     "editor.wordWrap": "off",
     "editor.occurrencesHighlight": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
-  },
   "editor.wordWrapColumn": 800,
   "workbench.localHistory.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  // "python.analysis.typeCheckingMode": "basic",
-  // "python.analysis.diagnosticMode": "workspace",
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.editor.wrapTabs": true,
-  "terminal.integrated.tabs.enabled": false,
   "workbench.editor.tabCloseButton": "off",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "files.autoSave": "onFocusChange",
   "workbench.colorTheme": "GitHub Dark",
-  "reactSnippets.settings.importReactOnTop": false,
   "git.openRepositoryInParentFolders": "never",
   // "python.analysis.autoImportCompletions": true,
   // "python.analysis.autoImportUserSymbols": true,
-  // "python.formatting.provider": "black",
-
+  "python.analysis.typeCheckingMode": "off",
+  "python.analysis.diagnosticMode": "workspace",
   "css.lint.unknownAtRules": "ignore",
-  // "python.linting.mypyEnabled": true,
-  "editor.minimap.enabled": false
+  "python.analysis.autoImportCompletions": true,
+  "editor.minimap.enabled": false,
+  "emmet.includeLanguages": {
+    "html-eex": "html",
+    "phoenix-heex": "html"
+  },
+  "python.analysis.extraPaths": [
+    "/home/danielvelara/.vscode/extensions/continue.continue-0.0.413-linux-x64"
+  ],
+  "diffEditor.codeLens": true,
+  "python.autoComplete.extraPaths": [
+    "/home/danielvelara/.vscode/extensions/continue.continue-0.0.413-linux-x64"
+  ],
+  "workbench.editor.empty.hint": "hidden",
 }

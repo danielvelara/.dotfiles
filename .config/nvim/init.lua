@@ -40,7 +40,6 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 
-
 vim.o.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 vim.o.smartcase = true
 
@@ -114,7 +113,7 @@ require('lazy').setup({
       { 'williamboman/mason.nvim', config = true },
       'williamboman/mason-lspconfig.nvim',
       'folke/neodev.nvim',
-      -- { 'j-hui/fidget.nvim', opts = {} },
+      -- { 'j-hui/fidget.nvim',       tag = "legacy", event = "LspAttach", opts = {} },
     },
   },
 
@@ -152,12 +151,33 @@ require('lazy').setup({
 
   -- Utilities
   { 'folke/which-key.nvim', opts = {} },
-  {
-    'goolord/alpha-nvim',
-    event = "VimEnter",
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    -- opts = { require 'alpha.themes.startify'.config }
-  },
+
+  -- {
+  --   'goolord/alpha-nvim',
+  --   event = "VimEnter",
+  --   dependencies = { 'nvim-tree/nvim-web-devicons' },
+  --   -- opts = { require 'alpha.themes.startify'.config },
+  --   opts = function()
+  --   end
+  -- },
+  -- {
+  --   'glepnir/dashboard-nvim',
+  --   event = 'VimEnter',
+  --   config = function()
+  --     require('dashboard').setup {
+  --       theme = 'hyper',
+  --       disable_move,
+  --       -- config = {
+  --       --   center = {
+  --       --     icon = ' ',
+  --       --     icon_hl = 'Title',
+  --       --   }
+  --       -- }
+  --     }
+  --   end,
+  --   dependencies = { { 'nvim-tree/nvim-web-devicons' } }
+  -- },
+
   {
     'akinsho/bufferline.nvim',
     version = "*",
@@ -230,17 +250,19 @@ require('lazy').setup({
     },
   },
   { "nvim-tree/nvim-web-devicons" },
-  {
-    'lukas-reineke/indent-blankline.nvim',
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-      show_current_context = true,
-      show_current_context_start = true,
-      show_end_of_line = true,
-      space_char_blankline = " ",
-    },
-  },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+
+  -- {
+  --   'lukas-reineke/indent-blankline.nvim',
+  --   opts = {
+  --     char = '┊',
+  --     show_trailing_blankline_indent = false,
+  --     show_current_context = true,
+  --     show_current_context_start = true,
+  --     show_end_of_line = true,
+  --     space_char_blankline = " ",
+  --   },
+  -- },
 
   {
     'nvim-treesitter/nvim-treesitter', -- Syntax Hightlight
@@ -306,8 +328,10 @@ require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim' },
 
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = true,
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
-  auto_install = false,
+  auto_install = true,
 
   highlight = { enable = true },
   indent = { enable = true },
@@ -363,6 +387,15 @@ require('nvim-treesitter.configs').setup {
         ['<leader>A'] = '@parameter.inner',
       },
     },
+    -- rainbow = {
+    --   enable = true,
+    --   -- list of languages you want to disable the plugin for
+    --   disable = { 'jsx', 'cpp' },
+    --   -- Which query to use for finding delimiters
+    --   query = 'rainbow-parens',
+    --   -- Highlight the entire buffer all at once
+    --   strategy = require('ts-rainbow').strategy.global,
+    -- }
   },
 }
 
@@ -440,10 +473,12 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Ensure the servers above are installed
-local mason_lspconfig = require 'mason-lspconfig'
+local mason_lspconfig = require('mason-lspconfig')
 
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
+  ensure_installed = { "lua_ls", "ruff_lsp", "pyright", "elixirls", "eslint", "gopls", "rust_analyzer", "prismals",
+    "bashls", "dockerls", "tailwindcss", "nil_ls" },
 }
 
 mason_lspconfig.setup_handlers {
@@ -455,6 +490,15 @@ mason_lspconfig.setup_handlers {
     }
   end,
 }
+
+local cmd = vim.cmd
+
+cmd [[
+  augroup RestoreCursorShapeOnExit
+    autocmd!
+    autocmd VimLeave * set guicursor=a:ver25
+  augroup END
+]]
 
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`

@@ -32,7 +32,7 @@ HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
 
 # PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
-plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform deno zsh-syntax-highlighting zsh-autosuggestions httpie)
+plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform deno zsh-syntax-highlighting zsh-autosuggestions httpie mix poetry)
 
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
@@ -67,12 +67,12 @@ alias n="ncmpcpp"
 alias nb="newsboat"
 alias q="qalc"
 alias ct="cointop"
-alias code="codium"
+# alias code="codium"
 alias hl="hledger"
-alias tf="terraform"
 alias lvim="~/.local/bin/lvim"
 alias lg="lazygit"
 alias ld="lazydocker"
+alias cat="bat"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -84,3 +84,6 @@ fpath+=~/.zfunc
 zstyle ':completion:*' menu select
 autoload -Uz compinit && compinit
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+# Created by `pipx` on 2023-08-01 02:22:07
+export PATH="$PATH:/home/danielvelara/.local/bin"

@@ -17,6 +17,9 @@ fi
 sleep 1s
 clear
 
+# Install Nix
+sh <(curl -L https://nixos.org/nix/install) --daemon
+
 
 # yay
 pacman -S --needed git base-devel
@@ -56,8 +59,8 @@ systemctl enable bluetooth.service --now
 systemctl enable cups.service --now
 
 # CLI
-yay -S pass pass-otp exa fd bat tldr ripgrep fzf jump dust csview
-yay -S neofetch visidata ncdu bottom duf gdu ncdu gparted testdisk
+yay -S pass pass-otp exa fd bat tldr navi ripgrep fzf jump dust csview czkawka-cli git-delta hexyl
+yay -S neofetch visidata ncdu bottom duf gdu ncdu gparted testdisk nvtop hyperfine
 yay -S 7zip cfdisk qrcp libqalculate
 yay -S man-db perl-image-exiftool mediainfo
 yay -S xclip cronie screenkey
@@ -84,7 +87,14 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 sudo npm i -g bash-language-server
 
 # Developer
-yay -S python python-pip nodejs npm elixir jdk-openjdk go base-devel tcc rust hugo
+yay -S python python-pip
+pip install --user pipx
+pipx ensurepath
+pipx install poetry
+
+yay -S jdk-openjdk go base-devel tcc rust hugo
+yay -S nodejs npm
+yay -S elixir inotify-tools
 yay -S sqlite litecli sqlitebrowser pgcli dbeaver usql postgresql # Databases
 
 # Cloud
@@ -93,14 +103,17 @@ sudo usermod -aG docker $USER
 npm i -g serve
 npm i -g serverless
 
+# AI
+yay -S ollama whisper.cpp
+
 # Networking
-yay -S net-tools bind ngrok-bin inetutils aria2 nload ipcalc whois ntop protonvpn ufw gufw httpie insomnia-bin jq websocat static-web-server-bin gping oha
+yay -S net-tools bind ngrok-bin inetutils aria2 nload ipcalc whois ntop protonvpn ufw gufw httpie insomnia-bin jq websocat static-web-server-bin gping oha tailscale nmap rustscan ipfs intermodal-bin
 
 # Cybersecurity
 yay -S aircrack-ng sublist3r-git gnu-netcat burpsuite nikto wifite2 nmap
 
 # Applications
-yay -S brave-bin librewolf-bin anki-bin
+yay -S brave-bin librewolf-bin anki-bin xournalapp
 yay -S imv mpv zathura zathura-pdf-mupdf
 ln -sfn ~/.dotfiles/.config/zathura ~/.config
 yay -S obs-studio gimp handbrake imagemagick flameshot # Media
@@ -118,6 +131,7 @@ yay -S pandoc-bin beamer-bin texlive-core \
     # calcurse \
     # khal \
     # pomo \
+    rustdesk-bin \
     calibre
 
 yay -S newsboat
