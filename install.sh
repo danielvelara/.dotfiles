@@ -59,12 +59,14 @@ systemctl enable bluetooth.service --now
 systemctl enable cups.service --now
 
 # CLI
-yay -S pass pass-otp exa fd bat tldr navi ripgrep fzf jump dust csview czkawka-cli git-delta hexyl
-yay -S neofetch visidata ncdu bottom duf gdu ncdu gparted testdisk nvtop hyperfine
+yay -S pass pass-otp exa fd bat tldr navi ripgrep fzf jump dust csview czkawka-cli git-delta hexyl tokei
+yay -S neofetch visidata ncdu bottom duf gdu ncdu gparted testdisk nvtop hyperfine stress-ng
 yay -S 7zip cfdisk qrcp libqalculate
 yay -S man-db perl-image-exiftool mediainfo
 yay -S xclip cronie screenkey
 yay -S power-profiles-daemon brightnessctl feh
+yay -S gpg-tui age
+
 
 # Fonts
 pacman -S ttf-liberation ttf-firacode ttf-ms-fonts noto-fonts noto-fonts-emoji
