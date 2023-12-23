@@ -32,7 +32,7 @@ font:
     style: Regular
   size: 12.5
   offset:
-    x: -1
+    x: 0
     y: 0
 cursor:
   style:

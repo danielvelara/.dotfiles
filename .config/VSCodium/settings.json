@@ -25,10 +25,7 @@
   "editor.largeFileOptimizations": false,
   "editor.renderControlCharacters": true,
   "editor.parameterHints.enabled": false,
-  "editor.rulers": [
-    79,
-    100
-  ],
+  "editor.rulers": [79, 100],
   // "editor.linkedEditing": false,
   // Workbench
   "workbench.layoutControl.type": "menu",
@@ -76,7 +73,7 @@
   },
   "[markdown]": {
     "editor.wordWrap": "off",
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.wordWrapColumn": 800,
@@ -108,4 +105,5 @@
     "/home/danielvelara/.vscode/extensions/continue.continue-0.0.413-linux-x64"
   ],
   "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.tabActionCloseVisibility": false
 }
