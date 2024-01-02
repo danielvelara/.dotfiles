@@ -109,7 +109,7 @@ npm i -g serverless
 yay -S ollama whisper.cpp
 
 # Networking
-yay -S net-tools bind ngrok-bin inetutils aria2 nload ipcalc whois ntop protonvpn ufw gufw httpie insomnia-bin jq websocat static-web-server-bin gping oha tailscale nmap rustscan ipfs intermodal-bin
+yay -S net-tools bind ngrok-bin inetutils aria2 nload ipcalc whois ntop protonvpn ufw gufw httpie insomnia-bin jq websocat static-web-server-bin gping oha tailscale nmap rustscan ipfs intermodal-bin goaccess trippy
 
 # Cybersecurity
 yay -S aircrack-ng sublist3r-git gnu-netcat burpsuite nikto wifite2 nmap
