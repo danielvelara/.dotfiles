@@ -7,6 +7,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export ZSH="/home/danielvelara/.oh-my-zsh"
+# export CDPATH=$CDPATH:/Users/danielvelara/Documents/kata
+export ERL_AFLAGS="-kernel shell_history enabled"
 ZSH_THEME="robbyrussell" # "random"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # echo $RANDOM_THEMEK
@@ -28,11 +30,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="false"
 # DISABLE_MAGIC_FUNCTIONS="true"
 HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
+
 # HIST_STAMPS="yyyy-mm-dd"
 
 
 # PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
-plugins=(git gh python docker aws pass golang archlinux ufw npm httpie terraform deno zsh-syntax-highlighting zsh-autosuggestions httpie mix poetry)
+plugins=(git gh python docker docker-compose aws pass golang archlinux ufw npm httpie terraform deno zsh-syntax-highlighting zsh-autosuggestions httpie mix poetry asdf)
 
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
@@ -60,19 +63,20 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 # Aliases
-alias vim='nvim'
+alias vim='lvim'
 alias exa='exa -l'
 alias dmenu='rofi -dmenu'
-alias n="ncmpcpp"
-alias nb="newsboat"
-alias q="qalc"
-alias ct="cointop"
+alias n=ncmpcpp
+alias nb=newsboat
+alias q=qalc
+alias ct=cointop
 # alias code="codium"
 alias hl="hledger"
 alias lvim="~/.local/bin/lvim"
 alias lg="lazygit"
 alias ld="lazydocker"
-alias cat="bat"
+alias cat=bat
+alias py=python3
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
