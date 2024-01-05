@@ -30,9 +30,9 @@ font:
   normal:
     family: "MesloLGS NF"
     style: Regular
-  size: 12.5
+  size: 15
   offset:
-    x: 0
+    x: -1
     y: 0
 cursor:
   style:

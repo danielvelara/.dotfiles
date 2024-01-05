@@ -109,7 +109,8 @@ npm i -g serverless
 yay -S ollama whisper.cpp
 
 # Networking
-yay -S net-tools bind ngrok-bin inetutils aria2 nload ipcalc whois ntop protonvpn ufw gufw httpie insomnia-bin jq websocat static-web-server-bin gping oha tailscale nmap rustscan ipfs intermodal-bin goaccess trippy
+
+yay -S net-tools bind ngrok-bin inetutils aria2 nload ipcalc whois ntop protonvpn ufw gufw httpie insomnia-bin jq websocat static-web-server-bin gping oha tailscale nmap rustscan ipfs intermodal-bin termshark trippy goaccess
 
 # Cybersecurity
 yay -S aircrack-ng sublist3r-git gnu-netcat burpsuite nikto wifite2 nmap
@@ -121,7 +122,7 @@ ln -sfn ~/.dotfiles/.config/zathura ~/.config
 yay -S obs-studio gimp handbrake imagemagick flameshot # Media
 
 # Files
-yay -S lf-bin xplr thunar xarchiver unzip gvfs gvfs-mtp scrcpy lxappearence
+yay -S lf-bin xplr thunar thunar-archive-plugin xarchiver unzip gvfs gvfs-mtp scrcpy lxappearence
 ln -sfn ~/.dotfiles/.config/lf ~/.config 
 ln -sfn ~/.dotfiles/.config/xplr ~/.config
 

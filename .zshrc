@@ -53,6 +53,7 @@ function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;
 
 # gsettings set org.gnome.desktop.interface text-scaling-factor 1.4
 # redshift -O 2500k -P
+. /opt/asdf-vm/asdf.sh
 
 
 export ARCHFLAGS="-arch x86_64"
