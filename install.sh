@@ -100,7 +100,7 @@ yay -S elixir inotify-tools
 yay -S sqlite litecli sqlitebrowser pgcli dbeaver usql postgresql # Databases
 
 # Cloud
-yay -S docker docker-compose lazydocker-bin dive aws-cli-v2-bin traefik-bin portmaster-stub-bin flyctl-bin # DevOps
+yay -S docker docker-compose lazydocker-bin ctop dive aws-cli-v2-bin traefik-bin portmaster-stub-bin flyctl-bin # DevOps
 sudo usermod -aG docker $USER
 npm i -g serve
 npm i -g serverless
