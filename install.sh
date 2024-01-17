@@ -1,18 +1,16 @@
 #! /usr/bin/env bash
 
 # Make sure user is running as root
-if [ $EUID -ne 0 ]
-then
-    echo "Program should run as root"
-    exit
+if [ $EUID -ne 0 ]; then
+	echo "Program should run as root"
+	exit
 fi
 
 # Ask for confirmation
 echo "Continue with Arch setup? y/n"
 read CONFIRM
-if [ $CONFIRM = n ]
-then 
-    exit
+if [ $CONFIRM = n ]; then
+	exit
 fi
 sleep 1s
 clear
@@ -20,14 +18,13 @@ clear
 # Install Nix
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
-
 # yay
 pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 
-# System 
+# System
 ln -sfn ~/.dotfiles/.xinitrc .xinitrc
 ln -sfn ~/.dotfiles/.Xresources ~/
 xrdb -load ~/.Xresources
@@ -41,14 +38,14 @@ ln -sfn ~/.dotfiles/.config/mimeapps.list ~/.config
 yay -S alacritty zsh ttf-meslo-nerd-font-powerlevel10k tmux
 ln -sfn ~/.dotfiles/.config/alacritty ~/.config
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -sfn ~/.dotfiles/.zshrc ~/.zshrc 
+ln -sfn ~/.dotfiles/.zshrc ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # ln -sfn ~/.dotfiles/.p10k.zsh ~/
 ln -sfn ~/.dotfiles/.tmux.conf ~/
 
-# System
+# i3wm
 yay -S polybar dunst rofi rofi-emoji rofi-calc redshift xorg-xrandr arandr autorandr
 ln -sfn ~/.dotfiles/.config/polybar ~/.config
 ln -sfn ~/.dotfiles/.config/dunst ~/.config
@@ -67,37 +64,43 @@ yay -S xclip cronie screenkey
 yay -S power-profiles-daemon brightnessctl feh
 yay -S gpg-tui age
 
-
 # Fonts
 pacman -S ttf-liberation ttf-firacode ttf-ms-fonts noto-fonts noto-fonts-emoji
 
 yay -S vscodium-bin
 ln -sfn ~/.dotfiles/.config/VSCodium/product.json ~/.config/VSCodium # Enable Marketplace
-ln -sfn ~/.dotfiles/.config/VSCodium/keybindings.json ~/.config/VSCodium/User 
-ln -sfn ~/.dotfiles/.config/VSCodium/settings.json ~/.config/VSCodium/User 
-ln -sfn ~/.dotfiles/.config/VSCodium/snippets ~/.config/VSCodium/User 
+ln -sfn ~/.dotfiles/.config/VSCodium/keybindings.json ~/.config/VSCodium/User
+ln -sfn ~/.dotfiles/.config/VSCodium/settings.json ~/.config/VSCodium/User
+ln -sfn ~/.dotfiles/.config/VSCodium/snippets ~/.config/VSCodium/User
 
 # Git
 yay -S git lazygit github-cli git-chglog onefetch
 ln -sfn ~/.dotfiles/.gitconfig ~/
-echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >> ~/.zshrc && source ~/.zshrc
+echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >>~/.zshrc && source ~/.zshrc
 
 # Neovim
 yay -S neovim
 ln -sfn ~/.dotfiles/.config/nvim ~/.config
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-sudo npm i -g bash-language-server
 
 # Developer
-yay -S python python-pip
+yay -S python python-pip asdf goreleaser-bin
 pip install --user pipx
 pipx ensurepath
 pipx install poetry
 
-yay -S jdk-openjdk go base-devel tcc rust hugo
-yay -S nodejs npm
-yay -S elixir inotify-tools
-yay -S sqlite litecli sqlitebrowser pgcli dbeaver usql postgresql # Databases
+asdf plugin add erlang && asdf install erlang latest && asdf global erlang latest
+asdf plugin add elixir && asdf install elixir latest && asdf global elixir latest
+asdf plugin add golang && asdf install golang latest && asdf global golang latest
+asdf plugin add nodejs && asdf install nodejs latest && asdf global nodejs latest
+asdf plugin add python && asdf install python latest && asdf global python latest
+# asdf plugin add java
+
+yay -S base-devel tcc hugo
+yay -S npm inotify-tools
+
+# Databases
+yay -S sqlite litecli sqlitebrowser dbeaver usql postgresql pgcli # Databases
 
 # Cloud
 yay -S docker docker-compose lazydocker-bin ctop dive aws-cli-v2-bin traefik-bin portmaster-stub-bin flyctl-bin # DevOps
@@ -106,7 +109,7 @@ npm i -g serve
 npm i -g serverless
 
 # AI
-yay -S ollama whisper.cpp
+# yay -S ollama whisper.cpp
 
 # Networking
 
@@ -116,26 +119,22 @@ yay -S net-tools bind ngrok-bin inetutils aria2 nload ipcalc whois ntop protonvp
 yay -S aircrack-ng sublist3r-git gnu-netcat burpsuite nikto wifite2 nmap
 
 # Applications
-yay -S brave-bin librewolf-bin anki-bin xournalapp
+yay -S brave-bin librewolf-bin anki-bin xournalapp calibre
 yay -S imv mpv zathura zathura-pdf-mupdf
 ln -sfn ~/.dotfiles/.config/zathura ~/.config
 yay -S obs-studio gimp handbrake imagemagick flameshot # Media
 
-# Files
-yay -S lf-bin xplr thunar thunar-archive-plugin xarchiver unzip gvfs gvfs-mtp scrcpy lxappearence
-ln -sfn ~/.dotfiles/.config/lf ~/.config 
+# GUI
+yay -S thunar thunar-archive-plugin xarchiver unzip gvfs gvfs-mtp scrcpy lxappearence
+ln -sfn ~/.dotfiles/.config/lf ~/.config
 ln -sfn ~/.dotfiles/.config/xplr ~/.config
 
 # Utilities
-yay -S hledger-bin cointop-bin # Finance
-yay -S pandoc-bin beamer-bin texlive-core \
-    slides-bin \
-    # slidev-bin \
-    # calcurse \
-    # khal \
-    # pomo \
-    rustdesk-bin \
-    calibre
+yay -S hledger-bin cointop-bin lf-bin xplr
+yay -S pandoc-bin beamer-bin texlive-core slides-bin rustdesk-bin
+# calcurse \
+# pomo # slidev-bin
+# khal \
 
 yay -S newsboat
 ln -sfn ~/.dotfiles/.newsboat ~/
@@ -149,13 +148,11 @@ ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
 ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
 systemctl enable mpd --now
 
-
 echo "Remember to set autorandr config"
 echo "Successfull installation! Reboot? y/n"
 read REBOOT
-if [ $REBOOT = y ]
-then
-    echo "rebooting..."
-    sleep 1s
-    reboot
+if [ $REBOOT = y ]; then
+	echo "rebooting..."
+	sleep 1s
+	reboot
 fi
