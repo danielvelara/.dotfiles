@@ -84,7 +84,7 @@ ln -sfn ~/.dotfiles/.config/nvim ~/.config
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 
 # Developer
-yay -S python python-pip asdf goreleaser-bin
+yay -S python python-pip asdf goreleaser-bin tinygo-bin
 pip install --user pipx
 pipx ensurepath
 pipx install poetry
