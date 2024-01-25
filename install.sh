@@ -15,7 +15,6 @@ fi
 sleep 1s
 clear
 
-
 ########################
 ## Nix
 ########################
@@ -27,17 +26,16 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 
-
 ########################
 ## System
 ########################
 
 yay -S \
- 	zsh \
-  	tmux \
-  	alacritty \
-  	ttf-meslo-nerd-font-powerlevel10k \
-   	
+	zsh \
+	tmux \
+	alacritty \
+	ttf-meslo-nerd-font-powerlevel10k
+
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -68,30 +66,29 @@ ln -sfn ~/.dotfiles/.config/VSCodium/settings.json ~/.config/VSCodium/User
 ########################
 
 pacman -S \
- 	ttf-firacode \
-  	ttf-ms-fonts \
+	ttf-firacode \
+	ttf-ms-fonts \
 	ttf-liberation \
-   	noto-fonts noto-fonts-emoji
+	noto-fonts noto-fonts-emoji
 
 ########################
 ## Git
 ########################
 
-yay -S git lazygit github-cli git-chglog onefetch  git-delta
+yay -S git lazygit github-cli git-chglog onefetch git-delta
 echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >>~/.zshrc && source ~/.zshrc
-
 
 ########################
 ## i3wm
 ########################
 
 yay -S \
- 	dunst \
-  	polybar \
-  	redshift \
-    	lxappearence \
+	dunst \
+	polybar \
+	redshift \
+	lxappearence \
 	rofi rofi-emoji rofi-calc \
-    	xorg-xrandr arandr autorandr
+	xorg-xrandr arandr autorandr
 
 yay -S bluez bluez-utils cups
 systemctl enable bluetooth.service --now
@@ -104,18 +101,18 @@ systemctl enable cups.service --now
 yay -S \
 	thunar thunar-archive-plugin xarchiver unzip gvfs gvfs-mtp \
 	brave-bin \
- 	librewolf-bin \
-  	anki-bin \
-   	vscodium-bin \
-   	calibre \
-    	imv \
-     	mpv \
+	librewolf-bin \
+	anki-bin \
+	vscodium-bin \
+	calibre \
+	imv \
+	mpv \
 	zathura zathura-pdf-mupdf \
 	obs-studio \
- 	gimp \
-  	handbrake \
-   	imagemagick \
-    	flameshot
+	gimp \
+	handbrake \
+	imagemagick \
+	flameshot
 
 ########################
 ## CLI
@@ -123,57 +120,55 @@ yay -S \
 
 yay -S \
 	pass pass-otp \
-   	fzf \
-   	bat \
-   	duf \
-    	gdu \
-     	age \
-    	tldr \
-     	navi \	
- 	jump \
-  	dust \
-        cfdisk \
-   	ncdu \
-    	tokei \
-   	csview \
-  	bottom \
-     	gparted \
-    	ripgrep \
+	fzf \
+	bat \
+	duf \
+	gdu \
+	age \
+	tldr \
+	navi \	
+jump \
+	dust \
+	cfdisk \
+	ncdu \
+	tokei \
+	csview \
+	bottom \
+	gparted \
+	ripgrep \
 	testdisk \
 	neofetch \
- 	visidata \
-    	czkawka-cli \
- 	nvtop \
-  	hyperfine \
-   	stress-ng \
-    	7zip \
-      	qrcp \
-     	feh \
-    	xclip \
-     	cronie \
-       	man-db \
-      	gpg-tui \
-      	screenkey \
+	visidata \
+	czkawka-cli \
+	nvtop \
+	hyperfine \
+	stress-ng \
+	7zip \
+	qrcp \
+	feh \
+	xclip \
+	cronie \
+	man-db \
+	gpg-tui \
+	screenkey \
 	mediainfo \
- 	libqalculate \
- 	brightnessctl \
-  	perl-image-exiftool \
-	power-profiles-daemon \
-    	
-	scrcpy \
- 	hledger-bin \
-  	newsboat \
-      	slides-bin \
+	libqalculate \
+	brightnessctl \
+	perl-image-exiftool \
+	power-profiles-daemon
+
+scrcpy \
+	hledger-bin \
+	newsboat \
+	slides-bin \
 	lf-bin \
- 	xplr \
-  	ncmpcpp mpc mpd pulsemixer \
-  	# calcurse \
-	# pomo \
- 	# slidev-bin \
-  	# khal \
-  	pandoc-bin beamer-bin texlive-core
-
-
+	xplr \
+	ncmpcpp mpc mpd pulsemixer \
+	\
+	pandoc-bin beamer-bin texlive-core # calcurse \
+# pomo \
+# slidev-bin \
+# khal \
 
 ########################
 ## Developer
@@ -181,10 +176,10 @@ yay -S \
 
 yay -S \
 	base-devel \
- 	hugo \
-  	asdf \
-   	goreleaser-bin
-# npm inotify-tools python python-pip   
+	hugo \
+	asdf \
+	goreleaser-bin
+# npm inotify-tools python python-pip
 pip install --user pipx
 pipx install poetry ensurepath yt-dlp python-spotdl
 
@@ -204,7 +199,7 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 
 yay -S \
 	sqlite litecli sqlitebrowser dbeaver usql \
- 	postgresql pgcli
+	postgresql pgcli
 
 ########################
 ## DevOps
@@ -212,8 +207,8 @@ yay -S \
 
 yay -S \
 	docker docker-compose lazydocker-bin ctop dive \
-    	flyctl-bin
-     
+	flyctl-bin
+
 sudo usermod -aG docker $USER
 
 ########################
@@ -221,40 +216,40 @@ sudo usermod -aG docker $USER
 ########################
 
 yay -S \
-  	jq \
-  	oha \
-  	ufw \
-   	gufw \
- 	bind \
+	jq \
+	oha \
+	ufw \
+	gufw \
+	bind \
 	ntop \
-      	ipfs \
+	ipfs \
 	nmap \
-       	gping \
+	gping \
 	aria2 \
- 	whois \
-     	nload \
-     	nikto \
-      	ipcalc \
- 	trippy \
+	whois \
+	nload \
+	nikto \
+	ipcalc \
+	trippy \
 	httpie \
-       	wifite2 \
- 	websocat \
-       	rustscan \
-  	goaccess \
-   	net-tools \
+	wifite2 \
+	websocat \
+	rustscan \
+	goaccess \
+	net-tools \
 	protonvpn \
- 	termshark \
- 	ngrok-bin \
-   	inetutils \
+	termshark \
+	ngrok-bin \
+	inetutils \
 	tailscale \
-      	burpsuite \
-       	gnu-netcat \
+	burpsuite \
+	gnu-netcat \
 	aircrack-ng \
 	traefik-bin \
-      	sublist3r-git \
-        intermodal-bin \
-   	portmaster-stub-bin \
-	static-web-server-bin \
+	sublist3r-git \
+	intermodal-bin \
+	portmaster-stub-bin \
+	static-web-server-bin
 
 echo "Remember to set autorandr config"
 echo "Successfull installation! Reboot? y/n"
