@@ -87,19 +87,14 @@ sh ~/dotfiles/install.sh
   - [WhatRuns](https://chrome.google.com/webstore/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaa)
   - [React Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoieni)
   - [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibl)
-  - [VisBug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbe)
-  - [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es)
   - [Visbug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc/)
+  - [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=es)
 - Productivity
   - [ReadAloud](https://chrome.google.com/webstore/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp)
   - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
-  - [JSONViewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh/related)
-  - [UniversalBypass](https://github.com/Sainan/Universal-Bypass)
-  - [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa)
   - [MS Editor](https://chrome.google.com/webstore/detail/microsoft-editor-spelling/gpaiobkfhnonedkhhfjpmhdalgeoebfa)
   - [ViewImage](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk)
   - [Bypass Paywall](https://github.com/iamadamdev/bypass-paywalls-chrome)
-  - [Simple Allow Copy](https://chrome.google.com/webstore/detail/simple-allow-copy/aefehdhdciieocakfobpaaolhipkcpgc)
 - YouTube QoL
   - [Unhook](https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid)
   - [SponsorBlock](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
@@ -120,67 +115,12 @@ sh ~/dotfiles/install.sh
 <details>
 <summary><code>VSCode Extensions</code></summary>
 
-### Languages
-
-[C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
-[C/C++ Compile Run](https://marketplace.visualstudio.com/items?itemName=danielpinto8zz6.c-cpp-compile-run)
-[Go](https://marketplace.visualstudio.com/items?itemName=golang.Go)
-[Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-[Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
-[Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
-[Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
-
-### Appearance
-
-[GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
-[Gruvbox Theme](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox)
-
-### Tools
-
-[AWS](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-toolkit-vscode)
-[AWS CloudFormation Auto-template Generator](https://marketplace.visualstudio.com/items?itemName=john-goldsmith.vscode-aws-cloudformation-auto-template-generator)
-[CloudFormation](https://marketplace.visualstudio.com/items?itemName=aws-scripting-guy.cformf)
-[GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
-[Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
-
-### Git
-
-[Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
-[Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
-
-### Other
-
-[Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-[Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-[node-snippets](https://marketplace.visualstudio.com/items?itemName=chris-noring.node-snippets)
-[Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
-[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
-[Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare)
-[Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
-[SQLTools](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)
-[SQLTools SQLite](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-sqlite)
-[Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
-[ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
-[Glean](https://marketplace.visualstudio.com/items?itemName=wix.glean)
-[JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
-[fastapi-snippets](https://marketplace.visualstudio.com/items?itemName=damildrizzy.fastapi-snippets)
-[flask-snippets](https://marketplace.visualstudio.com/items?itemName=cstrap.flask-snippets)
-[Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)
-[Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
-[Python Indent](https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent)
-[Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
-[autoDocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
-[Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-[Spanish - Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-spanish)
-[HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
-[CSS Peek](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek)
-[IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
-[JavaScript Booster](https://marketplace.visualstudio.com/items?itemName=sburg.vscode-javascript-booster)
-[Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-[Jinja](https://marketplace.visualstudio.com/items?itemName=wholroyd.jinja)
-[Jinja Snippets](https://marketplace.visualstudio.com/items?itemName=noxiz.jinja-snippets)
+- [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+- [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
 
 </details>
 
@@ -199,31 +139,18 @@ sh ~/dotfiles/install.sh
 - Entertainment
   - AntennaPod
   - lichess
-  - RetroMusic
   - Spotify
 - Learning
-  - AnkiDroid
+  - Anki
   - Guitar Tuna
   - Tabs
 - Banking
   - BBVA
-  - muun
   - Nubank
-  - Sivale
 - System
-  - Chromium
-  - AuroraStore
-  - F-Droid
-  - mpv
-  - MuPDF
   - Termux
 - Utilities
   - GMaps
-  - GoogleCamera
-  - QR Scanner
   - OrganicMaps
-  - Notebloc
   - Parkimovil
   - WhatsApp
-  - Trail Sense
-  - Record Voice
