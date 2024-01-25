@@ -47,8 +47,6 @@ sh ~/dotfiles/install.sh
 | Editor             | [neovim](https://neovim.io/) <br> & [VSCodium](https://vscodium.com/)                                                                          |
 | PDF Reader         | [zathura](https://pwmt.org/projects/zathura) + [Catppuccin](https://github.com/catppuccin/zathura)                                             |
 | Image Viewer       | [imv](https://sr.ht/~exec64/imv/)                                                                                                              |
-| Ebook Management   | [Calibre](https://calibre-ebook.com/)                                                                                                          |
-| SRS                | [Anki](https://apps.ankiweb.net)                                                                                                               |
 | Music Player       | [mpd](https://www.musicpd.org) + [mpc](https://www.musicpd.org/clients/mpc/) + [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)                   |
 | Video Player       | [mpv](https://mpv.io/)                                                                                                                         |
 | Video Recording    | [OBS](https://obsproject.com/)                                                                                                                 |
@@ -58,10 +56,9 @@ sh ~/dotfiles/install.sh
 | Screenshot Utility | [Flameshot](https://flameshot.org/) <br> & [scrot](https://github.com/resurrecting-open-source-projects/scrot)                                 |
 | Image Editor       | [GIMP](https://www.gimp.org/) <br> & [ImageMagick](https://imagemagick.org/)                                                                   |
 | Firewall           | [ufw](https://launchpad.net/ufw)                                                                                                               |
-| VPN                | [ProtonVPN](https://protonvpn.com/) + [protonvpn-cli](https://github.com/ProtonVPN/linux-cli)                                                  |
 | Calculator         | [Qalculate!](https://qalculate.github.io/)                                                                                                     |
 | File Converter     | [Pandoc](https://pandoc.org/)                                                                                                                  |
-| Presentation Tool  | [Beamer](https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc) <br> & [slides](https://github.com/maaslalani/slides)    |
+| Presentation Tool  | [Beamer](https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc) <br> & [slides]()    |
 
 ## Tools
 
