@@ -75,7 +75,7 @@ pacman -S \
 ## Git
 ########################
 
-yay -S git lazygit github-cli git-chglog onefetch git-delta
+yay -S git lazygit github-cli git-chglog git-cliff onefetch git-delta
 echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >>~/.zshrc && source ~/.zshrc
 
 ########################
