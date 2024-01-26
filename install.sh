@@ -127,7 +127,8 @@ yay -S \
 	age \
 	tldr \
 	navi \	
-jump \
+	jump \
+ 	hugo \
 	dust \
 	cfdisk \
 	ncdu \
@@ -149,26 +150,22 @@ jump \
 	xclip \
 	cronie \
 	man-db \
-	gpg-tui \
+ 	gpg-tui \
+ 	mediainfo \
 	screenkey \
-	mediainfo \
+ 	slidev-bin \
 	libqalculate \
 	brightnessctl \
 	perl-image-exiftool \
-	power-profiles-daemon
-
-scrcpy \
+	power-profiles-daemon \
+	scrcpy \
 	hledger-bin \
 	newsboat \
 	slides-bin \
 	lf-bin \
 	xplr \
 	ncmpcpp mpc mpd pulsemixer \
-	\
 	pandoc-bin beamer-bin texlive-core # calcurse \
-# pomo \
-# slidev-bin \
-# khal \
 
 ########################
 ## Developer
@@ -176,9 +173,17 @@ scrcpy \
 
 yay -S \
 	base-devel \
-	hugo \
 	asdf \
+    	ctop \
+    	dive \
+	docker \
+ 	flyctl-bin \
+ 	lazydocker-bin \
+ 	docker-compose \
+  	sqlite litecli sqlitebrowser dbeaver usql \
+	postgresql pgcli \
 	goreleaser-bin
+ 
 # npm inotify-tools python python-pip
 pip install --user pipx
 pipx install poetry ensurepath yt-dlp python-spotdl
@@ -192,24 +197,8 @@ asdf plugin add python && asdf install python latest && asdf global python lates
 
 yay -S neovim
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-
-########################
-## Databases
-########################
-
-yay -S \
-	sqlite litecli sqlitebrowser dbeaver usql \
-	postgresql pgcli
-
-########################
-## DevOps
-########################
-
-yay -S \
-	docker docker-compose lazydocker-bin ctop dive \
-	flyctl-bin
-
 sudo usermod -aG docker $USER
+
 
 ########################
 ## Networking
@@ -250,12 +239,3 @@ yay -S \
 	intermodal-bin \
 	portmaster-stub-bin \
 	static-web-server-bin
-
-echo "Remember to set autorandr config"
-echo "Successfull installation! Reboot? y/n"
-read REBOOT
-if [ $REBOOT = y ]; then
-	echo "rebooting..."
-	sleep 1s
-	reboot
-fi
