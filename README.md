@@ -23,13 +23,11 @@ sh ~/dotfiles/install.sh
 | **Display Manager**      | [lxdm](https://wiki.archlinux.org/title/LXDM)                    |
 | **Service Manager**      | [systemd](https://systemd.io/)                                   |
 | **Window Manager**       | [i3wm](https://github.com/i3/i3)                                 |
-| **Compositor**           | [jonaburg/picom](https://github.com/jonaburg/picom)              |
 | **Network Manager**      | [NetworkManager](https://networkmanager.dev/)                    |
 | **Notification Manager** | [Dunst](https://dunst-project.org/)                              |
 | **Audio Manager**        | [PipeWire](https://pipewire.org/)                                |
 | **Brightness Manager**   | [brightnessctl](https://github.com/Hummer12007/brightnessctl)    |
 | **Printing Manager**     | [cups](https://www.cups.org/)                                    |
-| **Session lock**         | [slock + xautolock](https://tools.suckless.org/slock/)           |
 | **Application Launcher** | [rofi](https://github.com/davatorium/rofi)                       |
 | **Status Panel**         | [Polybar](https://polybar.github.io/)                            |
 | **Terminal**             | [Alacritty](https://alacritty.org/)                              |
@@ -83,7 +81,6 @@ sh ~/dotfiles/install.sh
 - Productivity
   - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
   - [ViewImage](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk)
-  - [Bypass Paywall](https://github.com/iamadamdev/bypass-paywalls-chrome)
 - YouTube
   - [Unhook](https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid)
   - [SponsorBlock](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
@@ -101,11 +98,7 @@ sh ~/dotfiles/install.sh
 <summary><code>VSCode Extensions</code></summary>
 
 - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
-- [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
 
 </details>
 
