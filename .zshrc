@@ -79,6 +79,9 @@ alias ld="lazydocker"
 alias cat=bat
 alias py=python3
 alias df=duf
+alias du=dust
+alias fzf="fzf --preview 'bat --color=always {}' --preview-window '~3'"
+alias ping=gping
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
