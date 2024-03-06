@@ -1,0 +1,67 @@
+# change focus
+lalt - h : yabai -m window --focus west
+lalt - j : yabai -m window --focus south
+lalt - k : yabai -m window --focus north
+lalt - l : yabai -m window --focus east
+
+# shift window in current workspace
+lalt + shift - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
+lalt + shift - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
+lalt + shift - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
+lalt + shift - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
+
+
+# set insertion point in focused container
+lalt + ctrl - h : yabai -m window --insert west
+lalt + ctrl - j : yabai -m window --insert south
+lalt + ctrl - k : yabai -m window --insert north
+lalt + ctrl - l : yabai -m window --insert east
+
+# go back to previous workspace (kind of like back_and_forth in i3)
+# lalt - b : yabai -m space --focus recent
+
+# move focused window to previous workspace
+# lalt + shift - b : yabai -m window --space recent; \
+#                   yabai -m space --focus recent
+
+# move focused window to next/prev workspace
+lalt + shift - 1 : yabai -m window --space 1
+lalt + shift - 2 : yabai -m window --space 2
+lalt + shift - 3 : yabai -m window --space 3
+lalt + shift - 4 : yabai -m window --space 4
+lalt + shift - 5 : yabai -m window --space 5
+lalt + shift - 6 : yabai -m window --space 6
+lalt + shift - 7 : yabai -m window --space 7
+lalt + shift - 8 : yabai -m window --space 8
+lalt + shift - 9 : yabai -m window --space 9
+
+# # mirror tree y-axis
+lalt + shift - y : yabai -m space --mirror y-axis
+
+# # mirror tree x-axis
+lalt + shift - x : yabai -m space --mirror x-axis
+
+# balance size of windows
+lalt + shift - 0 : yabai -m space --balance
+
+# change layout of desktop
+lalt - e : yabai -m space --layout bsp
+lalt - l : yabai -m space --layout float
+lalt - s : yabai -m space --layout stack
+
+# cycle through stack windows
+# lalt - p : yabai -m window --focus stack.next || yabai -m window --focus south
+# lalt - n : yabai -m window --focus stack.prev || yabai -m window --focus north
+
+# close focused window
+lalt - w : yabai -m window --close
+
+# enter fullscreen mode for the focused container
+lalt - f : yabai -m window --toggle zoom-fullscreen
+
+# toggle window native fullscreen
+lalt + shift - f : yabai -m window --toggle native-fullscreen
+
+lalt - return : open -n /Applications/Alacritty.app
+lalt - b : open -n /Applications/Google\ Chrome.app
+lalt - n : open ~/Documents/
