@@ -133,6 +133,8 @@ yay -S \
 	cfdisk \
 	ncdu \
 	tokei \
+  pdftk \
+  qpdf \
 	csview \
 	bottom \
 	gparted \
@@ -180,7 +182,7 @@ yay -S \
  	flyctl-bin \
  	lazydocker-bin \
  	docker-compose \
-  	sqlite litecli sqlitebrowser dbeaver usql \
+  sqlite litecli sqlitebrowser dbeaver usql \
 	postgresql pgcli \
 	goreleaser-bin
  

@@ -17,13 +17,12 @@ exec --no-startup-id xset s off -dpms
 # exec --no-startup-id nm-applet
 
 # Config
-exec_always --no-startup-id setxkbmap -option caps:escape
-# setxkbmap -layout "la-latin1"
+# exec_always --no-startup-id setxkbmap -option caps:escape
+# exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl
 exec_always --no-startup-id xset r rate 300 30
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 # exec --no-startup-id polybar
 exec_always --no-startup-id redshift -O 3500 -P
-# exec_always --no-startup-id setxkbmap us -variant intl
 # exec --no-startup-id feh --no-fehbg --bg-fill '/path/to/favorite-picture.jpg'
 
 
@@ -68,22 +67,12 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # Move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -195,8 +184,8 @@ bindsym $mod+XF86LaunchA exec --no-startup-id dunstify "hi"
 bindsym $mod+d exec --no-startup-id "rofi -modi calc,window,drun,run,ssh,emoji -show drun -show-icons"
 
 bindsym $mod+Return exec --no-startup-id alacritty 
-bindsym $mod+Shift+Return exec --no-startup-id alacritty -e tmux attatch
-bindsym $mod+Ctrl+n exec "xdg-open ."
+bindsym $mod+Shift+Return exec --no-startup-id alacritty -e btm
+bindsym $mod+Shift+n exec "thunar ."
 bindsym $mod+Shift+b exec "xdg-open https://"
 bindsym $mod+Print exec "flameshot gui"
 
