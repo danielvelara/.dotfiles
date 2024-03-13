@@ -1,6 +1,18 @@
 set $mod Mod4 
 set $sup Mod1
 
+# set $term foot
+set $term alacritty
+set $lock i3lock
+set $menu rofi
+# dmenu
+# swaymsg exec --
+
+set $left h
+set $down j
+set $up k
+set $right l
+
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -14,11 +26,11 @@ exec --no-startup-id xset s off -dpms
 
 # NetworkManager
 # exec --no-startup-id nm-applet
-# exec --no-startup-id nm-applet
 
 # Config
-# exec_always --no-startup-id setxkbmap -option caps:escape
-# exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl
+exec_always --no-startup-id setxkbmap -option
+exec_always --no-startup-id setxkbmap -option caps:escape
+exec_always --no-startup-id setxkbmap -layout us -variant altgr-intl
 exec_always --no-startup-id xset r rate 300 30
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 # exec --no-startup-id polybar
@@ -37,8 +49,9 @@ workspace_layout tabbed
 
 # Style
 # font pango:monospace 8
-font pango:Fira Code Nerd Font Mono Regular 8
 # font pango:DejaVu Sans Mono 8
+font pango:Fira Code Nerd Font Mono Regular 8
+
 # client.focused #859900 #859900 #fdf6e3 #859900
 # class        border | backgr | text | indicator | child_border
 client.focused #D79921 #D79921 #FBF1C7 #FFFF00
@@ -56,7 +69,6 @@ for_window [class="^.*"] sticky enable
 # for_window [instance=alacritty] sticky enable
 
 # title_window_icon 
-
 
 smart_gaps on
 gaps inner 15
@@ -162,29 +174,31 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit
 
 # Adjust PulseAudio volume
 set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh_i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && refresh_i3status
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 bindsym XF86Explorer exec --no-startup-id thunar
-bindsym XF86Tools exec --no-startup-id powerprofilesctl set $(printf "performance\nbalanced\npower-saver" | rofi -dmenu -p "Power Mode")
-bindsym XF86Display exec --no-startup-id autorandr --load $(printf "docked\nmobile" | rofi -dmenu -p "Autorandr Configuration")
+bindsym XF86Tools exec --no-startup-id powerprofilesctl set $(printf "performance\nbalanced\npower-saver" | $menu -dmenu -p "Power Mode")
+bindsym XF86Display exec --no-startup-id autorandr --load $(printf "docked\nmobile" | $menu -dmenu -p "Autorandr Configuration")
+bindsym $mod+XF86AudioMute exec "mpc prev"
+bindsym $mod+XF86AudioLowerVolume exec "mpc toggle"
+bindsym $mod+XF86AudioRaiseVolume exec "mpc next"
 
-# bindsym $mod+Escape exec --no-startup-id i3lock -c 000000 
-bindsym $mod+Shift+Escape exec --no-startup-id i3lock -c 000000 && mpc -q pause && systemctl suspend
-# bindsym $mod+Shift+Escape exec --no-startup-id  i3lock -c 000000 &&systemctl suspend
+# bindsym $mod+ exec --no-startup-id "notify-send hi"
+bindsym $mod+Escape exec --no-startup-id $lock -c 000000 
+bindsym $mod+Shift+Escape exec --no-startup-id $lock -c 000000 && mpc -q pause && systemctl suspend
 # bindsym $Shift+Escape "loginctl lock-session"
-bindsym $mod+XF86LaunchA exec --no-startup-id dunstify "hi"
 
 
 # ----- Menu ----- 
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id "rofi -modi calc,window,drun,run,ssh,emoji -show drun -show-icons"
 
-bindsym $mod+Return exec --no-startup-id alacritty 
-bindsym $mod+Shift+Return exec --no-startup-id alacritty -e btm
+bindsym $mod+Return exec --no-startup-id $term 
+bindsym $mod+Shift+Return exec --no-startup-id $term -e btm
 bindsym $mod+Shift+n exec "thunar ."
 bindsym $mod+Shift+b exec "xdg-open https://"
 bindsym $mod+Print exec "flameshot gui"
