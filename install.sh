@@ -30,7 +30,7 @@ makepkg -si
 ## System
 ########################
 
-sudo pacman -S sway swaybg foot polkit waybar ttf-font-awesome
+sudo pacman -S sway swaybg foot polkit waybar ttf-font-awesome mako wofi wlsunset
 ln -sfn ~/.dotfiles/.config/sway/config ~/.config/sway 
 ln -sfn ~/.dotfiles/.config/foot/foot.ini ~/.config/foot 
 ln -sfn ~/.dotfiles/.config/waybar/ ~/.config/
