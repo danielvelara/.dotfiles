@@ -7,7 +7,7 @@ vim.diagnostic.config({ virtual_text = true })
 -- vim.opt.listchars:append "eol:↴"
 -- vim.opt.listchars:append "space:⋅"
 
-lvim.colorscheme = "gruvbox"
+-- lvim.colorscheme = "gruvbox"
 lvim.builtin.nvimtree.setup.filters.dotfiles = true
 lvim.builtin.treesitter.highlight.enable = true
 
@@ -37,69 +37,6 @@ lvim.builtin.treesitter.ensure_installed = {
 
 
 ------------------------
--- Formatters
-------------------------
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-  { command = "black",     filetypes = { "python" } },
-  { command = "ruff",      filetypes = { "python" },                               args = { "a" } },
-  { command = "shfmt",     filetypes = { "sh", "bash" } },
-  { command = "prettier",  filetypes = { "yml", "yaml", "markdown", "javascript" } },
-  { command = "goimports", filetypes = { "go" } },
-  { command = "gofumpt",   filetypes = { "go" } },
-}
-lvim.format_on_save.enabled = true
--- lvim.format_on_save.pattern = { "*.py" }
-
-
-------------------------
--- Lintters
-------------------------
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  { command = "ruff",          filetypes = { "python" }, args = { "" } },
-  { command = "shellcheck",    filetypes = { "bash" } },
-  { command = "staticcheck",   filetypes = { "go" } },
-  { command = "golangci-lint", filetypes = { "go" } }
-}
-
-
-------------------------
--- DAP
-------------------------
-lvim.builtin.dap.active = true
--- Python DAP
-local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
-pcall(function()
-  require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
-end)
--- Go DAP
-local dap_ok, dapgo = pcall(require, "dap-go")
-if not dap_ok then
-  return
-end
-dapgo.setup()
-
-
-------------------------
--- Testing
-------------------------
-require("neotest").setup({
-  adapters = {
-    require("neotest-python")({
-      -- Extra arguments for nvim-dap configuration
-      -- See https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for values
-      dap = {
-        justMyCode = false,
-        console = "integratedTerminal",
-      },
-      args = { "--log-level", "DEBUG", "--quiet" },
-      runner = "pytest",
-    })
-  }
-})
-
-------------------------
 -- Plugins
 ------------------------
 lvim.plugins = {
@@ -119,10 +56,10 @@ lvim.plugins = {
   -- Python
   "ChristianChiarulli/swenv.nvim",
   "mfussenegger/nvim-dap-python",
-  "nvim-neotest/neotest-python",
+  -- "nvim-neotest/neotest-python",
   -- System
   "tpope/vim-surround",
-  "nvim-neotest/neotest",
+  -- "nvim-neotest/neotest",
   { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
   {
     "folke/zen-mode.nvim",
@@ -237,6 +174,71 @@ lvim.plugins = {
   --   },
   -- }
 }
+
+
+------------------------
+-- Formatters
+------------------------
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "black",     filetypes = { "python" } },
+  { command = "ruff",      filetypes = { "python" },                               args = { "a" } },
+  { command = "shfmt",     filetypes = { "sh", "bash" } },
+  { command = "prettier",  filetypes = { "yml", "yaml", "markdown", "javascript" } },
+  { command = "goimports", filetypes = { "go" } },
+  { command = "gofumpt",   filetypes = { "go" } },
+}
+lvim.format_on_save.enabled = true
+-- lvim.format_on_save.pattern = { "*.py" }
+
+
+------------------------
+-- Lintters
+------------------------
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "ruff",          filetypes = { "python" }, args = { "" } },
+  { command = "shellcheck",    filetypes = { "bash" } },
+  { command = "staticcheck",   filetypes = { "go" } },
+  { command = "golangci-lint", filetypes = { "go" } }
+}
+
+
+------------------------
+-- DAP
+------------------------
+lvim.builtin.dap.active = true
+-- Python DAP
+local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
+pcall(function()
+  require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
+end)
+-- Go DAP
+local dap_ok, dapgo = pcall(require, "dap-go")
+if not dap_ok then
+  return
+end
+dapgo.setup()
+
+
+------------------------
+-- Testing
+------------------------
+-- require("neotest").setup({
+--   adapters = {
+--     require("neotest-python")({
+--       -- Extra arguments for nvim-dap configuration
+--       -- See https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for values
+--       dap = {
+--         justMyCode = false,
+--         console = "integratedTerminal",
+--       },
+--       args = { "--log-level", "DEBUG", "--quiet" },
+--       runner = "pytest",
+--     })
+--   }
+-- })
+
 
 ------------------------
 -- LSP
