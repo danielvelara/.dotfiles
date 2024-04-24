@@ -214,6 +214,7 @@ sudo usermod -aG docker $USER
 yay -S \
 	jq \
 	oha \
+ 	wrk \
 	ufw \
 	gufw \
 	bind \
