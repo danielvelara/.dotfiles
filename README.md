@@ -1,10 +1,11 @@
-<h2 align="center"> ━━━━━━  ❖  ━━━━━━ </h2>
-
 # ~/.dotfiles
 
 <p align="center">
    <img src="https://user-images.githubusercontent.com/13500134/150906114-216d4c5b-06f0-4ef4-a6d9-9087f2bc33b2.png" width="200"/>
 </p>
+
+<h2 align="center"> ━━━━━━  ❖  ━━━━━━ </h2>
+
 
 
 ```bash
@@ -19,12 +20,10 @@ sh ~/dotfiles/install.sh
 | Program                  | Name                                                             |
 | ------------------------ | ---------------------------------------------------------------- |
 | **Operating System**     | [Arch Linux](https://archlinux.org/)                             |
+| **Window Manager**       | [sway](https://github.com/swaywm/sway)                           |
 | **Display Manager**      | [lxdm](https://wiki.archlinux.org/title/LXDM)                    |
 | **Service Manager**      | [systemd](https://systemd.io/)                                   |
-| **Window Manager**       | [i3wm](https://github.com/i3/i3)                                 |
 | **Network Manager**      | [NetworkManager](https://networkmanager.dev/)                    |
-| **Notification Manager** | [Dunst](https://dunst-project.org/)                              |
-| **Brightness Manager**   | [brightnessctl](https://github.com/Hummer12007/brightnessctl)    |
 | **Application Launcher** | [rofi](https://github.com/davatorium/rofi)                       |
 | **Status Panel**         | [Polybar](https://polybar.github.io/)                            |
 | **Shell**                | [zsh](https://www.zsh.org/)                                      |
@@ -32,24 +31,15 @@ sh ~/dotfiles/install.sh
 
 ## Applications
 
-| Applicaton         | Name                                                                                                                                           |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mail Reader        | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                                                        |
-| Text Editor        | [neovim](https://neovim.io/) <br> & [VSCodium](https://vscodium.com/)                                                                          |
-| Video Editor       | [Kdenlive](https://kdenlive.org/en/)                                                                                                           |
-| Video Converter    | [HandBrake](https://handbrake.fr/) <br> & [FFmpeg](https://ffmpeg.org/)                                                                        |
-| Screenshot Utility | [Flameshot](https://flameshot.org/) <br>                                                                                                       |
-| Image Editor       | [GIMP](https://www.gimp.org/) <br> & [ImageMagick](https://imagemagick.org/)                                                                   |
-| Calculator         | [Qalculate!](https://qalculate.github.io/)                                                                                                     |
-| File Converter     | [Pandoc](https://pandoc.org/)                                                                                                                  |
-| Presentation Tool  | [Beamer](https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc) <br> & [slides]()                                        |
-
-## Tools
-
-| Tool               | Name                                                   |
-| ------------------ | ------------------------------------------------------ |
-| Database Tools     | [usql](https://github.com/xo/usql)                     |
-| Speech Synthesizer | [eseapk-ng](https://github.com/espeak-ng/espeak-ng)    |
+| Applicaton         | Name                                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------------------- |
+| Mail Client        | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                 |
+| Text Editor        | [neovim](https://neovim.io/)                                                                            |
+| Video Editor       | Kdenlive                                                                                                |
+| Image Editor       | GIMP & ImageMagick                                                                                      |
+| Screenshot Utility | [Flameshot](https://flameshot.org/)                                                                     |
+| Calculator         | Qalculate                                                                                               |
+| Presentation Tool  | [Beamer](https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc) <br> & [slides]() |
 
 <details>
 <summary><code>Chromium Extensions</code> </summary>
@@ -73,7 +63,6 @@ sh ~/dotfiles/install.sh
   - [libredirect](https://github.com/libredirect/libredirect)
 
 </details>
-
 
 <details>
 <summary><code>VSCode Extensions</code></summary>
