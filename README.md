@@ -4,9 +4,6 @@
    <img src="https://user-images.githubusercontent.com/13500134/150906114-216d4c5b-06f0-4ef4-a6d9-9087f2bc33b2.png" width="200"/>
 </p>
 
-<h2 align="center"> ━━━━━━  ❖  ━━━━━━ </h2>
-
-
 
 ```bash
 sudo pacman -Syyu
@@ -35,10 +32,6 @@ cd .dotfiles && ./install.sh
 | ------------------ | ------------------------------------------------------------------------------------------------------- |
 | Mail Client        | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                 |
 | Text Editor        | [neovim](https://neovim.io/)                                                                            |
-| Video Editor       | Kdenlive                                                                                                |
-| Image Editor       | GIMP & ImageMagick                                                                                      |
-| Screenshot Utility | [Flameshot](https://flameshot.org/)                                                                     |
-| Calculator         | Qalculate                                                                                               |
 | Presentation Tool  | [Beamer](https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc) <br> & [slides]() |
 
 <details>
@@ -46,8 +39,6 @@ cd .dotfiles && ./install.sh
 
 - Developer
   - [Hoppscotch](https://chromewebstore.google.com/detail/hoppscotch-browser-extens/amknoiejhlmhancpahfcfcfhllgkpbld)
-  - [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
-  - [BuiltWith](https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn)
   - [WhatRuns](https://chromewebstore.google.com/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip)
 - Productivity
   - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
