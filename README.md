@@ -18,13 +18,26 @@ cd .dotfiles && ./install.sh
 | ------------------------ | ---------------------------------------------------------------- |
 | **Operating System**     | [Arch Linux](https://archlinux.org/)                             |
 | **Window Manager**       | [sway](https://github.com/swaywm/sway)                           |
-| **Display Manager**      | [lxdm](https://wiki.archlinux.org/title/LXDM)                    |
+| **Display Manager**      | [ly](https://github.com/fairyglade/ly)                    |
 | **Service Manager**      | [systemd](https://systemd.io/)                                   |
 | **Network Manager**      | [NetworkManager](https://networkmanager.dev/)                    |
 | **Application Launcher** | [rofi](https://github.com/davatorium/rofi)                       |
 | **Status Panel**         | [Polybar](https://polybar.github.io/)                            |
 | **Shell**                | [zsh](https://www.zsh.org/)                                      |
 | **Terminal Multiplexer** | [tmux](https://github.com/tmux/tmux/wiki)                        |
+
+- Sway/Wayland
+  - swayidle
+  - brightnessctl
+  - pavucontrol
+  - swaybg
+  - waybar
+  - grim
+  - foot
+  - swaylock
+  - dmenu
+  - slurp
+  - xorg-xwayland 
 
 ## Applications
 
