@@ -7,7 +7,7 @@
 
 ```bash
 sudo pacman -Syyu
-pacman -S --needed git base-devel
+sudo pacman -S --needed git base-devel
 git clone https://github.com/danielvelara/.dotfiles
 cd .dotfiles && ./install.sh
 ```
