@@ -14,12 +14,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-export CDPATH=$CDPATH:/Users/danielvelara/Documents/
+# export CDPATH=$CDPATH:/Users/danielvelara/Documents/
 # export CDPATH=$CDPATH:/Users/danielvelara/Documents/kata
 # export GOPATH="$HOME/go"
 export ERL_AFLAGS="-kernel shell_history enabled"
 export PATH="$HOME/go/bin:$PATH"
-
 
 export BROWSER=brave
 export TERMINAL="alacritty"
@@ -39,7 +38,6 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 DISABLE_UNTRACKED_FILES_DIRTY="false"
 # DISABLE_MAGIC_FUNCTIONS="true"
 HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
-
 
 # HIST_STAMPS="yyyy-mm-dd"
 
@@ -62,15 +60,11 @@ source $ZSH/oh-my-zsh.sh
 
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-# gsettings set org.gnome.desktop.interface text-scaling-factor 1.4
-# redshift -O 2500k -P
 . /opt/asdf-vm/asdf.sh
-
 
 export ARCHFLAGS="-arch x86_64"
 export VISUAL=nvim;
 export EDITOR=nvim;
-export LEDGER_FILE=.main.journal
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
@@ -108,8 +102,6 @@ alias llm='ollama run llama3.1'
 #   export EDITOR='mvim'
 # fi
 
-
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -122,5 +114,3 @@ autoload -Uz compinit && compinit
 
 # Created by `pipx` on 2023-08-01 02:22:07
 export PATH="$PATH:/home/danielvelara/.local/bin"
-
-
