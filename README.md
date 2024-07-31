@@ -37,21 +37,6 @@ cd .dotfiles && ./install.sh
 | Mail Client          | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                 |
 
 
-
-- Sway/Wayland
-  - swayidle
-  - brightnessctl
-  - pavucontrol
-  - swaybg
-  - waybar
-  - grim
-  - foot
-  - swaylock
-  - dmenu
-  - slurp
-  - xorg-xwayland 
-
-
 ### Browser Extensions
 
 - Productivity
