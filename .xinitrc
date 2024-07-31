@@ -5,7 +5,3 @@ xrdb -merge ~/.Xresources
 # xautolock -time 10 -locker slock # 10 minutes
 xset s off -dpms # Prevent sleep
 # Default
-
-export BROWSER=brave
-export TERMINAL="alacritty"
-export READER="zathura"
