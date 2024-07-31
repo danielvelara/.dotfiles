@@ -39,10 +39,9 @@ cd .dotfiles && ./install.sh
 
 ### Browser Extensions
 
-- Productivity
-  - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
-  - [VideoSpeedController](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
-  - [libredirect](https://github.com/libredirect/libredirect)
+- [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
+- [VideoSpeedController](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
+- [libredirect](https://github.com/libredirect/libredirect)
 
 ## VSCode Extensions
 
