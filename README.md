@@ -51,29 +51,17 @@ cd .dotfiles && ./install.sh
   - slurp
   - xorg-xwayland 
 
-## Applications
 
+### Browser Extensions
 
-<details>
-<summary><code>Chromium Extensions</code> </summary>
-
-- Developer
-  - [Hoppscotch](https://chromewebstore.google.com/detail/hoppscotch-browser-extens/amknoiejhlmhancpahfcfcfhllgkpbld)
-  - [WhatRuns](https://chromewebstore.google.com/detail/whatruns/cmkdbmfndkfgebldhnkbfhlneefdaaip)
 - Productivity
   - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
-  - [ViewImage](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk)
-- YouTube
+  - [VideoSpeedController](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
   - [Unhook](https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid)
   - [SponsorBlock](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
-  - [VideoSpeedController](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
-  - [h264ify](https://chrome.google.com/webstore/detail/h264ify/aleakchihdccplidncghkekgioiakgal)
-- Privacy
   - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
-  - [Keepa](https://chrome.google.com/webstore/detail/neebplgakaahbhdphmkckjjcegoiijjo)
   - [libredirect](https://github.com/libredirect/libredirect)
 
-</details>
 
 <details>
 <summary><code>VSCode Extensions</code></summary>
