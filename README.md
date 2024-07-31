@@ -16,25 +16,25 @@ cd .dotfiles && ./install.sh
 
 | Program              | Name                                           |
 | -------------------- | ---------------------------------------------- |
-| Bootloader           | [GNU GRUB](https://www.gnu.org/software/grub/) |
-| Operating System     | [Arch Linux](https://archlinux.org/)           |
-| Window Manager       | [sway](https://swaywm.org/)                    |
-| Display Server       | [Wayland](https://wayland.freedesktop.org/)    |
-| Display Manager      | [ly](https://github.com/fairyglade/ly)         |
-| Service Manager      | [systemd](https://systemd.io/)                 |
-| Network Manager      | [NetworkManager](https://networkmanager.dev/)  |
-| Audio Manager        | [Pipewire](https://www.pipewire.org/)          |
-| Application Launcher | [rofi](https://github.com/davatorium/rofi)     |
-| Status Panel         | [Polybar](https://polybar.github.io/)          |
-| Shell                | [zsh](https://www.zsh.org/)                    |
-| Terminal Multiplexer | [tmux](https://github.com/tmux/tmux/wiki)      |
-| Terminal Emulator    | [foot](https://codeberg.org/dnkl/foot)         |
-| Text Editor          | [Neovim](https://neovim.io/)                   |
-| Web Browser          | [LibreWolf](https://librewolf.net/)            |
-| SRS                  | [Anki](https://apps.ankiweb.net/)              |
-| Productivity Suite   | [LibreOffice](https://www.libreoffice.org/)    |
-| Presentation Tool    | [slides](https://github.com/maaslalani/slides) |
-| Mail Client          | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                 |
+| Bootloader            | [GNU GRUB](https://www.gnu.org/software/grub/) |
+| Operating System      | [Arch Linux](https://archlinux.org/)           |
+| Window Manager        | [sway](https://swaywm.org/)                    |
+| Display Server        | [Wayland](https://wayland.freedesktop.org/)    |
+| Display/Login Manager | [Ly](https://github.com/fairyglade/ly)         |
+| Service Manager       | [systemd](https://systemd.io/)                 |
+| Network Manager       | [NetworkManager](https://networkmanager.dev/)  |
+| Audio Manager         | [Pipewire](https://www.pipewire.org/)          |
+| Application Launcher  | [rofi](https://github.com/davatorium/rofi)     |
+| Status Panel          | [Polybar](https://polybar.github.io/)          |
+| Shell                 | [zsh](https://www.zsh.org/)                    |
+| Terminal Multiplexer  | [tmux](https://github.com/tmux/tmux/wiki)      |
+| Terminal Emulator     | [foot](https://codeberg.org/dnkl/foot)         |
+| Text Editor           | [Neovim](https://neovim.io/)                   |
+| Web Browser           | [LibreWolf](https://librewolf.net/)            |
+| SRS                   | [Anki](https://apps.ankiweb.net/)              |
+| Productivity Suite    | [LibreOffice](https://www.libreoffice.org/)    |
+| Presentation Tool     | [slides](https://github.com/maaslalani/slides) |
+| Mail Client           | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                 |
 
 
 ### Browser Extensions
@@ -43,28 +43,16 @@ cd .dotfiles && ./install.sh
   - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
   - [VideoSpeedController](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
   - [Unhook](https://chrome.google.com/webstore/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid)
-  - [SponsorBlock](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)
   - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
   - [libredirect](https://github.com/libredirect/libredirect)
 
-
-<details>
-<summary><code>VSCode Extensions</code></summary>
+## VSCode Extensions
 
 - [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
 - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
 
-</details>
+## Anki Extensions
 
-<details>
-<summary><code>Anki Extensions</code></summary>
-
-- Heatmap: Manual Install
-- Image Occlusion: 1374772155
-- ProgrssBar: 2091361802
-- Syntax Highlighting for Code: 1463041493
-- Anki Simulator: 817108664
-- Frozen Fields: 516643804
-- Advanced Review Bottom Bar: 1136455830
-
-</details>
+- Heatmap: `1771074083`
+- Image Occlusion: `1374772155`
+- Syntax Highlighting for Code: `1463041493`
