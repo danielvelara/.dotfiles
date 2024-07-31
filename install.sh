@@ -15,8 +15,6 @@ fi
 sleep 1s
 clear
 
-# Nix
-# sh <(curl -L https://nixos.org/nix/install) --daemon
 
 # Install yay
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
@@ -32,31 +30,27 @@ sh -c "$(curl -fsSL https://raw.github.com/tyzsh/ohmyzsh/master/tools/install.sh
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-
 # Fonts
 # pacman -S ttf-ms-fonts ttf-liberation noto-fonts noto-fonts-emoji ttf-meslo-nerd-font-powerlevel10k ttf-font-awesome # ttf-firacode
 
-# Sway
-# sway swayidle brightnessctl pavucontrol swaybg waybar grim foot swaylock dmenu slurp xorg-xwayland mako wofi 
+# yay -S dunst polybar lxappearence rofi rofi-emoji rofi-calc screenkey
+# sway swayidle brightnessctl pavucontrol swaybg waybar grim foot swaylock dmenu slurp xorg-xwayland mako wofi kanshi
+
+
 sudo pacman -S wlsunset-git
-mkdir ~/.config/sway && ln -sfn ~/.dotfiles/.config/sway/config ~/.config/sway 
-mkdir ~/.config/foot && ln -sfn ~/.dotfiles/.config/foot/foot.ini ~/.config/foot 
+mkdir ~/.config/sway   && ln -sfn ~/.dotfiles/.config/sway ~/.config/ 
+mkdir ~/.config/foot   && ln -sfn ~/.dotfiles/.config/foot ~/.config/ 
+# mkdir ~/.config/waybar && ln -sfn ~/.dotfiles/.config/waybar ~/.config/
+# mkdir ~/.config/dunst  && ln -sfn ~/.dotfiles/.config/dunst  ~/.config/ 
+# mkdir ~/.config/rofi   && ln -sfn ~/.dotfiles/.config/rofi   ~/.config
+
+
 ln -sfn ~/.dotfiles/.zshrc ~/.zshrc
 ln -sfn ~/.dotfiles/.tmux.conf ~/
 
-# i3wm
-# yay -S dunst polybar redshift lxappearence rofi rofi-emoji rofi-calc xorg-xrandr arandr autorandr screenkey
 
-# ln -sfn ~/.dotfiles/.config/waybar/ ~/.config/
-# ln -sfn ~/.dotfiles/.xinitrc ~/
 # ln -sfn ~/.dotfiles/.newsboat ~/
-# ln -sfn ~/.dotfiles/.gitconfig ~/
-# ln -sfn ~/.dotfiles/.Xresources ~/
-# ln -sfn ~/.dotfiles/.profile .profile
-# ln -sfn ~/.dotfiles/.config/lf ~/.config
 # ln -sfn ~/.dotfiles/.config/nvim ~/.config
-# ln -sfn ~/.dotfiles/.config/dunst ~/.config
-# ln -sfn ~/.dotfiles/.config/rofi/ ~/.config
 # ln -sfn ~/.dotfiles/.config/polybar ~/.config
 # ln -sfn ~/.dotfiles/.config/alacritty ~/.config
 # ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
@@ -74,6 +68,7 @@ yay -S bottom hledger-bin # tldr pass pass-otp fzf ripgrep  slidev-bin libqalcul
 # Developer
 yay -S asdf-vm lazygit lazydocker-bin flyctl-bin # ctop dive docker  docker-compose sqlite sqlitebrowser dbeaver postgresql ollama
 # github-cli git-chglog git-cliff onefetch git-delta gitleaks
+# sudo usermod -aG docker $USER
 
 # Networking
 yay -S caddy  # protonvpn ufw gufw jq oha wrk bind ntop nmap gping aria2 whois nload nikto ipcalc trippy httpie wifite2 websocat rustscan goaccess net-tools termshark inetutils tailscale burpsuite gnu-netcat aircrack-ng intermodal-bin portmaster-stub-bin
@@ -90,4 +85,3 @@ yay -S caddy  # protonvpn ufw gufw jq oha wrk bind ntop nmap gping aria2 whois n
 # asdf plugin add neovim && asdf install neovim latest && asdf global neovim latest
 
 # bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-# sudo usermod -aG docker $USER
