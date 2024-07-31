@@ -6,14 +6,20 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# export ZSH="$HOME/.oh-my-zsh"
 export ZSH="/home/danielvelara/.oh-my-zsh"
-# export CDPATH=$CDPATH:/Users/danielvelara/Documents/kata
-export ERL_AFLAGS="-kernel shell_history enabled"
-ZSH_THEME="robbyrussell" # "random"
+# ZSH_THEME="robbyrussell" # "random"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # echo $RANDOM_THEMEK
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+export CDPATH=$CDPATH:/Users/danielvelara/Documents/
+# export CDPATH=$CDPATH:/Users/danielvelara/Documents/kata
+# export GOPATH="$HOME/go"
+export ERL_AFLAGS="-kernel shell_history enabled"
+export PATH="$HOME/go/bin:$PATH"
+
 
 export BROWSER=brave
 export TERMINAL="alacritty"
@@ -39,7 +45,7 @@ HYPHEN_INSENSITIVE="false" # _ and - will be interchangeable.
 
 
 # PLUGINS: $ZSH/plugins & $ZSH_CUSTOM/plugins/
-plugins=(git gh python docker docker-compose aws pass golang archlinux ufw npm httpie terraform deno zsh-syntax-highlighting zsh-autosuggestions httpie mix poetry asdf)
+plugins=(git gh python docker docker-compose aws pass golang archlinux ufw npm httpie terraform deno zsh-syntax-highlighting zsh-autosuggestions httpie mix asdf)
 
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
@@ -53,6 +59,7 @@ zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
 source $ZSH/oh-my-zsh.sh
+
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 # gsettings set org.gnome.desktop.interface text-scaling-factor 1.4
@@ -77,6 +84,11 @@ alias q=qalc
 alias ct=cointop
 # alias code="codium"
 alias hl="hledger"
+alias hla='hledger accounts --tree'
+alias hlis='hledger is --montly -T --average --tree'
+alias hlbs='hledger bse -M --tree'
+alias hlbal='hledger bal --tree --monthly --average'
+alias hlcf='hledger cf -t -M'
 alias lvim="~/.local/bin/lvim"
 alias lg="lazygit"
 alias ld="lazydocker"
@@ -86,6 +98,17 @@ alias df=duf
 alias du=dust
 alias fzf="fzf --preview 'bat --color=always {}' --preview-window '~3'"
 alias ping=gping
+alias llama='ollama run llama3.1:70b'
+alias llm='ollama run llama3.1'
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -99,3 +122,5 @@ autoload -Uz compinit && compinit
 
 # Created by `pipx` on 2023-08-01 02:22:07
 export PATH="$PATH:/home/danielvelara/.local/bin"
+
+
