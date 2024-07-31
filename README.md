@@ -18,9 +18,10 @@ cd .dotfiles && ./install.sh
 | ------------------------ | ---------------------------------------------------------------- |
 | **Operating System**     | [Arch Linux](https://archlinux.org/)                             |
 | **Window Manager**       | [sway](https://github.com/swaywm/sway)                           |
-| **Display Manager**      | [ly](https://github.com/fairyglade/ly)                    |
+| **Display Manager**      | [ly](https://github.com/fairyglade/ly)                           |
 | **Service Manager**      | [systemd](https://systemd.io/)                                   |
 | **Network Manager**      | [NetworkManager](https://networkmanager.dev/)                    |
+| **Audio Manager**        | [Pipewire](https://www.pipewire.org/)                    |
 | **Application Launcher** | [rofi](https://github.com/davatorium/rofi)                       |
 | **Status Panel**         | [Polybar](https://polybar.github.io/)                            |
 | **Shell**                | [zsh](https://www.zsh.org/)                                      |
