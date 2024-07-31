@@ -33,9 +33,11 @@ systemctl enable cups.service --now
 ## System
 ########################
 
-sudo pacman -S sway swaybg foot polkit waybar mako wofi wlsunset
+sudo pacman -S wlsunset-git
 
-# sway swayidle brightnessctl pavucontrol swaybg waybar grim foot swaylock dmenu slurp xorg-xwayland 
+# sway swayidle brightnessctl pavucontrol swaybg waybar grim foot swaylock dmenu slurp xorg-xwayland mako wofi 
+
+yay -S zsh tmux
 
 # Fonts
 pacman -S ttf-firacode ttf-ms-fonts ttf-liberation noto-fonts noto-fonts-emoji ttf-meslo-nerd-font-powerlevel10k ttf-font-awesome
@@ -64,9 +66,6 @@ ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
 ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
 ln -sfn ~/.dotfiles/.config/VSCodium/settings.json ~/.config/VSCodium/User
 
-
-yay -S zsh tmux alacritty
-	
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
