@@ -15,10 +15,7 @@ fi
 sleep 1s
 clear
 
-########################
-## Nix
-########################
-
+# Nix
 # sh <(curl -L https://nixos.org/nix/install) --daemon
 
 # Install yay
@@ -27,11 +24,6 @@ pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin
 # yay -S bluez bluez-utils cups
 # systemctl enable bluetooth.service --now
 # systemctl enable cups.service --now
-
-
-########################
-## System
-########################
 
 # sway swayidle brightnessctl pavucontrol swaybg waybar grim foot swaylock dmenu slurp xorg-xwayland mako wofi 
 sudo pacman -S wlsunset-git
@@ -44,7 +36,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 
 # Fonts
-pacman -S ttf-firacode ttf-ms-fonts ttf-liberation noto-fonts noto-fonts-emoji ttf-meslo-nerd-font-powerlevel10k ttf-font-awesome
+pacman -S ttf-ms-fonts ttf-liberation noto-fonts noto-fonts-emoji ttf-meslo-nerd-font-powerlevel10k ttf-font-awesome # ttf-firacode
 
 # Sway
 mkdir ~/.config/sway && ln -sfn ~/.dotfiles/.config/sway/config ~/.config/sway 
@@ -52,57 +44,38 @@ mkdir ~/.config/foot && ln -sfn ~/.dotfiles/.config/foot/foot.ini ~/.config/foot
 ln -sfn ~/.dotfiles/.zshrc ~/.zshrc
 ln -sfn ~/.dotfiles/.tmux.conf ~/
 
+# i3wm
+# yay -S dunst polybar redshift lxappearence rofi rofi-emoji rofi-calc xorg-xrandr arandr autorandr
+
 
 # ln -sfn ~/.dotfiles/.config/waybar/ ~/.config/
-ln -sfn ~/.dotfiles/.xinitrc ~/
-ln -sfn ~/.dotfiles/.newsboat ~/
-ln -sfn ~/.dotfiles/.gitconfig ~/
-ln -sfn ~/.dotfiles/.Xresources ~/
-ln -sfn ~/.dotfiles/.profile .profile
-ln -sfn ~/.dotfiles/.config/lf ~/.config
-ln -sfn ~/.dotfiles/.config/nvim ~/.config
-ln -sfn ~/.dotfiles/.config/dunst ~/.config
-ln -sfn ~/.dotfiles/.config/rofi/ ~/.config
-ln -sfn ~/.dotfiles/.config/polybar ~/.config
+# ln -sfn ~/.dotfiles/.xinitrc ~/
+# ln -sfn ~/.dotfiles/.newsboat ~/
+# ln -sfn ~/.dotfiles/.gitconfig ~/
+# ln -sfn ~/.dotfiles/.Xresources ~/
+# ln -sfn ~/.dotfiles/.profile .profile
+# ln -sfn ~/.dotfiles/.config/lf ~/.config
+# ln -sfn ~/.dotfiles/.config/nvim ~/.config
+# ln -sfn ~/.dotfiles/.config/dunst ~/.config
+# ln -sfn ~/.dotfiles/.config/rofi/ ~/.config
+# ln -sfn ~/.dotfiles/.config/polybar ~/.config
 # ln -sfn ~/.dotfiles/.config/alacritty ~/.config
-ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
-ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
-ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
-ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
-ln -sfn ~/.dotfiles/.config/VSCodium/settings.json ~/.config/VSCodium/User
+# ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
+# ln -sfn ~/.dotfiles/.config/ncmpcpp/bindings ~/.config/ncmpcpp
+# ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
+# ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
+# ln -sfn ~/.dotfiles/.config/VSCodium/settings.json ~/.config/VSCodium/User
 
-########################
-## Git
-########################
-
-yay -S lazygit github-cli git-chglog git-cliff onefetch git-delta gitleaks
-echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >>~/.zshrc && source ~/.zshrc
-
-########################
-## i3wm
-########################
-
-yay -S \
-	dunst \
-	polybar \
-	redshift \
-	lxappearence \
-	rofi rofi-emoji rofi-calc \
-	xorg-xrandr arandr autorandr
-
-########################
-## Applications
-########################
-
-yay -S librewolf-bin # anki-bin vscodium-bin zathura zathura-pdf-mupdf obs-studio imv mpv gimp flameshot imagemagick calibre
-	# thunar thunar-archive-plugin xarchiver unzip gvfs gvfs-mtp
+# Applications
+yay -S librewolf-bin anki-bin obs-studio thunar thunar-archive-plugin xarchiver unzip # vscodium-bin zathura zathura-pdf-mupdf  imv mpv gimp flameshot imagemagick calibre
+	#   gvfs gvfs-mtp
 	
 
 ########################
 ## CLI
 ########################
 
-yay -S bottom hledger-bin tldr # pass pass-otp fzf ripgrep  slidev-bin libqalculate
+yay -S bottom hledger-bin # tldr pass pass-otp fzf ripgrep  slidev-bin libqalculate
 	bat \
 	duf \
 	gdu \
@@ -143,11 +116,13 @@ yay -S bottom hledger-bin tldr # pass pass-otp fzf ripgrep  slidev-bin libqalcul
 	ncmpcpp mpc mpd pulsemixer \
 	pandoc-bin beamer-bin texlive-core # calcurse \
 
-########################
-## Developer
-########################
 
-yay -S asdf-vm # ctop dive docker flyctl-bin lazydocker-bin docker-compose sqlite sqlitebrowser dbeaver postgresql ollama
+# Developer
+
+yay -S asdf-vm lazygit lazydocker-bin flyctl-bin # ctop dive docker  docker-compose sqlite sqlitebrowser dbeaver postgresql ollama
+# github-cli git-chglog git-cliff onefetch git-delta gitleaks
+# echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >>~/.zshrc && source ~/.zshrc
+
  
 # npm inotify-tools python python-pip
 pip install --user pipx
@@ -158,7 +133,6 @@ asdf plugin add elixir && asdf install elixir latest && asdf global elixir lates
 asdf plugin add golang && asdf install golang latest && asdf global golang latest
 asdf plugin add nodejs && asdf install nodejs latest && asdf global nodejs latest
 asdf plugin add python && asdf install python latest && asdf global python latest
-
 asdf plugin add neovim && asdf install neovim latest && asdf global neovim latest
 
 
