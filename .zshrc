@@ -15,6 +15,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+export BROWSER=brave
+export TERMINAL="alacritty"
+export READER="zathura"
+
 # oh-my-zsh
 # export UPDATE_ZSH_DAYS=13
 DISABLE_AUTO_UPDATE="true"
@@ -92,7 +96,6 @@ function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;
 fpath+=~/.zfunc
 zstyle ':completion:*' menu select
 autoload -Uz compinit && compinit
-function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 # Created by `pipx` on 2023-08-01 02:22:07
 export PATH="$PATH:/home/danielvelara/.local/bin"
