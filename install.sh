@@ -24,35 +24,40 @@ clear
 # Install yay
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 
-yay -S bluez bluez-utils cups
-systemctl enable bluetooth.service --now
-systemctl enable cups.service --now
+# yay -S bluez bluez-utils cups
+# systemctl enable bluetooth.service --now
+# systemctl enable cups.service --now
 
 
 ########################
 ## System
 ########################
 
-sudo pacman -S wlsunset-git
-
 # sway swayidle brightnessctl pavucontrol swaybg waybar grim foot swaylock dmenu slurp xorg-xwayland mako wofi 
-
+sudo pacman -S wlsunset-git
 yay -S zsh tmux
+sh -c "$(curl -fsSL https://raw.github.com/tyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 
 # Fonts
 pacman -S ttf-firacode ttf-ms-fonts ttf-liberation noto-fonts noto-fonts-emoji ttf-meslo-nerd-font-powerlevel10k ttf-font-awesome
 
 # Sway
-ln -sfn ~/.dotfiles/.config/sway/config ~/.config/sway 
-ln -sfn ~/.dotfiles/.config/foot/foot.ini ~/.config/foot 
-ln -sfn ~/.dotfiles/.config/waybar/ ~/.config/
+mkdir ~/.config/sway && ln -sfn ~/.dotfiles/.config/sway/config ~/.config/sway 
+mkdir ~/.config/foot && ln -sfn ~/.dotfiles/.config/foot/foot.ini ~/.config/foot 
+ln -sfn ~/.dotfiles/.zshrc ~/.zshrc
+ln -sfn ~/.dotfiles/.tmux.conf ~/
 
+
+# ln -sfn ~/.dotfiles/.config/waybar/ ~/.config/
 ln -sfn ~/.dotfiles/.xinitrc ~/
 ln -sfn ~/.dotfiles/.newsboat ~/
 ln -sfn ~/.dotfiles/.gitconfig ~/
-ln -sfn ~/.dotfiles/.tmux.conf ~/
 ln -sfn ~/.dotfiles/.Xresources ~/
-ln -sfn ~/.dotfiles/.zshrc ~/.zshrc
 ln -sfn ~/.dotfiles/.profile .profile
 ln -sfn ~/.dotfiles/.config/lf ~/.config
 ln -sfn ~/.dotfiles/.config/nvim ~/.config
@@ -66,17 +71,11 @@ ln -sfn ~/.dotfiles/.config/mpd/mpd.conf ~/.config/mpd/mpd.conf
 ln -sfn ~/.dotfiles/.config/mpd/playlist ~/.config/mpd/playlist
 ln -sfn ~/.dotfiles/.config/VSCodium/settings.json ~/.config/VSCodium/User
 
-
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
 ########################
 ## Git
 ########################
 
-yay -S git lazygit github-cli git-chglog git-cliff onefetch git-delta gitleaks
+yay -S lazygit github-cli git-chglog git-cliff onefetch git-delta gitleaks
 echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >>~/.zshrc && source ~/.zshrc
 
 ########################
@@ -95,32 +94,18 @@ yay -S \
 ## Applications
 ########################
 
-yay -S \
-	thunar thunar-archive-plugin xarchiver unzip gvfs gvfs-mtp \
-	librewolf-bin \
-	anki-bin \
-	vscodium-bin \
-	calibre \
-	imv \
-	mpv \
-	zathura zathura-pdf-mupdf \
-	obs-studio \
-	gimp \
-	imagemagick \
-	flameshot
+yay -S librewolf-bin # anki-bin vscodium-bin zathura zathura-pdf-mupdf obs-studio imv mpv gimp flameshot imagemagick calibre
+	# thunar thunar-archive-plugin xarchiver unzip gvfs gvfs-mtp
+	
 
 ########################
 ## CLI
 ########################
 
-yay -S \
-	pass pass-otp \
-	fzf \
+yay -S bottom hledger-bin tldr # pass pass-otp fzf ripgrep  slidev-bin libqalculate
 	bat \
 	duf \
 	gdu \
-	age \
-	tldr \
 	navi \	
 	jump \
  	hugo \
@@ -131,9 +116,7 @@ yay -S \
 	pdftk \
 	qpdf \
 	csview \
-	bottom \
 	gparted \
-	ripgrep \
 	testdisk \
 	neofetch \
 	visidata \
@@ -150,13 +133,9 @@ yay -S \
  	gpg-tui \
  	mediainfo \
 	screenkey \
- 	slidev-bin \
-	libqalculate \
-	brightnessctl \
 	perl-image-exiftool \
 	power-profiles-daemon \
 	scrcpy \
-	hledger-bin \
 	newsboat \
 	slides-bin \
 	lf-bin \
@@ -168,19 +147,7 @@ yay -S \
 ## Developer
 ########################
 
-yay -S \
-	base-devel \
-	asdf \
-    	ctop \
-    	dive \
-	docker \
- 	flyctl-bin \
- 	lazydocker-bin \
- 	docker-compose \
-  	sqlite sqlitebrowser dbeaver  \
-	postgresql \
- 	ollama \
-	goreleaser-bin
+yay -S asdf-vm # ctop dive docker flyctl-bin lazydocker-bin docker-compose sqlite sqlitebrowser dbeaver postgresql ollama
  
 # npm inotify-tools python python-pip
 pip install --user pipx
@@ -203,15 +170,12 @@ sudo usermod -aG docker $USER
 ## Networking
 ########################
 
-yay -S \
+yay -S  # caddy	protonvpn ufw gufw
 	jq \
 	oha \
  	wrk \
-	ufw \
-	gufw \
 	bind \
 	ntop \
-	ipfs \
 	nmap \
 	gping \
 	aria2 \
@@ -221,13 +185,11 @@ yay -S \
 	ipcalc \
 	trippy \
 	httpie \
- 	caddy \
 	wifite2 \
 	websocat \
 	rustscan \
 	goaccess \
 	net-tools \
-	protonvpn \
 	termshark \
 	ngrok-bin \
 	inetutils \
@@ -235,9 +197,5 @@ yay -S \
 	burpsuite \
 	gnu-netcat \
 	aircrack-ng \
-	traefik-bin \
 	intermodal-bin \
 	portmaster-stub-bin \
-	static-web-server-bin
-
-
