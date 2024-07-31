@@ -19,12 +19,10 @@ clear
 ## Nix
 ########################
 
-sh <(curl -L https://nixos.org/nix/install) --daemon
+# sh <(curl -L https://nixos.org/nix/install) --daemon
 
-pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
+# Install yay
+pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 yay -S bluez bluez-utils cups
 systemctl enable bluetooth.service --now
