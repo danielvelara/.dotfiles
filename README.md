@@ -40,12 +40,10 @@ cd .dotfiles && ./install.sh
 | Mail Client           | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                 |
 
 
-
 ### Browser Extensions
 
 - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/)
 - [VideoSpeedController](https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk)
-- [libredirect](https://github.com/libredirect/libredirect)
 
 ## VSCode Extensions
 
