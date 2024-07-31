@@ -6,8 +6,8 @@
 
 
 ```bash
-sudo pacman -Syyu
-sudo pacman -S --needed git base-devel
+sudo pacman -Syu
+sudo pacman -S base-devel git
 git clone https://github.com/danielvelara/.dotfiles
 cd .dotfiles && ./install.sh
 ```
