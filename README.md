@@ -14,18 +14,28 @@ cd .dotfiles && ./install.sh
 
 ## Setup
 
-| Program                  | Name                                                             |
-| ------------------------ | ---------------------------------------------------------------- |
-| **Operating System**     | [Arch Linux](https://archlinux.org/)                             |
-| **Window Manager**       | [sway](https://github.com/swaywm/sway)                           |
-| **Display Manager**      | [ly](https://github.com/fairyglade/ly)                           |
-| **Service Manager**      | [systemd](https://systemd.io/)                                   |
-| **Network Manager**      | [NetworkManager](https://networkmanager.dev/)                    |
-| **Audio Manager**        | [Pipewire](https://www.pipewire.org/)                    |
-| **Application Launcher** | [rofi](https://github.com/davatorium/rofi)                       |
-| **Status Panel**         | [Polybar](https://polybar.github.io/)                            |
-| **Shell**                | [zsh](https://www.zsh.org/)                                      |
-| **Terminal Multiplexer** | [tmux](https://github.com/tmux/tmux/wiki)                        |
+| Program                  | Name                                           |
+| ------------------------ | ---------------------------------------------- |
+| **Bootloader**           | [GNU GRUB](https://www.gnu.org/software/grub/) |
+| **Operating System**     | [Arch Linux](https://archlinux.org/)           |
+| **Window Manager**       | [sway](https://swaywm.org/)                    |
+| **Display Server**       | [Wayland](https://wayland.freedesktop.org/)    |
+| **Display Manager**      | [ly](https://github.com/fairyglade/ly)         |
+| **Service Manager**      | [systemd](https://systemd.io/)                 |
+| **Network Manager**      | [NetworkManager](https://networkmanager.dev/)  |
+| **Audio Manager**        | [Pipewire](https://www.pipewire.org/)          |
+| **Application Launcher** | [rofi](https://github.com/davatorium/rofi)     |
+| **Status Panel**         | [Polybar](https://polybar.github.io/)          |
+| **Shell**                | [zsh](https://www.zsh.org/)                    |
+| **Terminal Multiplexer** | [tmux](https://github.com/tmux/tmux/wiki)      |\
+| **Terminal Emulator**    | [foot](https://codeberg.org/dnkl/foot)         |
+| **Text Editor**          | [Neovim](https://neovim.io/)                   |
+| **Web Browser**          | [LibreWolf](https://librewolf.net/)            |
+| **SRS**                  | [Anki](https://apps.ankiweb.net/)              |
+
+
+web browser
+
 
 - Sway/Wayland
   - swayidle
