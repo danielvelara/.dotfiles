@@ -43,14 +43,12 @@ mkdir ~/.config/foot   && ln -sfn ~/.dotfiles/.config/foot ~/.config/
 # mkdir ~/.config/waybar && ln -sfn ~/.dotfiles/.config/waybar ~/.config/
 # mkdir ~/.config/dunst  && ln -sfn ~/.dotfiles/.config/dunst  ~/.config/ 
 # mkdir ~/.config/rofi   && ln -sfn ~/.dotfiles/.config/rofi   ~/.config
-
+# mkdir ~/.config/lvim   && ln -sfn ~/.dotfiles/.config/lvim   ~/.config
 
 ln -sfn ~/.dotfiles/.zshrc ~/.zshrc
 ln -sfn ~/.dotfiles/.tmux.conf ~/
 
-
 # ln -sfn ~/.dotfiles/.newsboat ~/
-# ln -sfn ~/.dotfiles/.config/nvim ~/.config
 # ln -sfn ~/.dotfiles/.config/polybar ~/.config
 # ln -sfn ~/.dotfiles/.config/alacritty ~/.config
 # ln -sfn ~/.dotfiles/.config/ncmpcpp/config ~/.config/ncmpcpp
