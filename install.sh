@@ -74,7 +74,6 @@ yay -S bottom hledger-bin # tldr pass pass-otp fzf ripgrep  slidev-bin libqalcul
 # Developer
 yay -S asdf-vm lazygit lazydocker-bin flyctl-bin # ctop dive docker  docker-compose sqlite sqlitebrowser dbeaver postgresql ollama
 # github-cli git-chglog git-cliff onefetch git-delta gitleaks
-# echo "function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}" >>~/.zshrc && source ~/.zshrc
 
 # Networking
 yay -S caddy  # protonvpn ufw gufw jq oha wrk bind ntop nmap gping aria2 whois nload nikto ipcalc trippy httpie wifite2 websocat rustscan goaccess net-tools termshark inetutils tailscale burpsuite gnu-netcat aircrack-ng intermodal-bin portmaster-stub-bin
