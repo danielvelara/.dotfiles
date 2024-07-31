@@ -14,25 +14,29 @@ cd .dotfiles && ./install.sh
 
 ## Setup
 
-| Program                  | Name                                           |
-| ------------------------ | ---------------------------------------------- |
-| **Bootloader**           | [GNU GRUB](https://www.gnu.org/software/grub/) |
-| **Operating System**     | [Arch Linux](https://archlinux.org/)           |
-| **Window Manager**       | [sway](https://swaywm.org/)                    |
-| **Display Server**       | [Wayland](https://wayland.freedesktop.org/)    |
-| **Display Manager**      | [ly](https://github.com/fairyglade/ly)         |
-| **Service Manager**      | [systemd](https://systemd.io/)                 |
-| **Network Manager**      | [NetworkManager](https://networkmanager.dev/)  |
-| **Audio Manager**        | [Pipewire](https://www.pipewire.org/)          |
-| **Application Launcher** | [rofi](https://github.com/davatorium/rofi)     |
-| **Status Panel**         | [Polybar](https://polybar.github.io/)          |
-| **Shell**                | [zsh](https://www.zsh.org/)                    |
-| **Terminal Multiplexer** | [tmux](https://github.com/tmux/tmux/wiki)      |
-| **Terminal Emulator**    | [foot](https://codeberg.org/dnkl/foot)         |
-| **Text Editor**          | [Neovim](https://neovim.io/)                   |
-| **Web Browser**          | [LibreWolf](https://librewolf.net/)            |
-| **SRS**                  | [Anki](https://apps.ankiweb.net/)              |
-| **Productivity suite**   | [LibreOffice](https://www.libreoffice.org/)    |
+| Program              | Name                                           |
+| -------------------- | ---------------------------------------------- |
+| Bootloader           | [GNU GRUB](https://www.gnu.org/software/grub/) |
+| Operating System     | [Arch Linux](https://archlinux.org/)           |
+| Window Manager       | [sway](https://swaywm.org/)                    |
+| Display Server       | [Wayland](https://wayland.freedesktop.org/)    |
+| Display Manager      | [ly](https://github.com/fairyglade/ly)         |
+| Service Manager      | [systemd](https://systemd.io/)                 |
+| Network Manager      | [NetworkManager](https://networkmanager.dev/)  |
+| Audio Manager        | [Pipewire](https://www.pipewire.org/)          |
+| Application Launcher | [rofi](https://github.com/davatorium/rofi)     |
+| Status Panel         | [Polybar](https://polybar.github.io/)          |
+| Shell                | [zsh](https://www.zsh.org/)                    |
+| Terminal Multiplexer | [tmux](https://github.com/tmux/tmux/wiki)      |
+| Terminal Emulator    | [foot](https://codeberg.org/dnkl/foot)         |
+| Text Editor          | [Neovim](https://neovim.io/)                   |
+| Web Browser          | [LibreWolf](https://librewolf.net/)            |
+| SRS                  | [Anki](https://apps.ankiweb.net/)              |
+| Productivity Suite   | [LibreOffice](https://www.libreoffice.org/)    |
+| Presentation Tool    | [slides](https://github.com/maaslalani/slides) |
+| Mail Client          | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                 |
+
+
 
 - Sway/Wayland
   - swayidle
@@ -49,11 +53,6 @@ cd .dotfiles && ./install.sh
 
 ## Applications
 
-| Applicaton         | Name                                                                                                    |
-| ------------------ | ------------------------------------------------------------------------------------------------------- |
-| Mail Client        | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                 |
-| Text Editor        | [neovim](https://neovim.io/)                                                                            |
-| Presentation Tool  | [Beamer](https://ashwinschronicles.github.io/beamer-slides-using-markdown-and-pandoc) <br> & [slides]() |
 
 <details>
 <summary><code>Chromium Extensions</code> </summary>
