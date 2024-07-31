@@ -35,6 +35,8 @@ systemctl enable cups.service --now
 
 sudo pacman -S sway swaybg foot polkit waybar mako wofi wlsunset
 
+# sway swayidle brightnessctl pavucontrol swaybg waybar grim foot swaylock dmenu slurp xorg-xwayland 
+
 # Fonts
 pacman -S ttf-firacode ttf-ms-fonts ttf-liberation noto-fonts noto-fonts-emoji ttf-meslo-nerd-font-powerlevel10k ttf-font-awesome
 
