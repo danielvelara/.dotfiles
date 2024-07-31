@@ -27,15 +27,12 @@ cd .dotfiles && ./install.sh
 | **Application Launcher** | [rofi](https://github.com/davatorium/rofi)     |
 | **Status Panel**         | [Polybar](https://polybar.github.io/)          |
 | **Shell**                | [zsh](https://www.zsh.org/)                    |
-| **Terminal Multiplexer** | [tmux](https://github.com/tmux/tmux/wiki)      |\
+| **Terminal Multiplexer** | [tmux](https://github.com/tmux/tmux/wiki)      |
 | **Terminal Emulator**    | [foot](https://codeberg.org/dnkl/foot)         |
 | **Text Editor**          | [Neovim](https://neovim.io/)                   |
 | **Web Browser**          | [LibreWolf](https://librewolf.net/)            |
 | **SRS**                  | [Anki](https://apps.ankiweb.net/)              |
-
-
-web browser
-
+| **Productivity suite**   | [LibreOffice](https://www.libreoffice.org/)    |
 
 - Sway/Wayland
   - swayidle
