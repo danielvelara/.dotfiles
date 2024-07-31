@@ -29,12 +29,16 @@ cd .dotfiles && ./install.sh
 | Shell                 | [zsh](https://www.zsh.org/)                    |
 | Terminal Multiplexer  | [tmux](https://github.com/tmux/tmux/wiki)      |
 | Terminal Emulator     | [foot](https://codeberg.org/dnkl/foot)         |
-| Text Editor           | [Neovim](https://neovim.io/)                   |
 | Web Browser           | [LibreWolf](https://librewolf.net/)            |
+| Text Editor           | [Neovim](https://neovim.io/)                   |
+| PDF Viewer            | [zathura](https://pwmt.org/projects/zathura)   |
+| Image Viewer          | [imv](https://sr.ht/~exec64/imv/)              |
+| Video Player          | [mpv](https://mpv.io/)                         |
 | SRS                   | [Anki](https://apps.ankiweb.net/)              |
 | Productivity Suite    | [LibreOffice](https://www.libreoffice.org/)    |
 | Presentation Tool     | [slides](https://github.com/maaslalani/slides) |
 | Mail Client           | [NeoMutt](https://neomutt.org/) + [Muttwizard](https://muttwizard.com/)                                 |
+
 
 
 ### Browser Extensions
