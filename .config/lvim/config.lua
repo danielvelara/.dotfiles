@@ -7,9 +7,25 @@ vim.diagnostic.config({ virtual_text = true })
 -- vim.opt.listchars:append "eol:↴"
 -- vim.opt.listchars:append "space:⋅"
 
+-- lvim.colorscheme = "github_light"
+-- lvim.colorscheme = "github_dark_dimmed"
+-- lvim.colorscheme = "github_dark_default"
 -- lvim.colorscheme = "gruvbox"
+lvim.colorscheme = "lunar"
+
+-- lvim.colorscheme = "nord"
+-- lvim.leader = "space"
 lvim.builtin.nvimtree.setup.filters.dotfiles = true
+lvim.builtin.nvimtree.setup.view.width = 35
 lvim.builtin.treesitter.highlight.enable = true
+lvim.format_on_save.enabled = true
+-- lvim.builtin.treesitter.rainbow = {
+--   enable = true,
+--   query = {
+--     "rainbow-parens",
+--   },
+-- }
+-- lvim.builtin.treesitter.autotag = true
 
 ------------------------
 -- Treesitter
@@ -23,18 +39,8 @@ lvim.builtin.treesitter.ensure_installed = {
   "elixir",
   "heex",
   "python",
-  "lua",
-  "gomod",
   "go",
 }
--- lvim.builtin.treesitter.rainbow = {
---   enable = true,
---   query = {
---     "rainbow-parens",
---   },
--- }
--- lvim.builtin.treesitter.autotag = true
-
 
 ------------------------
 -- Plugins
@@ -43,6 +49,7 @@ lvim.plugins = {
   -- Themes
   -- "lunarvim/colorschemes",
   "ellisonleao/gruvbox.nvim",
+  "shaunsingh/nord.nvim",
   'projekt0n/github-nvim-theme',
   {
     "folke/tokyonight.nvim",
@@ -50,38 +57,40 @@ lvim.plugins = {
     priority = 1000,
     opts = {},
   },
-  -- Go
-  "olexsmir/gopher.nvim",
-  "leoluz/nvim-dap-go",
-  -- Python
-  "ChristianChiarulli/swenv.nvim",
-  "mfussenegger/nvim-dap-python",
-  -- "nvim-neotest/neotest-python",
   -- System
   "tpope/vim-surround",
   -- "nvim-neotest/neotest",
-  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
+  -- { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
   {
     "folke/zen-mode.nvim",
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
+    -- opts = {}
+    config = function()
+      -- Example mapping to toggle outline
+      vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>",
+        { desc = "Toggle ZenMode" })
+
+      require("zen-mode").setup {
+        -- Your setup opts here (leave empty to use defaults)
+      }
+    end,
   },
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "VeryLazy",
-  --   opts = {},
-  --   config = function(_, opts) require 'lsp_signature'.setup(opts) end
-  -- },
+  {
+    "vhyrro/luarocks.nvim",
+    priority = 1000,
+    config = true,
+  },
   {
     "nvim-neorg/neorg",
     build = ":Neorg sync-parsers",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    lazy = false,
-    priority = 1000,
+    dependencies = { "luarocks.nvim" },
+    lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+    -- version = "*",
+    version = "8.9.0",
+    -- config = true,
     config = function()
+      vim.keymap.set("n", "<leader>Z", "<cmd>Neorg index<CR>",
+        { desc = "Toggle Neorg Index" })
+
       require("neorg").setup {
         load = {
           ["core.defaults"] = {}, -- Loads default behaviour
@@ -93,7 +102,6 @@ lvim.plugins = {
               default_keybinds = true,
             }
           },
-          -- ["core.ui.calendar"] = {},
           ["core.concealer"] = {}, -- Adds pretty icons to your documents
           ["core.dirman"] = {      -- Manages Neorg workspaces
             config = {
@@ -107,6 +115,14 @@ lvim.plugins = {
       }
     end
   },
+  -- {
+  -- },
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "VeryLazy",
+  --   opts = {},
+  --   config = function(_, opts) require 'lsp_signature'.setup(opts) end
+  -- },
   {
     "hedyhli/outline.nvim",
     config = function()
@@ -120,106 +136,77 @@ lvim.plugins = {
     end,
   },
   {
-    "scalameta/nvim-metals",
+    "elixir-tools/elixir-tools.nvim",
+    version = "*",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      local elixir = require("elixir")
+      local elixirls = require("elixir.elixirls")
+
+      elixir.setup {
+        nextls = {
+          enable = false,
+          init_options = {
+            experimental = {
+              completions = {
+                enable = true
+              }
+            }
+
+          }
+        },
+        credo = {
+          enable = true
+        },
+        elixirls = {
+          enable = false,
+          settings = elixirls.settings {
+            dialyzerEnabled = false,
+            enableTestLenses = false,
+            fetchDeps = false,
+            suggestSpecs = false,
+            completions = false
+          },
+          on_attach = function(_, _)
+            vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
+            vim.keymap.set("n", "<space>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
+            vim.keymap.set("v", "<space>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+          end,
+        }
+      }
+    end,
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-    ft = { "scala", "sbt", "java" },
-    opts = function()
-      local metals_config = require("metals").bare_config()
-      metals_config.on_attach = function(client, bufnr)
-        -- your on_attach function
-      end
-
-      return metals_config
-    end,
-    config = function(self, metals_config)
-      local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = self.ft,
-        callback = function()
-          require("metals").initialize_or_attach(metals_config)
-        end,
-        group = nvim_metals_group,
-      })
-    end
   }
-  -- {
-  --   "elixir-tools/elixir-tools.nvim",
-  --   version = "*",
-  --   event = { "BufReadPre", "BufNewFile" },
-  --   config = function()
-  --     local elixir = require("elixir")
-  --     local elixirls = require("elixir.elixirls")
-
-  --     elixir.setup {
-  --       nextls = { enable = true },
-  --       credo = {},
-  --       elixirls = {
-  --         enable = true,
-  --         settings = elixirls.settings {
-  --           dialyzerEnabled = false,
-  --           enableTestLenses = false,
-  --         },
-  --         on_attach = function(client, bufnr)
-  --           vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
-  --           vim.keymap.set("n", "<space>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
-  --           vim.keymap.set("v", "<space>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
-  --         end,
-  --       }
-  --     }
-  --   end,
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --   },
-  -- }
 }
-
-
-------------------------
--- Formatters
-------------------------
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-  { command = "black",     filetypes = { "python" } },
-  { command = "ruff",      filetypes = { "python" },                               args = { "a" } },
-  { command = "shfmt",     filetypes = { "sh", "bash" } },
-  { command = "prettier",  filetypes = { "yml", "yaml", "markdown", "javascript" } },
-  { command = "goimports", filetypes = { "go" } },
-  { command = "gofumpt",   filetypes = { "go" } },
-}
-lvim.format_on_save.enabled = true
--- lvim.format_on_save.pattern = { "*.py" }
-
 
 ------------------------
 -- Lintters
 ------------------------
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "ruff",          filetypes = { "python" }, args = { "" } },
-  { command = "shellcheck",    filetypes = { "bash" } },
-  { command = "staticcheck",   filetypes = { "go" } },
-  { command = "golangci-lint", filetypes = { "go" } }
+  -- { command = "ruff",          filetypes = { "python" }, args = { "" } },
+  { command = "shellcheck", filetypes = { "bash" } },
+  -- { command = "sqlfluff",      filetypes = { "sql" },    args = { "--dialect", "postgres" } },
+  -- { command = "staticcheck",   filetypes = { "go" } },
+  -- { command = "golangci-lint", filetypes = { "go" } }
 }
 
-
 ------------------------
--- DAP
+-- Formatters
 ------------------------
-lvim.builtin.dap.active = true
--- Python DAP
-local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
-pcall(function()
-  require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
-end)
--- Go DAP
-local dap_ok, dapgo = pcall(require, "dap-go")
-if not dap_ok then
-  return
-end
-dapgo.setup()
-
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  -- { command = "black",     filetypes = { "python" } },
+  -- { command = "ruff",      filetypes = { "python" },                               args = { "a" } },
+  { command = "shfmt",     filetypes = { "sh", "bash" } },
+  { command = "prettier",  filetypes = { "yml", "yaml", "markdown", "javascript" } },
+  { command = "goimports", filetypes = { "go" } },
+  { command = "gofumpt",   filetypes = { "go" } },
+  { command = "sqlfmt",    filetypes = { "sql" } },
+  -- { command = "sql-formatter", filetypes = { "sql" } },
+}
 
 ------------------------
 -- Testing
@@ -246,7 +233,8 @@ dapgo.setup()
 lvim.lsp.installer.setup.ensure_installed = {
   "bashls",
   "cssls",
-  "elixirls",
+  -- "elixirls",
+  -- "nextls"
   "emmet_ls",
   "gopls",
   "html",
@@ -257,7 +245,6 @@ lvim.lsp.installer.setup.ensure_installed = {
   "tsserver",
   "vimls",
 }
-
 
 -- Go LSP
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "gopls" })
@@ -281,6 +268,7 @@ require("lvim.lsp.manager").setup("gopls", {
 })
 
 
+
 -- Python LSP
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 require("lvim.lsp.manager").setup("pyright", {
@@ -301,18 +289,7 @@ require("lvim.lsp.manager").setup("pyright", {
     }
   },
 })
-lvim.builtin.which_key.mappings["C"] = {
-  name = "Python",
-  c = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Choose Env" },
-}
 
--- Elixir LSP
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "nextls" })
-require("lvim.lsp.manager").setup("nextls", {
-  filetypes = { "ex" },
-  on_init = require("lvim.lsp").common_on_init,
-  capabilities = require("lvim.lsp").common_capabilities(),
-})
 
 -- Lua LSP
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "lua_ls" })
@@ -346,5 +323,17 @@ require("lvim.lsp.manager").setup("tailwindcss", {
 -- Emmet LSP
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "emmet_ls" })
 require("lvim.lsp.manager").setup("emmet_ls", {
-  filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact", "heex", "eelixir" },
+  filetypes = { "css", "html", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact", "heex", "elixir" },
+})
+
+-- HTML LSP
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "html" })
+require("lvim.lsp.manager").setup("html", {
+  filetypes = { "heex" },
+})
+
+require("lvim.lsp.manager").setup("gleam", {
+})
+
+require("lvim.lsp.manager").setup("taplo", {
 })
