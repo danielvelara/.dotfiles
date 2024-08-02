@@ -6,8 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# export ZSH="$HOME/.oh-my-zsh"
-export ZSH="/home/danielvelara/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="/home/danielvelara/.oh-my-zsh"
 # ZSH_THEME="robbyrussell" # "random"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # echo $RANDOM_THEMEK
@@ -20,9 +20,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 export ERL_AFLAGS="-kernel shell_history enabled"
 export PATH="$HOME/go/bin:$PATH"
 
-export BROWSER=brave
-export TERMINAL="alacritty"
-export READER="zathura"
+export BROWSER=librewolf
+MOZ_ENABLE_WAYLAND=1
+# export TERMINAL="foot"
+# export READER="zathura"
 
 # oh-my-zsh
 # export UPDATE_ZSH_DAYS=13
@@ -75,7 +76,6 @@ alias dmenu='rofi -dmenu'
 alias n=ncmpcpp
 alias nb=newsboat
 alias q=qalc
-alias ct=cointop
 # alias code="codium"
 alias hl="hledger"
 alias hla='hledger accounts --tree'
@@ -95,6 +95,7 @@ alias ping=gping
 alias llama='ollama run llama3.1:70b'
 alias llm='ollama run llama3.1'
 
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -105,7 +106,7 @@ alias llm='ollama run llama3.1'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="/home/danielvelara/.deta/bin:$PATH"
+# export PATH="/home/danielvelara/.deta/bin:$PATH"
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
 fpath+=~/.zfunc
@@ -113,4 +114,4 @@ zstyle ':completion:*' menu select
 autoload -Uz compinit && compinit
 
 # Created by `pipx` on 2023-08-01 02:22:07
-export PATH="$PATH:/home/danielvelara/.local/bin"
+# export PATH="$PATH:/home/danielvelara/.local/bin"
