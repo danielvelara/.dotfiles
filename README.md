@@ -14,13 +14,13 @@ cd .dotfiles && ./install.sh
 
 ## Setup
 
-| Program              | Name                                           |
-| -------------------- | ---------------------------------------------- |
+| Program              | Name                                            |
+| -------------------- | ----------------------------------------------- |
 | Bootloader            | [GNU GRUB](https://www.gnu.org/software/grub/) |
 | Operating System      | [Arch Linux](https://archlinux.org/)           |
-| Window Manager        | [sway](https://swaywm.org/)                    |
 | Display Server        | [Wayland](https://wayland.freedesktop.org/)    |
 | Display/Login Manager | [Ly](https://github.com/fairyglade/ly)         |
+| Window Manager        | [sway](https://swaywm.org/)                    |
 | Service Manager       | [systemd](https://systemd.io/)                 |
 | Network Manager       | [NetworkManager](https://networkmanager.dev/)  |
 | Audio Manager         | [Pipewire](https://www.pipewire.org/)          |
