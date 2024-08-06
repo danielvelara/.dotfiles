@@ -65,7 +65,6 @@ lvim.plugins = {
     "folke/zen-mode.nvim",
     -- opts = {}
     config = function()
-      -- Example mapping to toggle outline
       vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>",
         { desc = "Toggle ZenMode" })
 
@@ -81,7 +80,7 @@ lvim.plugins = {
   },
   {
     "nvim-neorg/neorg",
-    build = ":Neorg sync-parsers",
+    -- build = ":Neorg sync-parsers",
     dependencies = { "luarocks.nvim" },
     lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
     -- version = "*",
@@ -123,62 +122,62 @@ lvim.plugins = {
   --   opts = {},
   --   config = function(_, opts) require 'lsp_signature'.setup(opts) end
   -- },
-  {
-    "hedyhli/outline.nvim",
-    config = function()
-      -- Example mapping to toggle outline
-      vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>",
-        { desc = "Toggle Outline" })
+  -- {
+  --   "hedyhli/outline.nvim",
+  --   config = function()
+  --     -- Example mapping to toggle outline
+  --     vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>",
+  --       { desc = "Toggle Outline" })
 
-      require("outline").setup {
-        -- Your setup opts here (leave empty to use defaults)
-      }
-    end,
-  },
-  {
-    "elixir-tools/elixir-tools.nvim",
-    version = "*",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      local elixir = require("elixir")
-      local elixirls = require("elixir.elixirls")
+  --     require("outline").setup {
+  --       -- Your setup opts here (leave empty to use defaults)
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   "elixir-tools/elixir-tools.nvim",
+  --   version = "*",
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   config = function()
+  --     local elixir = require("elixir")
+  --     local elixirls = require("elixir.elixirls")
 
-      elixir.setup {
-        nextls = {
-          enable = false,
-          init_options = {
-            experimental = {
-              completions = {
-                enable = true
-              }
-            }
+  --     elixir.setup {
+  --       nextls = {
+  --         enable = false,
+  --         init_options = {
+  --           experimental = {
+  --             completions = {
+  --               enable = true
+  --             }
+  --           }
 
-          }
-        },
-        credo = {
-          enable = true
-        },
-        elixirls = {
-          enable = false,
-          settings = elixirls.settings {
-            dialyzerEnabled = false,
-            enableTestLenses = false,
-            fetchDeps = false,
-            suggestSpecs = false,
-            completions = false
-          },
-          on_attach = function(_, _)
-            vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
-            vim.keymap.set("n", "<space>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
-            vim.keymap.set("v", "<space>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
-          end,
-        }
-      }
-    end,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-  }
+  --         }
+  --       },
+  --       credo = {
+  --         enable = true
+  --       },
+  --       elixirls = {
+  --         enable = false,
+  --         settings = elixirls.settings {
+  --           dialyzerEnabled = false,
+  --           enableTestLenses = false,
+  --           fetchDeps = false,
+  --           suggestSpecs = false,
+  --           completions = false
+  --         },
+  --         on_attach = function(_, _)
+  --           vim.keymap.set("n", "<space>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
+  --           vim.keymap.set("n", "<space>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
+  --           vim.keymap.set("v", "<space>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+  --         end,
+  --       }
+  --     }
+  --   end,
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --   },
+  -- }
 }
 
 ------------------------
