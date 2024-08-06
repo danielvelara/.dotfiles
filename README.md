@@ -24,6 +24,7 @@ cd .dotfiles && ./install.sh
 | Service Manager       | [systemd](https://systemd.io/)                 |
 | Network Manager       | [NetworkManager](https://networkmanager.dev/)  |
 | Audio Manager         | [Pipewire](https://www.pipewire.org/)          |
+| Printing Manager      | [CUPS](https://www.cups.org/)                  |
 | Application Launcher  | [rofi](https://github.com/davatorium/rofi)     |
 | Status Panel          | [Polybar](https://polybar.github.io/)          |
 | Shell                 | [zsh](https://www.zsh.org/)                    |
